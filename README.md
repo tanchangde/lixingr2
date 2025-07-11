@@ -1,6 +1,8 @@
 
 # lixingr2
 
+[![R-CMD-check](https://github.com/tanchangde/lixingr2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tanchangde/lixingr2/actions/workflows/R-CMD-check.yaml)
+
 An R language wrapper for the lixinger API.
 
 ## User Guide
