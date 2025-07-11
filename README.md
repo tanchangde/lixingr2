@@ -1,5 +1,5 @@
 
-# lixingr
+# lixingr2
 
 An R language wrapper for the lixinger API.
 
