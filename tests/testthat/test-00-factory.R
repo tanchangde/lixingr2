@@ -54,7 +54,7 @@ test_that("parameter cleaning & camelCase conversion works", {
   expect_identical(body$stockCodes, c("AAA", "BBB"))
 })
 
-test_that("NULL optional parameters are dropped", {
+test_that("NULL parameters and internal parameters are excluded", {
   captured <- NULL
   local_mocked_bindings(
     req_perform = function(req, ...) {
@@ -74,7 +74,7 @@ test_that("NULL optional parameters are dropped", {
 
   body <- captured$body$data
   expect_false("opt" %in% names(body))
-  expect_false(".max_tries" %in% names(body))
+  expect_false(any(grepl("^\\.", names(body))))
 })
 
 test_that("backoff_fun receives correct attempt numbers", {
