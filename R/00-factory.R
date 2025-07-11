@@ -16,7 +16,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       optional
     ),
     .max_tries = rlang::expr(getOption("lxg.max_tries", 4L)),
-    .backoff_fun = rlang::expr(getOption("lxg.backoff_fun", NULL))
+    .backoff_fun = rlang::expr(getOption("lxg.backoff_fun", NULL)),
+    .retry_on = rlang::expr(getOption("lxg.retry_on", NULL))
   )
 
   check_calls <- purrr::map(
@@ -29,6 +30,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
 
     max_tries <- .max_tries
     backoff_fun <- .backoff_fun
+    retry_on <- .retry_on
 
     query_params <- as.list(environment()) |>
       purrr::discard(is.null)
@@ -60,13 +62,21 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       }
     }
 
+    if (is.null(retry_on)) {
+      retry_on <- function(resp) {
+        status <- httr2::resp_status(resp)
+        status == 429 || status >= 500
+      }
+    }
+
     req <- httr2::request("https://open.lixinger.com/api") |>
       httr2::req_headers("Content-Type" = "application/json") |>
       httr2::req_url_path_append(!!endpoint) |>
       httr2::req_body_json(data = request_params, auto_unbox = FALSE) |>
       httr2::req_retry(
         max_tries = max_tries,
-        backoff = backoff_fun
+        backoff = backoff_fun,
+        is_transient = retry_on
       )
 
     req |>
