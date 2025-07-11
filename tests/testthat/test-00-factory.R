@@ -3,7 +3,10 @@ make_ep <- getFromNamespace("make_endpoint", "lixingr2")
 test_that("generated function has correct formals", {
   fn <- make_ep("dummy", required = c("foo", "bar"), optional = c("opt_x"))
   fmls <- formals(fn)
-  expect_setequal(names(fmls), c("foo", "bar", "opt_x", ".max_tries"))
+  expect_setequal(names(fmls), c(
+    "foo", "bar", "opt_x", ".max_tries",
+    ".backoff_fun"
+  ))
   expect_true(rlang::is_missing(fmls$foo))
   expect_true(rlang::is_missing(fmls$bar))
   expect_identical(fmls$opt_x, rlang::expr(NULL))
@@ -42,6 +45,7 @@ test_that("parameter cleaning & camelCase conversion works", {
   )
 
   body <- captured$body$data
+
   expect_named(body, c("fooVal", "barBaz", "stockCodes", "maxTries"),
     ignore.order = TRUE
   )
@@ -71,4 +75,34 @@ test_that("NULL optional parameters are dropped", {
   body <- captured$body$data
   expect_false("opt" %in% names(body))
   expect_false(".max_tries" %in% names(body))
+})
+
+test_that("backoff_fun receives correct attempt numbers", {
+  ep <- make_endpoint(
+    endpoint = "dummy",
+    required = "foo"
+  )
+
+  attempts_seen <- integer()
+
+  local_mocked_bindings(
+    request = function(...) list(),
+    req_headers = function(req, ...) req,
+    req_url_path_append = function(req, ...) req,
+    req_body_json = function(req, ...) req,
+    req_perform = function(req) list(status = 200L),
+    resp_body_json = function(resp, ...) resp,
+    req_retry = function(req, max_tries, backoff) {
+      for (i in seq_len(max_tries - 1)) {
+        backoff(i)
+        attempts_seen <<- c(attempts_seen, i)
+      }
+      req
+    },
+    .package = "httr2"
+  )
+
+  ep(foo = "abc", .max_tries = 4)
+
+  expect_identical(attempts_seen, 1:3)
 })
