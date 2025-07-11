@@ -3,7 +3,7 @@ make_ep <- getFromNamespace("make_endpoint", "lixingr2")
 test_that("generated function has correct formals", {
   fn <- make_ep("dummy", required = c("foo", "bar"), optional = c("opt_x"))
   fmls <- formals(fn)
-  expect_setequal(names(fmls), c("foo", "bar", "opt_x"))
+  expect_setequal(names(fmls), c("foo", "bar", "opt_x", ".max_tries"))
   expect_true(rlang::is_missing(fmls$foo))
   expect_true(rlang::is_missing(fmls$bar))
   expect_identical(fmls$opt_x, rlang::expr(NULL))
@@ -42,7 +42,9 @@ test_that("parameter cleaning & camelCase conversion works", {
   )
 
   body <- captured$body$data
-  expect_named(body, c("fooVal", "barBaz", "stockCodes"), ignore.order = TRUE)
+  expect_named(body, c("fooVal", "barBaz", "stockCodes", "maxTries"),
+    ignore.order = TRUE
+  )
   expect_true(inherits(body$fooVal, "scalar"))
   expect_true(inherits(body$barBaz, "scalar"))
   expect_identical(body$stockCodes, c("AAA", "BBB"))
@@ -68,4 +70,5 @@ test_that("NULL optional parameters are dropped", {
 
   body <- captured$body$data
   expect_false("opt" %in% names(body))
+  expect_false(".max_tries" %in% names(body))
 })

@@ -14,7 +14,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     rlang::set_names(
       purrr::map(optional, ~ rlang::expr(NULL)),
       optional
-    )
+    ),
+    .max_tries = rlang::expr(getOption("lxg.max_tries", 4L))
   )
 
   check_calls <- purrr::map(
@@ -25,8 +26,11 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
   body <- rlang::expr({
     !!!check_calls
 
+    max_tries <- .max_tries
+
     query_params <- as.list(environment()) |>
       purrr::discard(is.null)
+    query_params <- query_params[!startsWith(names(query_params), ".")]
 
     names(query_params) <- purrr::map_chr(
       names(query_params),
@@ -49,7 +53,10 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     req <- httr2::request("https://open.lixinger.com/api") |>
       httr2::req_headers("Content-Type" = "application/json") |>
       httr2::req_url_path_append(!!endpoint) |>
-      httr2::req_body_json(data = request_params, auto_unbox = FALSE)
+      httr2::req_body_json(data = request_params, auto_unbox = FALSE) |>
+      httr2::req_retry(
+        max_tries = max_tries
+      )
 
     req |>
       httr2::req_perform() |>
