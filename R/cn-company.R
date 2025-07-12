@@ -57,3 +57,26 @@ lxr_cn_company_profile <- make_endpoint(
   endpoint = "cn/company/profile",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Share Capital Change Data
+#'
+#' @inheritParams common_params
+#' @param stock_code A single stock code, e.g., "300750".
+#' @param start_date The start date in "YYYY-MM-DD" format.
+#' @param end_date The end date in "YYYY-MM-DD" format. If not provided, the 
+#'   default value is last Monday. The interval between the start and end dates
+#'   must not exceed 10 years.
+#' @param limit The number of latest records to return. This parameter is only 
+#'   effective when requesting data within a date range.
+#'
+#' @return A parsed API response list. For details, refer to the 
+#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
+#'
+#' @rdname lxr_cn_company_equity_change
+#' @export
+lxr_cn_company_equity_change <- make_endpoint(
+  endpoint = "cn/company/equity-change",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
