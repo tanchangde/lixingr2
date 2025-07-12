@@ -132,3 +132,21 @@ lxr_cn_company_candlestick <- make_endpoint(
   required = c("token", "stock_code", "type", "start_date"),
   optional = c("end_date", "adjust_forward_date", "adjust_backward_date", "limit")
 )
+
+#' Retrieve Shareholders Number Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#'
+#' @return A parsed API response list. For details, refer to the
+#'   \href{https://open.lixinger.com/api/cn/company/shareholders-num}{API文档}。
+#'
+#' @rdname lxr_cn_company_shareholders_num
+#' @export
+lxr_cn_company_shareholders_num <- make_endpoint(
+  endpoint = "cn/company/shareholders-num",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
