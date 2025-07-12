@@ -35,13 +35,13 @@ test_that("parameter cleaning & camelCase conversion works", {
   fn <- make_ep(
     "test/path",
     required = c("foo_val"),
-    optional = c("bar_baz", "stockCodes")
+    optional = c("bar_baz", "stock_codes")
   )
 
   fn(
     foo_val     = 123,
     bar_baz     = "abc",
-    stockCodes  = c("AAA", "BBB")
+    stock_codes  = c("AAA", "BBB")
   )
 
   body <- captured$body$data
