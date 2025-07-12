@@ -125,7 +125,7 @@ lxr_cn_company_equity_change <- make_endpoint(
 #' @inheritParams limit_param
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API文档}。
+#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}。
 #'
 #' @rdname lxr_cn_company_candlestick
 #' @export
@@ -143,7 +143,7 @@ lxr_cn_company_candlestick <- make_endpoint(
 #' @inheritParams limit_param
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://open.lixinger.com/api/cn/company/shareholders-num}{API文档}。
+#'   \href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}。
 #'
 #' @rdname lxr_cn_company_shareholders_num
 #' @export

@@ -47,7 +47,7 @@ Can be set via option "lxg.retry_on".}
 }
 \value{
 A parsed API response list. For details, refer to the
-\href{https://open.lixinger.com/api/cn/company/shareholders-num}{API文档}。
+\href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}。
 }
 \description{
 Retrieve Shareholders Number Data

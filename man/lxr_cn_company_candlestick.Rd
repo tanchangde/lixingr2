@@ -62,7 +62,7 @@ Can be set via option "lxg.retry_on".}
 }
 \value{
 A parsed API response list. For details, refer to the
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API文档}。
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}。
 }
 \description{
 Adjusted prices are calculated only for the selected time period,
