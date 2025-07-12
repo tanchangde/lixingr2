@@ -35,12 +35,15 @@ Currently supports \code{ha} (Shanghai-Hong Kong Stock Connect).}
 "lxg.max_tries". Default is 4.}
 
 \item{.backoff_fun}{Function to calculate backoff delay in seconds between
-retries. Can be set via option "lxg.backoff_fun".}
+retries. Default is an exponential backoff with jitter. The delay increases
+with the number of retry attempts and includes randomness to reduce conflicts.
+The maximum delay is capped at 10 seconds. Can be set via option "lxg.backoff_fun".}
 
 \item{.retry_on}{Predicate function that takes a single argument (the
 response) and returns TRUE or FALSE to specify whether the response
-represents a transient error that should trigger a retry. Can be set via
-option "lxg.retry_on".}
+represents a transient error that should trigger a retry. Default retries
+on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
+Can be set via option "lxg.retry_on".}
 }
 \value{
 Returns a parsed API response list. See
