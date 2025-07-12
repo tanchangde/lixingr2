@@ -27,11 +27,13 @@ lxr_cn_company_candlestick(
 No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
 Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.}
 
-\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.}
+\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.
+The date should be based on Beijing Time (UTC+8).}
 
 \item{end_date}{The end date as a character string in "YYYY-MM-DD" format.
 If not provided, the default value is last Monday. The interval between
-the start and end dates must not exceed 10 years.}
+the start and end dates must not exceed 10 years. The date should be based
+on Beijing Time (UTC+8).}
 
 \item{adjust_forward_date}{The starting date for pre-adjustment as a character string.
 Must be used with \code{end_date} and must be greater than or equal to \code{end_date}.

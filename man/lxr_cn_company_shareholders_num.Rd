@@ -20,11 +20,13 @@ lxr_cn_company_shareholders_num(
 
 \item{stock_code}{A single stock code as a character string, e.g., "300750".}
 
-\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.}
+\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.
+The date should be based on Beijing Time (UTC+8).}
 
 \item{end_date}{The end date as a character string in "YYYY-MM-DD" format.
 If not provided, the default value is last Monday. The interval between
-the start and end dates must not exceed 10 years.}
+the start and end dates must not exceed 10 years. The date should be based
+on Beijing Time (UTC+8).}
 
 \item{limit}{The number of latest records to return. This parameter is only
 effective when requesting data within a date range.}
