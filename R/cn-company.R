@@ -16,6 +16,16 @@
 #' @name common_params
 NULL
 
+#' Date Range Parameters
+#'
+#' @param start_date The start date in "YYYY-MM-DD" format.
+#' @param end_date The end date in "YYYY-MM-DD" format. If not provided, the 
+#'   default value is last Monday. The interval between the start and end dates
+#'   must not exceed 10 years.
+#'
+#' @name date_range_params
+NULL
+
 #' Get detailed stock information
 #'
 #' @inheritParams common_params
@@ -62,10 +72,7 @@ lxr_cn_company_profile <- make_endpoint(
 #'
 #' @inheritParams common_params
 #' @param stock_code A single stock code, e.g., "300750".
-#' @param start_date The start date in "YYYY-MM-DD" format.
-#' @param end_date The end date in "YYYY-MM-DD" format. If not provided, the 
-#'   default value is last Monday. The interval between the start and end dates
-#'   must not exceed 10 years.
+#' @inheritParams date_range_params
 #' @param limit The number of latest records to return. This parameter is only 
 #'   effective when requesting data within a date range.
 #'
