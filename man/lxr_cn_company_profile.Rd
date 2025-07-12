@@ -13,10 +13,11 @@ lxr_cn_company_profile(
 )
 }
 \arguments{
-\item{token}{Authentication token.}
+\item{token}{Authentication token, must be a character string.}
 
-\item{stock_codes}{A vector of stock codes. The length of \code{stock_codes}
-must be between 1 and 100.Example format: \code{c("300750", "600519", "600157")}.}
+\item{stock_codes}{A vector of stock codes as character strings. The length
+of \code{stock_codes} must be between 1 and 100.Example format:
+\code{c("300750", "600519", "600157")}.}
 
 \item{.max_tries}{Maximum number of retry attempts. Can be set via option
 "lxg.max_tries". Default is 4.}

@@ -4,11 +4,11 @@
 \alias{date_range_params}
 \title{Date Range Parameters}
 \arguments{
-\item{start_date}{The start date in "YYYY-MM-DD" format.}
+\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.}
 
-\item{end_date}{The end date in "YYYY-MM-DD" format. If not provided, the
-default value is last Monday. The interval between the start and end dates
-must not exceed 10 years.}
+\item{end_date}{The end date as a character string in "YYYY-MM-DD" format.
+If not provided, the default value is last Monday. The interval between
+the start and end dates must not exceed 10 years.}
 }
 \description{
 Date Range Parameters

@@ -4,7 +4,7 @@
 \alias{common_params}
 \title{Common Parameter Descriptions}
 \arguments{
-\item{token}{Authentication token.}
+\item{token}{Authentication token, must be a character string.}
 
 \item{.max_tries}{Maximum number of retry attempts. Can be set via option
 "lxg.max_tries". Default is 4.}

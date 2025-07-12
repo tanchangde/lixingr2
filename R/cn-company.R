@@ -1,6 +1,6 @@
 #' Common Parameter Descriptions
 #'
-#' @param token Authentication token.
+#' @param token Authentication token, must be a character string.
 #' @param .max_tries Maximum number of retry attempts. Can be set via option
 #'   "lxg.max_tries". Default is 4.
 #' @param .backoff_fun Function to calculate backoff delay in seconds between
@@ -18,24 +18,24 @@ NULL
 
 #' Date Range Parameters
 #'
-#' @param start_date The start date in "YYYY-MM-DD" format.
-#' @param end_date The end date in "YYYY-MM-DD" format. If not provided, the 
-#'   default value is last Monday. The interval between the start and end dates
-#'   must not exceed 10 years.
+#' @param start_date The start date as a character string in "YYYY-MM-DD" format.
+#' @param end_date The end date as a character string in "YYYY-MM-DD" format.
+#'   If not provided, the default value is last Monday. The interval between
+#'   the start and end dates must not exceed 10 years.
 #'
 #' @name date_range_params
 NULL
 
 #' Stock Code Parameter
 #'
-#' @param stock_code A single stock code, e.g., "300750".
+#' @param stock_code A single stock code as a character string, e.g., "300750".
 #'
 #' @name stock_code_param
 NULL
 
 #' Limit Parameter
 #'
-#' @param limit The number of latest records to return. This parameter is only 
+#' @param limit The number of latest records to return. This parameter is only
 #'   effective when requesting data within a date range.
 #'
 #' @name limit_param
@@ -44,13 +44,14 @@ NULL
 #' Get detailed stock information
 #'
 #' @inheritParams common_params
-#' @param stock_codes A vector of stock codes. If not provided, all stock codes
+#' @param stock_codes A vector of stock codes as character strings. For example:
+#'   \code{c("300750", "600519", "600157")}. If not provided, all stock codes
 #'   will be queried.
-#' @param fs_table_type Financial statement type. Currently supported types
-#'   include: \code{non_financial}, \code{bank}, \code{insurance},
-#'   \code{security}, and \code{other_financial}.
-#' @param mutual_markets Stock Connect type, for example: \code{'ha'}.
-#'   Currently supports \code{ha} (Shanghai-Hong Kong Stock Connect).
+#' @param fs_table_type Financial statement type as a character string. Currently
+#'   supported types include: \code{"non_financial"}, \code{"bank"},
+#'   \code{"insurance"}, \code{"security"}, and \code{"other_financial"}.
+#' @param mutual_markets Stock Connect type as a character string. Currently
+#'   supports \code{"ha"} (Shanghai-Hong Kong Stock Connect).
 #' @param include_delisted Whether to include delisted stocks. \code{FALSE} or
 #'   \code{NULL} means not included.
 #'
@@ -69,8 +70,9 @@ lxr_cn_company <- make_endpoint(
 #' Get Company Profile Data
 #'
 #' @inheritParams common_params
-#' @param stock_codes A vector of stock codes. The length of \code{stock_codes} 
-#'   must be between 1 and 100.Example format: \code{c("300750", "600519", "600157")}.
+#' @param stock_codes A vector of stock codes as character strings. The length
+#'   of \code{stock_codes} must be between 1 and 100.Example format:
+#'   \code{c("300750", "600519", "600157")}.
 #'
 #' @return Returns a parsed API response list. See
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/profile}{API documentation}
@@ -90,7 +92,7 @@ lxr_cn_company_profile <- make_endpoint(
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
 #'
-#' @return A parsed API response list. For details, refer to the 
+#' @return A parsed API response list. For details, refer to the
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
 #'
 #' @rdname lxr_cn_company_equity_change
@@ -103,24 +105,24 @@ lxr_cn_company_equity_change <- make_endpoint(
 
 #' Retrieve Candlestick Data
 #' 
-#' @description Adjusted prices are calculated only for the selected time period, 
+#' @description Adjusted prices are calculated only for the selected time period,
 #' while trading volume is not adjusted.
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_code_param
 #' @param type Adjustment type, e.g., "lxr_fc_rights". Supported types include:
-#'   No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights}, 
+#'   No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
 #'   Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.
-#' @param adjust_forward_date The starting date for pre-adjustment. Must be used 
-#'   with \code{end_date} and must be greater than or equal to \code{end_date}. 
+#' @param adjust_forward_date The starting date for pre-adjustment as a character string.
+#'   Must be used with \code{end_date} and must be greater than or equal to \code{end_date}.
 #'   Required when requesting adjusted data; defaults to \code{end_date} if not provided.
-#' @param adjust_backward_date The starting date for post-adjustment. Must be used 
-#'   with \code{start_date} and must be less than or equal to \code{start_date}. 
+#' @param adjust_backward_date The starting date for post-adjustment as a character string.
+#'   Must be used with \code{start_date} and must be less than or equal to \code{start_date}.
 #'   Required when requesting adjusted data; defaults to \code{start_date} if not provided.
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
 #'
-#' @return 返回解析后的API响应列表。详情请参考 
+#' @return A parsed API response list. For details, refer to the
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API文档}。
 #'
 #' @rdname lxr_cn_company_candlestick
@@ -130,5 +132,3 @@ lxr_cn_company_candlestick <- make_endpoint(
   required = c("token", "stock_code", "type", "start_date"),
   optional = c("end_date", "adjust_forward_date", "adjust_backward_date", "limit")
 )
-
-

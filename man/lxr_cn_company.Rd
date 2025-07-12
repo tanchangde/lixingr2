@@ -16,17 +16,18 @@ lxr_cn_company(
 )
 }
 \arguments{
-\item{token}{Authentication token.}
+\item{token}{Authentication token, must be a character string.}
 
-\item{stock_codes}{A vector of stock codes. If not provided, all stock codes
+\item{stock_codes}{A vector of stock codes as character strings. For example:
+\code{c("300750", "600519", "600157")}. If not provided, all stock codes
 will be queried.}
 
-\item{fs_table_type}{Financial statement type. Currently supported types
-include: \code{non_financial}, \code{bank}, \code{insurance},
-\code{security}, and \code{other_financial}.}
+\item{fs_table_type}{Financial statement type as a character string. Currently
+supported types include: \code{"non_financial"}, \code{"bank"},
+\code{"insurance"}, \code{"security"}, and \code{"other_financial"}.}
 
-\item{mutual_markets}{Stock Connect type, for example: \code{'ha'}.
-Currently supports \code{ha} (Shanghai-Hong Kong Stock Connect).}
+\item{mutual_markets}{Stock Connect type as a character string. Currently
+supports \code{"ha"} (Shanghai-Hong Kong Stock Connect).}
 
 \item{include_delisted}{Whether to include delisted stocks. \code{FALSE} or
 \code{NULL} means not included.}

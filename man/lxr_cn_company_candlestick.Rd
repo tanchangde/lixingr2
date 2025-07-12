@@ -19,26 +19,26 @@ lxr_cn_company_candlestick(
 )
 }
 \arguments{
-\item{token}{Authentication token.}
+\item{token}{Authentication token, must be a character string.}
 
-\item{stock_code}{A single stock code, e.g., "300750".}
+\item{stock_code}{A single stock code as a character string, e.g., "300750".}
 
 \item{type}{Adjustment type, e.g., "lxr_fc_rights". Supported types include:
 No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
 Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.}
 
-\item{start_date}{The start date in "YYYY-MM-DD" format.}
+\item{start_date}{The start date as a character string in "YYYY-MM-DD" format.}
 
-\item{end_date}{The end date in "YYYY-MM-DD" format. If not provided, the
-default value is last Monday. The interval between the start and end dates
-must not exceed 10 years.}
+\item{end_date}{The end date as a character string in "YYYY-MM-DD" format.
+If not provided, the default value is last Monday. The interval between
+the start and end dates must not exceed 10 years.}
 
-\item{adjust_forward_date}{The starting date for pre-adjustment. Must be used
-with \code{end_date} and must be greater than or equal to \code{end_date}.
+\item{adjust_forward_date}{The starting date for pre-adjustment as a character string.
+Must be used with \code{end_date} and must be greater than or equal to \code{end_date}.
 Required when requesting adjusted data; defaults to \code{end_date} if not provided.}
 
-\item{adjust_backward_date}{The starting date for post-adjustment. Must be used
-with \code{start_date} and must be less than or equal to \code{start_date}.
+\item{adjust_backward_date}{The starting date for post-adjustment as a character string.
+Must be used with \code{start_date} and must be less than or equal to \code{start_date}.
 Required when requesting adjusted data; defaults to \code{start_date} if not provided.}
 
 \item{limit}{The number of latest records to return. This parameter is only
@@ -59,7 +59,7 @@ on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
 Can be set via option "lxg.retry_on".}
 }
 \value{
-返回解析后的API响应列表。详情请参考
+A parsed API response list. For details, refer to the
 \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API文档}。
 }
 \description{
