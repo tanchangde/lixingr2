@@ -55,6 +55,5 @@ lxr_cn_company <- make_endpoint(
 #' @export
 lxr_cn_company_profile <- make_endpoint(
   endpoint = "cn/company/profile",
-  required = "token",
-  optional = "stock_codes"
+  required = c("token", "stock_codes")
 )

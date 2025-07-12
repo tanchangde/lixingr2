@@ -6,7 +6,7 @@
 \usage{
 lxr_cn_company_profile(
   token,
-  stock_codes = NULL,
+  stock_codes,
   .max_tries = getOption("lxg.max_tries", 4L),
   .backoff_fun = getOption("lxg.backoff_fun", NULL),
   .retry_on = getOption("lxg.retry_on", NULL)
