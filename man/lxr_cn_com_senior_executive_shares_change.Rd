@@ -22,7 +22,7 @@ lxr_cn_com_senior_executive_shares_change(
 \item{stock_code}{A single stock code as a character string, e.g., "300750".}
 
 \item{date}{The date for which data is to be retrieved, as a character string
-in "YYYY-MM-DD" format.The date should be based on Beijing Time (UTC+8).}
+in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).}
 
 \item{start_date}{The start date as a character string in "YYYY-MM-DD" format.
 The date should be based on Beijing Time (UTC+8).}
@@ -55,4 +55,8 @@ A parsed API response list. For details, refer to the
 }
 \description{
 Retrieve Senior Executive Shareholding Change Data
+}
+\details{
+The \code{stock_code} parameter is only effective when requesting data
+within a date range.
 }

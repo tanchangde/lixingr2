@@ -16,6 +16,14 @@
 #' @name common_params
 NULL
 
+#' Date Parameter
+#'
+#' @param date The date for which data is to be retrieved, as a character string
+#'   in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).
+#'
+#' @name date_param
+NULL
+
 #' Date Range Parameters
 #'
 #' @param start_date The start date as a character string in "YYYY-MM-DD" format.
@@ -157,18 +165,38 @@ lxr_cn_com_shareholders_num <- make_endpoint(
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_code_param
-#' @param date The date for which data is to be retrieved, as a character string
-#'   in "YYYY-MM-DD" format.The date should be based on Beijing Time (UTC+8).
+#' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
+#' 
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
 #'
 #' @return A parsed API response list. For details, refer to the
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change}{API documentation}。
 #'
-#' @rdname lxr_cn_company_senior_executive_shares_change
+#' @rdname lxr_cn_com_senior_executive_shares_change
 #' @export
 lxr_cn_com_senior_executive_shares_change <- make_endpoint(
   endpoint = "cn/company/senior-executive-shares-change",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)
+
+#' Retrieve Major Shareholders Shareholding Change Data
+#'
+#' @inheritParams lxr_cn_com_senior_executive_shares_change
+#' 
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
+#'
+#' @return A parsed API response list. For details, refer to the
+#'   \href{https://open.lixinger.com/api/cn/company/major-shareholders-shares-change}{API documentation}。
+#'
+#' @rdname lxr_cn_com_major_shareholders_shares_change
+#' @export
+lxr_cn_com_major_shareholders_shares_change <- make_endpoint(
+  endpoint = "cn/company/major-shareholders-shares-change",
   required = c("token"),
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
