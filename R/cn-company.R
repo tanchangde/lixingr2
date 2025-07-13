@@ -153,3 +153,22 @@ lxr_cn_com_shareholders_num <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Retrieve Senior Executive Shareholding Change Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @param date The date for which data is to be retrieved, as a character string
+#'   in "YYYY-MM-DD" format.The date should be based on Beijing Time (UTC+8).
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#'
+#' @return A parsed API response list. For details, refer to the
+#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change}{API documentation}。
+#'
+#' @rdname lxr_cn_company_senior_executive_shares_change
+#' @export
+lxr_cn_com_senior_executive_shares_change <- make_endpoint(
+  endpoint = "cn/company/senior-executive-shares-change",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)
