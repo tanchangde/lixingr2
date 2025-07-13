@@ -10,7 +10,7 @@ An R language wrapper for the lixinger API.
 ### Installation
 
 ``` r
-devtools::install_github('tanchangde/lixingr2')
+devtools::install_github("tanchangde/lixingr2")
 ```
 
 ### Configuration
