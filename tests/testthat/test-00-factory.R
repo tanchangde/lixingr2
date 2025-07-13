@@ -34,24 +34,27 @@ test_that("parameter cleaning & camelCase conversion works", {
 
   fn <- make_ep(
     "test/path",
-    required = c("foo_val"),
-    optional = c("bar_baz", "stock_codes")
+    required = c("token", "stock_codes"),
+    optional = c("adjust_forward_date", "metrics_list")
   )
 
   fn(
-    foo_val     = 123,
-    bar_baz     = "abc",
-    stock_codes  = c("AAA", "BBB")
+    token = "admin",
+    stock_codes = c("300750", "600519", "600157"),
+    adjust_forward_date = "2023-01-01",
+    metrics_list = c("mc", "pe_ttm", "pb", "dyr")
   )
 
   body <- captured$body$data
 
-  expect_named(body, c("fooVal", "barBaz", "stockCodes", "maxTries"),
+  expect_named(body, c("token", "stockCodes", "adjustForwardDate", "metricsList",
+                       "maxTries"),
     ignore.order = TRUE
   )
-  expect_true(inherits(body$fooVal, "scalar"))
-  expect_true(inherits(body$barBaz, "scalar"))
-  expect_identical(body$stockCodes, c("AAA", "BBB"))
+  expect_true(inherits(body$token, "scalar"))
+  expect_true(inherits(body$maxTries, "scalar"))
+  expect_identical(body$stockCodes, c("300750", "600519", "600157"))
+  expect_identical(body$metricsList, c("mc", "pe_ttm", "pb", "dyr"))
 })
 
 test_that("NULL parameters and internal parameters are excluded", {
