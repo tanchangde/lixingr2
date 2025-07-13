@@ -1,0 +1,35 @@
+[
+  {
+    "stockCode": "300750",
+    "areaCode": "cn",
+    "exchange": "sz",
+    "market": "a",
+    "ipoDate": "2018-06-11T00:00:00+08:00",
+    "fsTableType": "non_financial",
+    "mutualMarkets": "ha",
+    "listingStatus": "normally_listed",
+    "name": "宁德时代"
+  },
+  {
+    "stockCode": "600519",
+    "areaCode": "cn",
+    "exchange": "sh",
+    "market": "a",
+    "ipoDate": "2001-08-27T00:00:00+08:00",
+    "fsTableType": "non_financial",
+    "mutualMarkets": "ha",
+    "listingStatus": "normally_listed",
+    "name": "贵州茅台"
+  },
+  {
+    "stockCode": "600157",
+    "areaCode": "cn",
+    "exchange": "sh",
+    "market": "a",
+    "ipoDate": "1998-05-13T00:00:00+08:00",
+    "fsTableType": "non_financial",
+    "mutualMarkets": "ha",
+    "listingStatus": "normally_listed",
+    "name": "永泰能源"
+  }
+]
