@@ -28,13 +28,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
   body <- rlang::expr({
     !!!check_calls
 
-    max_tries <- .max_tries
-    backoff_fun <- .backoff_fun
-    retry_on <- .retry_on
-
     query_params <- as.list(environment()) |>
       purrr::discard(is.null)
-    query_params <- query_params[!startsWith(names(query_params), ".")]
 
     names(query_params) <- purrr::map_chr(
       names(query_params),
@@ -53,6 +48,11 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
         .x
       }
     })
+
+    max_tries <- .max_tries
+    backoff_fun <- .backoff_fun
+    retry_on <- .retry_on
+    return_format <- .return_format
 
     if (is.null(backoff_fun)) {
       backoff_fun <- function(attempt) {

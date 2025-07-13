@@ -47,12 +47,11 @@ test_that("parameter cleaning & camelCase conversion works", {
 
   body <- captured$body$data
 
-  expect_named(body, c("token", "stockCodes", "adjustForwardDate", "metricsList",
-                       "maxTries"),
+  expect_named(body, c("token", "stockCodes", "adjustForwardDate", "metricsList"),
     ignore.order = TRUE
   )
   expect_true(inherits(body$token, "scalar"))
-  expect_true(inherits(body$maxTries, "scalar"))
+  expect_true(inherits(body$adjustForwardDate, "scalar"))
   expect_identical(body$stockCodes, c("300750", "600519", "600157"))
   expect_identical(body$metricsList, c("mc", "pe_ttm", "pb", "dyr"))
 })
