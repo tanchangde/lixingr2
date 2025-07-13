@@ -94,6 +94,7 @@ test_that("backoff_fun receives correct attempt numbers", {
     req_perform = function(req) list(status = 200L),
     req_body_json = function(req, ...) req,
     resp_body_string = function(req, ...) req,
+    resp_body_json = function(req, ...) req,
     req_retry = function(req, max_tries, backoff, ...) {
       for (i in seq_len(max_tries - 1)) {
         backoff(i)

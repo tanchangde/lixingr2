@@ -13,7 +13,7 @@ lxr_cn_com_shareholders_num(
   .max_tries = getOption("lxg.max_tries", 4L),
   .backoff_fun = getOption("lxg.backoff_fun", NULL),
   .retry_on = getOption("lxg.retry_on", NULL),
-  .return_format = "json"
+  .return_format = "list"
 )
 }
 \arguments{

@@ -18,7 +18,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     .max_tries = rlang::expr(getOption("lxg.max_tries", 4L)),
     .backoff_fun = rlang::expr(getOption("lxg.backoff_fun", NULL)),
     .retry_on = rlang::expr(getOption("lxg.retry_on", NULL)),
-    .return_format = rlang::expr("json")
+    .return_format = rlang::expr("list")
   )
 
   check_calls <- purrr::map(
