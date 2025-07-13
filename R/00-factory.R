@@ -91,6 +91,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       json = httr2::resp_body_string(performed_req),
       list = httr2::resp_body_json(performed_req),
       tibble = {
+        performed_req
         # Todo: convert to tibble
       }
     )
