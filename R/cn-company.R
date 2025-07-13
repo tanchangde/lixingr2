@@ -43,6 +43,14 @@ NULL
 #' @name stock_code_param
 NULL
 
+#' Stock Codes Parameter
+#'
+#' @param stock_codes A vector of stock codes as character strings. Example format:
+#'   `c("300750", "600519", "600157")`.
+#'
+#' @name stock_codes_param
+NULL
+
 #' Limit Parameter
 #'
 #' @param limit The number of latest records to return. This parameter is only
@@ -54,9 +62,7 @@ NULL
 #' Get detailed stock information
 #'
 #' @inheritParams common_params
-#' @param stock_codes A vector of stock codes as character strings. For example:
-#'   `c("300750", "600519", "600157")`. If not provided, all stock codes
-#'   will be queried.
+#' @inheritParams stock_codes_param
 #' @param fs_table_type Financial statement type as a character string. Currently
 #'   supported types include: `"non_financial"`, `"bank"`, `"insurance"`,
 #'   `"security"`, and `"other_financial"`.
@@ -64,6 +70,8 @@ NULL
 #'   supports `"ha"` (Shanghai-Hong Kong Stock Connect).
 #' @param include_delisted Whether to include delisted stocks. `FALSE` or
 #'   `NULL` means not included.
+#'
+#' @details If `stock_codes` is not provided, all stock codes will be queried.
 #'
 #' @return Returns a parsed API response list. See
 #'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company)
@@ -80,9 +88,9 @@ lxr_cn_com <- make_endpoint(
 #' Get Company Profile Data
 #'
 #' @inheritParams common_params
-#' @param stock_codes A vector of stock codes as character strings. The length
-#'   of `stock_codes` must be between 1 and 100.Example format:
-#'   `c("300750", "600519", "600157")`.
+#' @inheritParams stock_codes_param
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
 #'
 #' @return Returns a parsed API response list. See
 #'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/profile)

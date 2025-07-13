@@ -18,9 +18,8 @@ lxr_cn_com(
 \arguments{
 \item{token}{Authentication token, must be a character string.}
 
-\item{stock_codes}{A vector of stock codes as character strings. For example:
-\code{c("300750", "600519", "600157")}. If not provided, all stock codes
-will be queried.}
+\item{stock_codes}{A vector of stock codes as character strings. Example format:
+\code{c("300750", "600519", "600157")}.}
 
 \item{fs_table_type}{Financial statement type as a character string. Currently
 supported types include: \code{"non_financial"}, \code{"bank"}, \code{"insurance"},
@@ -53,4 +52,7 @@ for details.
 }
 \description{
 Get detailed stock information
+}
+\details{
+If \code{stock_codes} is not provided, all stock codes will be queried.
 }
