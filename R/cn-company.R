@@ -61,9 +61,9 @@ NULL
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}
 #'   for details.
 #'
-#' @rdname lxr_cn_company
+#' @rdname lxr_cn_com
 #' @export
-lxr_cn_company <- make_endpoint(
+lxr_cn_com <- make_endpoint(
   endpoint = "cn/company",
   required = "token",
   optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
@@ -80,9 +80,9 @@ lxr_cn_company <- make_endpoint(
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/profile}{API documentation}
 #'   for details.
 #'
-#' @rdname lxr_cn_company_profile
+#' @rdname lxr_cn_com_profile
 #' @export
-lxr_cn_company_profile <- make_endpoint(
+lxr_cn_com_profile <- make_endpoint(
   endpoint = "cn/company/profile",
   required = c("token", "stock_codes")
 )
@@ -97,16 +97,16 @@ lxr_cn_company_profile <- make_endpoint(
 #' @return A parsed API response list. For details, refer to the
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
 #'
-#' @rdname lxr_cn_company_equity_change
+#' @rdname lxr_cn_com_equity_change
 #' @export
-lxr_cn_company_equity_change <- make_endpoint(
+lxr_cn_com_equity_change <- make_endpoint(
   endpoint = "cn/company/equity-change",
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
 
 #' Retrieve Candlestick Data
-#' 
+#'
 #' @description Adjusted prices are calculated only for the selected time period,
 #' while trading volume is not adjusted.
 #'
@@ -127,9 +127,9 @@ lxr_cn_company_equity_change <- make_endpoint(
 #' @return A parsed API response list. For details, refer to the
 #'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}。
 #'
-#' @rdname lxr_cn_company_candlestick
+#' @rdname lxr_cn_com_candlestick
 #' @export
-lxr_cn_company_candlestick <- make_endpoint(
+lxr_cn_com_candlestick <- make_endpoint(
   endpoint = "cn/company/candlestick",
   required = c("token", "stock_code", "type", "start_date"),
   optional = c("end_date", "adjust_forward_date", "adjust_backward_date", "limit")
@@ -145,10 +145,11 @@ lxr_cn_company_candlestick <- make_endpoint(
 #' @return A parsed API response list. For details, refer to the
 #'   \href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}。
 #'
-#' @rdname lxr_cn_company_shareholders_num
+#' @rdname lxr_cn_com_shareholders_num
 #' @export
-lxr_cn_company_shareholders_num <- make_endpoint(
+lxr_cn_com_shareholders_num <- make_endpoint(
   endpoint = "cn/company/shareholders-num",
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
+
