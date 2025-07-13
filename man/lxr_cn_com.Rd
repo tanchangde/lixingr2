@@ -23,8 +23,8 @@ lxr_cn_com(
 will be queried.}
 
 \item{fs_table_type}{Financial statement type as a character string. Currently
-supported types include: \code{"non_financial"}, \code{"bank"},
-\code{"insurance"}, \code{"security"}, and \code{"other_financial"}.}
+supported types include: \code{"non_financial"}, \code{"bank"}, \code{"insurance"},
+\code{"security"}, and \code{"other_financial"}.}
 
 \item{mutual_markets}{Stock Connect type as a character string. Currently
 supports \code{"ha"} (Shanghai-Hong Kong Stock Connect).}

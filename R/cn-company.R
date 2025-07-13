@@ -55,18 +55,18 @@ NULL
 #'
 #' @inheritParams common_params
 #' @param stock_codes A vector of stock codes as character strings. For example:
-#'   \code{c("300750", "600519", "600157")}. If not provided, all stock codes
+#'   `c("300750", "600519", "600157")`. If not provided, all stock codes
 #'   will be queried.
 #' @param fs_table_type Financial statement type as a character string. Currently
-#'   supported types include: \code{"non_financial"}, \code{"bank"},
-#'   \code{"insurance"}, \code{"security"}, and \code{"other_financial"}.
+#'   supported types include: `"non_financial"`, `"bank"`, `"insurance"`,
+#'   `"security"`, and `"other_financial"`.
 #' @param mutual_markets Stock Connect type as a character string. Currently
-#'   supports \code{"ha"} (Shanghai-Hong Kong Stock Connect).
-#' @param include_delisted Whether to include delisted stocks. \code{FALSE} or
-#'   \code{NULL} means not included.
+#'   supports `"ha"` (Shanghai-Hong Kong Stock Connect).
+#' @param include_delisted Whether to include delisted stocks. `FALSE` or
+#'   `NULL` means not included.
 #'
 #' @return Returns a parsed API response list. See
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}
+#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company)
 #'   for details.
 #'
 #' @rdname lxr_cn_com
@@ -81,11 +81,11 @@ lxr_cn_com <- make_endpoint(
 #'
 #' @inheritParams common_params
 #' @param stock_codes A vector of stock codes as character strings. The length
-#'   of \code{stock_codes} must be between 1 and 100.Example format:
-#'   \code{c("300750", "600519", "600157")}.
+#'   of `stock_codes` must be between 1 and 100.Example format:
+#'   `c("300750", "600519", "600157")`.
 #'
 #' @return Returns a parsed API response list. See
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/profile}{API documentation}
+#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/profile)
 #'   for details.
 #'
 #' @rdname lxr_cn_com_profile
@@ -103,7 +103,7 @@ lxr_cn_com_profile <- make_endpoint(
 #' @inheritParams limit_param
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
+#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change).
 #'
 #' @rdname lxr_cn_com_equity_change
 #' @export
@@ -120,20 +120,20 @@ lxr_cn_com_equity_change <- make_endpoint(
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_code_param
-#' @param type Adjustment type, e.g., "lxr_fc_rights". Supported types include:
-#'   No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
-#'   Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.
+#' @param type Adjustment type, e.g., `"lxr_fc_rights"`. Supported types include:
+#'   No adjustment: `ex_rights`, Lixinger pre-adjustment: `lxr_fc_rights`,
+#'   Pre-adjustment: `fc_rights`, Post-adjustment: `bc_rights`.
 #' @param adjust_forward_date The starting date for pre-adjustment as a character string.
-#'   Must be used with \code{end_date} and must be greater than or equal to \code{end_date}.
-#'   Required when requesting adjusted data; defaults to \code{end_date} if not provided.
+#'   Must be used with `end_date` and must be greater than or equal to `end_date`.
+#'   Required when requesting adjusted data; defaults to `end_date` if not provided.
 #' @param adjust_backward_date The starting date for post-adjustment as a character string.
-#'   Must be used with \code{start_date} and must be less than or equal to \code{start_date}.
-#'   Required when requesting adjusted data; defaults to \code{start_date} if not provided.
+#'   Must be used with `start_date` and must be less than or equal to `start_date`.
+#'   Required when requesting adjusted data; defaults to `start_date` if not provided.
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}。
+#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick)。
 #'
 #' @rdname lxr_cn_com_candlestick
 #' @export
@@ -151,7 +151,7 @@ lxr_cn_com_candlestick <- make_endpoint(
 #' @inheritParams limit_param
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}。
+#'   [API documentation](https://open.lixinger.com/api/cn/company/shareholders-num)。
 #'
 #' @rdname lxr_cn_com_shareholders_num
 #' @export
@@ -173,7 +173,7 @@ lxr_cn_com_shareholders_num <- make_endpoint(
 #'   within a date range.
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change}{API documentation}。
+#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change)。
 #'
 #' @rdname lxr_cn_com_senior_executive_shares_change
 #' @export
@@ -191,7 +191,7 @@ lxr_cn_com_senior_executive_shares_change <- make_endpoint(
 #'   within a date range.
 #'
 #' @return A parsed API response list. For details, refer to the
-#'   \href{https://open.lixinger.com/api/cn/company/major-shareholders-shares-change}{API documentation}。
+#'   [API documentation](https://open.lixinger.com/api/cn/company/major-shareholders-shares-change)。
 #'
 #' @rdname lxr_cn_com_major_shareholders_shares_change
 #' @export

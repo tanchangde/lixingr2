@@ -23,7 +23,7 @@ lxr_cn_com_candlestick(
 
 \item{stock_code}{A single stock code as a character string, e.g., "300750".}
 
-\item{type}{Adjustment type, e.g., "lxr_fc_rights". Supported types include:
+\item{type}{Adjustment type, e.g., \code{"lxr_fc_rights"}. Supported types include:
 No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
 Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.}
 
