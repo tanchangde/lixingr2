@@ -27,7 +27,7 @@ devtools::install_github('tanchangde/lixingr2')
 ## Contributing Code
 
 The commit logs for this project follow this [style
-guide](https://open.leancloud.cn/git-commit-message/). Please try to
+guide](https://www.conventionalcommits.org/en/v1.0.0/). Please try to
 adhere to it. The optional scopes are:
 
 - cn-company
