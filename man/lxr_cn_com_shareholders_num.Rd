@@ -12,7 +12,8 @@ lxr_cn_com_shareholders_num(
   limit = NULL,
   .max_tries = getOption("lxg.max_tries", 4L),
   .backoff_fun = getOption("lxg.backoff_fun", NULL),
-  .retry_on = getOption("lxg.retry_on", NULL)
+  .retry_on = getOption("lxg.retry_on", NULL),
+  .return_format = "json"
 )
 }
 \arguments{
@@ -44,11 +45,21 @@ response) and returns TRUE or FALSE to specify whether the response
 represents a transient error that should trigger a retry. Default retries
 on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
 Can be set via option "lxg.retry_on".}
+
+\item{.return_format}{Format of the returned data. Must be one of \code{"json"},
+\code{"list"}, or \code{"tibble"}. Defaults to \code{"json"}.}
 }
 \value{
-A parsed API response list. For details, refer to the
-\href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}。
+A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:
+\itemize{
+\item \code{"json"}: Returns raw JSON data.
+\item \code{"list"}: Returns data as an R list.
+\item \code{"tibble"}: Returns data as a tibble (if implemented).
+}
 }
 \description{
 Retrieve Shareholders Number Data
+}
+\seealso{
+\href{https://open.lixinger.com/api/cn/company/shareholders-num}{API documentation}
 }
