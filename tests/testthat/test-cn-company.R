@@ -2,7 +2,7 @@ source(test_path("helper-mock-lxr-unnest.R"))
 
 test_that("lxr_cn_com converts JSON to data frame correctly", {
   mock_lxr_cn_com <- function() {
-    json_data <- readLines(test_path("fixtures", "lxr_cn_com_resp.json"))
+    json_data <- readLines(test_path("fixtures", "cn_com_resp.json"))
 
     json_data |>
     jsonlite::fromJSON(flatten = TRUE) |>
