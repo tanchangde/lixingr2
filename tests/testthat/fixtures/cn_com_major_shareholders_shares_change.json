@@ -1,0 +1,60 @@
+[
+  {
+    "shareholderName": "通怡向阳9号私募证券投资基金",
+    "date": "2022-06-01T00:00:00+08:00",
+    "changeQuantity": 311572,
+    "sharesChangeRatio": 0.0001,
+    "sharesHeldAfterChange": 0.0001,
+    "quantityHeldAfterChange": 311572,
+    "priceFloor": 408,
+    "priceCeiling": 408,
+    "sharesChangeAmount": 127121376,
+    "avgPrice": 408
+  },
+  {
+    "shareholderName": "黄世霖",
+    "date": "2022-06-01T00:00:00+08:00",
+    "changeQuantity": -311572,
+    "sharesChangeRatio": 0.0001,
+    "sharesHeldAfterChange": 0.1111,
+    "quantityHeldAfterChange": 258900728,
+    "priceFloor": 408,
+    "priceCeiling": 408,
+    "sharesChangeAmount": 127121376,
+    "avgPrice": 408
+  },
+  {
+    "shareholderName": "通怡向阳8号私募证券投资基金",
+    "date": "2022-05-27T00:00:00+08:00",
+    "changeQuantity": 333300,
+    "sharesChangeRatio": 0.0001,
+    "sharesHeldAfterChange": 0.0001,
+    "quantityHeldAfterChange": 333300,
+    "priceFloor": 390.01,
+    "priceCeiling": 390.01,
+    "sharesChangeAmount": 129990333,
+    "avgPrice": 390.01
+  },
+  {
+    "shareholderName": "黄世霖",
+    "date": "2022-05-27T00:00:00+08:00",
+    "changeQuantity": -333300,
+    "sharesChangeRatio": 0.0001,
+    "priceFloor": 390.01,
+    "priceCeiling": 390.01,
+    "sharesChangeAmount": 129990333,
+    "avgPrice": 390.01
+  },
+  {
+    "shareholderName": "通怡向阳7号私募证券投资基金",
+    "date": "2022-05-23T00:00:00+08:00",
+    "changeQuantity": 304500,
+    "sharesChangeRatio": 0.0001,
+    "sharesHeldAfterChange": 0.0001,
+    "quantityHeldAfterChange": 304500,
+    "priceFloor": 426.9,
+    "priceCeiling": 426.9,
+    "sharesChangeAmount": 129991050,
+    "avgPrice": 426.9
+  }
+]
