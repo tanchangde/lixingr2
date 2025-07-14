@@ -75,6 +75,21 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_shareholders_num.json"
 )
 
+resp_cn_com_senior_executive_shares_change <-
+  lxr_cn_com_senior_executive_shares_change(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  start_date = "2020-07-08",
+  end_date = "2025-07-01",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_senior_executive_shares_change,
+  "./tests/testthat/fixtures/cn_com_senior_executive_shares_change.json"
+)
+
 resp_cn_com_trading_abnormal <- lxr_cn_com_trading_abnormal(
   token = Sys.getenv("LIXINGR_TOKEN"),
   start_date = "2020-03-01",

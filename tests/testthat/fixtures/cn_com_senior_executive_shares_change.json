@@ -1,0 +1,72 @@
+[
+  {
+    "shareholderName": "黄世霖",
+    "relationBetweenES": "本人",
+    "executiveName": "黄世霖",
+    "duty": "董事、高管",
+    "beforeChangeShares": 259212200,
+    "changedShares": -311500,
+    "afterChangeShares": 258900700,
+    "avgPrice": 408,
+    "changeReason": "大宗交易",
+    "date": "2022-06-01T00:00:00+08:00",
+    "changedSharesForCapitalizationProportion": 0.0001,
+    "sharesChangeAmount": 127092000
+  },
+  {
+    "shareholderName": "黄世霖",
+    "relationBetweenES": "本人",
+    "executiveName": "黄世霖",
+    "duty": "董事、高管",
+    "beforeChangeShares": 259545600,
+    "changedShares": -333300,
+    "afterChangeShares": 259212300,
+    "avgPrice": 390.01,
+    "changeReason": "大宗交易",
+    "date": "2022-05-27T00:00:00+08:00",
+    "changedSharesForCapitalizationProportion": 0.0001,
+    "sharesChangeAmount": 129990333
+  },
+  {
+    "shareholderName": "黄世霖",
+    "relationBetweenES": "本人",
+    "executiveName": "黄世霖",
+    "duty": "董事、高管",
+    "beforeChangeShares": 259850100,
+    "changedShares": -304500,
+    "afterChangeShares": 259545600,
+    "avgPrice": 426.9,
+    "changeReason": "大宗交易",
+    "date": "2022-05-23T00:00:00+08:00",
+    "changedSharesForCapitalizationProportion": 0.0001,
+    "sharesChangeAmount": 129991050
+  },
+  {
+    "shareholderName": "黄世霖",
+    "relationBetweenES": "本人",
+    "executiveName": "黄世霖",
+    "duty": "董事、高管",
+    "beforeChangeShares": 260108499,
+    "changedShares": -258400,
+    "afterChangeShares": 259850099,
+    "avgPrice": 577.4,
+    "changeReason": "大宗交易",
+    "date": "2022-01-17T00:00:00+08:00",
+    "changedSharesForCapitalizationProportion": 0.0001,
+    "sharesChangeAmount": 149200160
+  },
+  {
+    "shareholderName": "黄世霖",
+    "relationBetweenES": "本人",
+    "executiveName": "黄世霖",
+    "duty": "董事、高管",
+    "beforeChangeShares": 260214699,
+    "changedShares": -106199,
+    "afterChangeShares": 260108500,
+    "avgPrice": 565,
+    "changeReason": "大宗交易",
+    "date": "2022-01-14T00:00:00+08:00",
+    "changedSharesForCapitalizationProportion": 0,
+    "sharesChangeAmount": 60002435
+  }
+]
