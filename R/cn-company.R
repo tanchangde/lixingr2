@@ -146,3 +146,21 @@ lxr_cn_com_major_shareholders_shares_change <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Trading Abnormal Data
+#'
+#' @inheritParams lxr_cn_com_senior_executive_shares_change
+#' @inherit common_return return
+#'
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/trading-abnormal)
+#'
+#' @rdname lxr_cn_com_trading_abnormal
+#' @export
+lxr_cn_com_trading_abnormal <- make_endpoint(
+  endpoint = "cn/company/trading-abnormal",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)

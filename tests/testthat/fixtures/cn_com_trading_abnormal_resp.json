@@ -1,0 +1,174 @@
+[
+  {
+    "date": "2020-07-07T00:00:00+08:00",
+    "reasonForDisclosure": "涨幅偏离值达7%的证券",
+    "totalPurchaseAmount": 578414487.57,
+    "institutionBuyAmount": 362695519.78,
+    "totalSellAmount": 511598264.43,
+    "institutionSellAmount": 0,
+    "institutionBuyCount": 4,
+    "institutionSellCount": 0,
+    "totalNetPurchaseAmount": -148902744.65,
+    "institutionNetPurchaseAmount": 362695519.78,
+    "buyList": [
+      {
+        "branchName": "深股通专用",
+        "buyAmount": 610970037.17,
+        "sellAmount": 395251069.38,
+        "dataId": "undefined1594051200000深股通专用610970037.17395251069.38",
+        "isInstitution": false
+      },
+      {
+        "branchName": "机构专用1",
+        "buyAmount": 96707394.14,
+        "sellAmount": 0,
+        "dataId": "undefined1594051200000机构专用196707394.140",
+        "isInstitution": true
+      },
+      {
+        "branchName": "机构专用2",
+        "buyAmount": 91212692.72,
+        "sellAmount": 0,
+        "dataId": "undefined1594051200000机构专用291212692.720",
+        "isInstitution": true
+      },
+      {
+        "branchName": "机构专用3",
+        "buyAmount": 90411372.5,
+        "sellAmount": 0,
+        "dataId": "undefined1594051200000机构专用390411372.50",
+        "isInstitution": true
+      },
+      {
+        "branchName": "机构专用4",
+        "buyAmount": 89193569.22,
+        "sellAmount": 4829508.8,
+        "dataId": "undefined1594051200000机构专用489193569.224829508.8",
+        "isInstitution": true
+      }
+    ],
+    "sellList": [
+      {
+        "branchName": "中信证券股份有限公司北京总部证券营业部",
+        "buyAmount": 8787320.93,
+        "sellAmount": 504943978.57,
+        "dataId": "undefined1594051200000中信证券股份有限公司北京总部证券营业部8787320.93504943978.57",
+        "isInstitution": false
+      },
+      {
+        "branchName": "深股通专用",
+        "buyAmount": 610970037.17,
+        "sellAmount": 395251069.38,
+        "dataId": "undefined1594051200000深股通专用610970037.17395251069.38",
+        "isInstitution": false
+      },
+      {
+        "branchName": "东兴证券股份有限公司福州五四路证券营业部",
+        "buyAmount": 78232,
+        "sellAmount": 85037252,
+        "dataId": "undefined1594051200000东兴证券股份有限公司福州五四路证券营业部7823285037252",
+        "isInstitution": false
+      },
+      {
+        "branchName": "中信建投证券股份有限公司北京东直门南大街证券营业部",
+        "buyAmount": 3734571,
+        "sellAmount": 77634442.68,
+        "dataId": "undefined1594051200000中信建投证券股份有限公司北京东直门南大街证券营业部373457177634442.68",
+        "isInstitution": false
+      },
+      {
+        "branchName": "广发证券股份有限公司秦皇岛和平大街证券营业部",
+        "buyAmount": 117141,
+        "sellAmount": 72418823.9,
+        "dataId": "undefined1594051200000广发证券股份有限公司秦皇岛和平大街证券营业部11714172418823.9",
+        "isInstitution": false
+      }
+    ]
+  },
+  {
+    "date": "2020-04-14T00:00:00+08:00",
+    "reasonForDisclosure": "涨幅偏离值达7%的证券",
+    "totalPurchaseAmount": 1605914570.46,
+    "institutionBuyAmount": 0,
+    "totalSellAmount": -754200769.64,
+    "institutionSellAmount": 0,
+    "institutionBuyCount": 0,
+    "institutionSellCount": 0,
+    "totalNetPurchaseAmount": 1195859602.05,
+    "institutionNetPurchaseAmount": 0,
+    "buyList": [
+      {
+        "branchName": "深股通专用",
+        "buyAmount": 1423597499.07,
+        "sellAmount": 259341761.02,
+        "dataId": "undefined1586793600000深股通专用1423597499.07259341761.02",
+        "isInstitution": false
+      },
+      {
+        "branchName": "中国银河证券股份有限公司厦门美湖路证券营业部",
+        "buyAmount": 200701098.88,
+        "sellAmount": 6278030,
+        "dataId": "undefined1586793600000中国银河证券股份有限公司厦门美湖路证券营业部200701098.886278030",
+        "isInstitution": false
+      },
+      {
+        "branchName": "华泰证券股份有限公司上海普陀区江宁路证券营业部",
+        "buyAmount": 114390527.72,
+        "sellAmount": 575771,
+        "dataId": "undefined1586793600000华泰证券股份有限公司上海普陀区江宁路证券营业部114390527.72575771",
+        "isInstitution": false
+      },
+      {
+        "branchName": "海通证券股份有限公司上海南桥证券营业部",
+        "buyAmount": 91105920,
+        "sellAmount": 12937143,
+        "dataId": "undefined1586793600000海通证券股份有限公司上海南桥证券营业部9110592012937143",
+        "isInstitution": false
+      },
+      {
+        "branchName": "中信证券股份有限公司深圳总部证券营业部",
+        "buyAmount": 67589823.81,
+        "sellAmount": 12337594,
+        "dataId": "undefined1586793600000中信证券股份有限公司深圳总部证券营业部67589823.8112337594",
+        "isInstitution": false
+      }
+    ],
+    "sellList": [
+      {
+        "branchName": "深股通专用",
+        "buyAmount": 1423597499.07,
+        "sellAmount": 259341761.02,
+        "dataId": "undefined1586793600000深股通专用1423597499.07259341761.02",
+        "isInstitution": false
+      },
+      {
+        "branchName": "中信建投证券股份有限公司张家港人民中路证券营业部",
+        "buyAmount": 3810238,
+        "sellAmount": 154915487.96,
+        "dataId": "undefined1586793600000中信建投证券股份有限公司张家港人民中路证券营业部3810238154915487.96",
+        "isInstitution": false
+      },
+      {
+        "branchName": "中国国际金融股份有限公司上海黄浦区湖滨路证券营业部",
+        "buyAmount": 16044992.17,
+        "sellAmount": 142406272.62,
+        "dataId": "undefined1586793600000中国国际金融股份有限公司上海黄浦区湖滨路证券营业部16044992.17142406272.62",
+        "isInstitution": false
+      },
+      {
+        "branchName": "华泰证券股份有限公司张家港金港镇长江中路证券营业部",
+        "buyAmount": 0,
+        "sellAmount": 86653836,
+        "dataId": "undefined1586793600000华泰证券股份有限公司张家港金港镇长江中路证券营业部086653836",
+        "isInstitution": false
+      },
+      {
+        "branchName": "申万宏源证券有限公司南京华侨路证券营业部",
+        "buyAmount": 1124597,
+        "sellAmount": 47059199,
+        "dataId": "undefined1586793600000申万宏源证券有限公司南京华侨路证券营业部112459747059199",
+        "isInstitution": false
+      }
+    ]
+  }
+]
