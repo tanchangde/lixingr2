@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "declarationDate": "2025-07-04T00:00:00+08:00",
+    "changeReason": "权证行权",
+    "capitalization": 4559310311,
+    "outstandingSharesA": 3902556433,
+    "limitedSharesA": 656753878,
+    "capitalizationChangeRatio": 0,
+    "outstandingSharesAChangeRatio": 0,
+    "limitedSharesAChangeRatio": 0
+  },
+  {
+    "date": "2025-05-20T00:00:00+08:00",
+    "declarationDate": "2025-05-20T00:00:00+08:00",
+    "changeReason": "超额配售",
+    "capitalization": 4559310211,
+    "outstandingSharesA": 3902556333,
+    "limitedSharesA": 656753878,
+    "capitalizationChangeRatio": 0.0354,
+    "outstandingSharesAChangeRatio": 0,
+    "limitedSharesAChangeRatio": 0.3113
+  },
+  {
+    "date": "2025-02-21T00:00:00+08:00",
+    "declarationDate": "2025-02-24T00:00:00+08:00",
+    "changeReason": "回购",
+    "capitalization": 4403394911,
+    "outstandingSharesA": 3902556333,
+    "limitedSharesA": 500838578,
+    "capitalizationChangeRatio": 0,
+    "outstandingSharesAChangeRatio": 0,
+    "limitedSharesAChangeRatio": -0.0001
+  },
+  {
+    "date": "2024-12-31T00:00:00+08:00",
+    "declarationDate": "2025-03-15T00:00:00+08:00",
+    "changeReason": "定期报告",
+    "capitalization": 4403466458,
+    "outstandingSharesA": 3902556333,
+    "limitedSharesA": 500910125,
+    "capitalizationChangeRatio": 0,
+    "outstandingSharesAChangeRatio": 0,
+    "limitedSharesAChangeRatio": 0
+  },
+  {
+    "date": "2024-11-19T00:00:00+08:00",
+    "declarationDate": "2024-11-14T00:00:00+08:00",
+    "changeReason": "增发",
+    "capitalization": 4403466458,
+    "outstandingSharesA": 3902556333,
+    "limitedSharesA": 500910125,
+    "capitalizationChangeRatio": 0.0002,
+    "outstandingSharesAChangeRatio": 0.0003,
+    "limitedSharesAChangeRatio": 0
+  }
+]
