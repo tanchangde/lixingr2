@@ -1,0 +1,29 @@
+[
+  {
+    "city": "宁德市",
+    "province": "福建",
+    "companyName": "宁德时代新能源科技股份有限公司",
+    "historyStockNames": [],
+    "stockCode": "300750",
+    "actualControllerTypes": "natural_person",
+    "actualControllerName": "曾毓群"
+  },
+  {
+    "city": "晋中市",
+    "province": "山西",
+    "companyName": "永泰能源集团股份有限公司",
+    "historyStockNames": ["鲁润股份", "永泰能源", "*ST永泰", "ST永泰"],
+    "stockCode": "600157",
+    "actualControllerTypes": "natural_person",
+    "actualControllerName": "王广西"
+  },
+  {
+    "city": "遵义市",
+    "province": "贵州",
+    "companyName": "贵州茅台酒股份有限公司",
+    "historyStockNames": [],
+    "stockCode": "600519",
+    "actualControllerTypes": "state_owned",
+    "actualControllerName": "贵州省国有资产监督管理委员会"
+  }
+]
