@@ -19,7 +19,7 @@ resp_cn_com <- lxr_cn_com(
 
 save_json_response(
   resp_cn_com,
-  "./tests/testthat/fixtures/cn_com_resp.json"
+  "./tests/testthat/fixtures/cn_com.json"
 )
 
 resp_cn_com_profile <- lxr_cn_com_profile(
@@ -115,5 +115,5 @@ resp_cn_com_trading_abnormal <- lxr_cn_com_trading_abnormal(
 
 save_json_response(
   resp_cn_com_trading_abnormal,
-  "./tests/testthat/fixtures/cn_com_trading_abnormal_resp.json"
+  "./tests/testthat/fixtures/cn_com_trading_abnormal.json"
 )
