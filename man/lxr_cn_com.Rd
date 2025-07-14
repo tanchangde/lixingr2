@@ -2,7 +2,7 @@
 % Please edit documentation in R/cn-company.R
 \name{lxr_cn_com}
 \alias{lxr_cn_com}
-\title{Get detailed stock information}
+\title{Get Detailed Stock Information}
 \usage{
 lxr_cn_com(
   token,
@@ -59,7 +59,7 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 }
 }
 \description{
-Get detailed stock information
+Get Detailed Stock Information
 }
 \details{
 If \code{stock_codes} is not provided, all stock codes will be queried.

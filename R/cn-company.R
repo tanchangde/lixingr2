@@ -1,4 +1,4 @@
-#' Get detailed stock information
+#' Get Detailed Stock Information
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_codes_param
