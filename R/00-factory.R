@@ -99,8 +99,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     retry_on <- .retry_on
     return_format <- .return_format
 
-    if (!return_format %in% c("json", "list", "tibble")) {
-      rlang::abort("Invalid return_format. Must be 'json', 'list', or 'tibble'.")
+    if (!return_format %in% c("json", "list", "tibble", "resp")) {
+      rlang::abort("Invalid return_format. Must be 'json', 'list', 'tibble' or 'resp'." )
     }
 
     if (is.null(backoff_fun)) {
@@ -137,7 +137,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       tibble = {
         performed_req
         # Todo: convert to tibble
-      }
+      },
+      resp = performed_req
     )
   })
 

@@ -14,7 +14,7 @@ save_json_response <- function(resp, path) {
 resp_lxr_cn_com <- lxr_cn_com(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = c("300750", "600519", "600157"),
-  .return_format = "tibble"
+  .return_format = "resp"
 )
 
 save_json_response(
@@ -27,7 +27,7 @@ resp_lxr_cn_com_trading_abnormal <- lxr_cn_com_trading_abnormal(
   start_date = "2020-03-01",
   end_date = "2025-07-01",
   stock_code = "300750",
-  .return_format = "tibble"
+  .return_format = "resp"
 )
 
 save_json_response(

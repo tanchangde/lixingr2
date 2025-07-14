@@ -68,6 +68,7 @@ NULL
 #'   - `"json"`: Returns raw JSON data.
 #'   - `"list"`: Returns data as an R list.
 #'   - `"tibble"`: Returns data as a tibble (if implemented).
+#'   - `"resp"`: Returns the performed request object.
 #'
 #' @name common_return
 NULL

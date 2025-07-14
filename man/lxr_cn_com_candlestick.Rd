@@ -70,6 +70,7 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 \item \code{"json"}: Returns raw JSON data.
 \item \code{"list"}: Returns data as an R list.
 \item \code{"tibble"}: Returns data as a tibble (if implemented).
+\item \code{"resp"}: Returns the performed request object.
 }
 }
 \description{
