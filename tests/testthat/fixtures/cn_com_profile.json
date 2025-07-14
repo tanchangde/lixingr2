@@ -9,15 +9,6 @@
     "actualControllerName": "曾毓群"
   },
   {
-    "city": "晋中市",
-    "province": "山西",
-    "companyName": "永泰能源集团股份有限公司",
-    "historyStockNames": ["鲁润股份", "永泰能源", "*ST永泰", "ST永泰"],
-    "stockCode": "600157",
-    "actualControllerTypes": "natural_person",
-    "actualControllerName": "王广西"
-  },
-  {
     "city": "遵义市",
     "province": "贵州",
     "companyName": "贵州茅台酒股份有限公司",
@@ -25,5 +16,14 @@
     "stockCode": "600519",
     "actualControllerTypes": "state_owned",
     "actualControllerName": "贵州省国有资产监督管理委员会"
+  },
+  {
+    "city": "青岛市",
+    "province": "山东",
+    "companyName": "中化装备科技(青岛)股份有限公司",
+    "historyStockNames": ["S黄海", "黄海股份", "*ST黄海", "ST黄海", "天华院", "克劳斯"],
+    "stockCode": "600579",
+    "actualControllerTypes": "state_owned",
+    "actualControllerName": "国务院国有资产监督管理委员会"
   }
 ]

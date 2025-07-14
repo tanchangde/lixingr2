@@ -22,7 +22,7 @@ lxr_unnest <- function(df) {
     df_expanded <- df |>
       dplyr::select(tidyselect::all_of(c(non_list_cols, col))) |>
       dplyr::mutate(original_row_id = dplyr::row_number()) |>
-      tidyr::unnest(cols = tidyselect::all_of(col), names_sep = ".") |>
+      tidyr::unnest(cols = tidyselect::all_of(col), names_sep = ".", keep_empty = TRUE) |>
       dplyr::group_by(.data$original_row_id) |>
       dplyr::mutate(grouped_row_id = dplyr::row_number()) |>
       dplyr::ungroup()
@@ -130,7 +130,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
 
     performed_req <- req |>
       httr2::req_perform()
-    
+
     switch(return_format,
       json = httr2::resp_body_string(performed_req),
       list = httr2::resp_body_json(performed_req),

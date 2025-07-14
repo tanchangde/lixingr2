@@ -24,7 +24,7 @@ save_json_response(
 
 resp_lxr_cn_com_profile <- lxr_cn_com_profile(
   token = Sys.getenv("LIXINGR_TOKEN"),
-  stock_codes = c("300750", "600519", "600157"),
+  stock_codes = c("300750", "600519", "600579"),
   .return_format = "resp"
 )
 
