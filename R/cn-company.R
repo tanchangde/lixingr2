@@ -304,3 +304,17 @@ lxr_cn_com_majority_shareholders <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Top 10 Circulating Shareholders Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/nolimit-shareholders)
+#'
+#' @rdname lxr_cn_com_nolimit_shareholders
+#' @export
+lxr_cn_com_nolimit_shareholders <- make_endpoint(
+  endpoint = "cn/company/nolimit-shareholders",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)

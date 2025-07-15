@@ -1,0 +1,47 @@
+[
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "厦门瑞庭投资有限公司",
+    "holdings": 1024704949,
+    "properties": "outstanding_shares_a",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.2626
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "香港中央结算有限公司",
+    "holdings": 551607462,
+    "properties": "outstanding_shares_a",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.1413
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "宁波联合创新新能源投资管理合伙企业(有限合伙)",
+    "holdings": 284220608,
+    "properties": "outstanding_shares_a",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.0728
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "黄世霖",
+    "holdings": 116505328,
+    "properties": "outstanding_shares_a",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.0299
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "中国工商银行股份有限公司-易方达创业板交易型开放式指数证券投资基金",
+    "holdings": 66768761,
+    "properties": "outstanding_shares_a",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.0171
+  }
+]
