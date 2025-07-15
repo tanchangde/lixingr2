@@ -248,3 +248,17 @@ lxr_cn_com_industries <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "date")
 )
+
+#' Retrieve Announcement Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/announcement)
+#'
+#' @rdname lxr_cn_com_announcement
+#' @export
+lxr_cn_com_announcement <- make_endpoint(
+  endpoint = "cn/company/announcement",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)
