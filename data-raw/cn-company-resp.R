@@ -210,3 +210,17 @@ save_json_response(
   resp_cn_com_measures,
   "./tests/testthat/fixtures/cn_com_measures.json"
 )
+
+resp_cn_com_inquiry <- lxr_cn_com_inquiry(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "600866",
+  start_date = "2015-07-15",
+  end_date = "2025-07-15",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_inquiry,
+  "./tests/testthat/fixtures/cn_com_inquiry.json"
+)

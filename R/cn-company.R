@@ -276,3 +276,17 @@ lxr_cn_com_measures <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Inquiry Letter Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/inquiry)
+#'
+#' @rdname lxr_cn_com_inquiry
+#' @export
+lxr_cn_com_inquiry <- make_endpoint(
+  endpoint = "cn/company/inquiry",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)
