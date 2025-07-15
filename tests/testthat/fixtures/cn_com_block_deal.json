@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2025-06-20T00:00:00+08:00",
+    "buyBranch": "申万宏源证券有限公司北京紫竹院路证券营业部",
+    "sellBranch": "机构专用",
+    "tradingPrice": 240.81,
+    "tradingVolume": 333030,
+    "tradingAmount": 80196950,
+    "stockCode": "300750",
+    "discountRate": -0.0023
+  },
+  {
+    "date": "2025-06-20T00:00:00+08:00",
+    "buyBranch": "国泰海通证券股份有限公司深圳深南大道京基一百证券营业部",
+    "sellBranch": "机构专用",
+    "tradingPrice": 240.26,
+    "tradingVolume": 281580,
+    "tradingAmount": 67653130,
+    "stockCode": "300750",
+    "discountRate": 0
+  },
+  {
+    "date": "2025-06-20T00:00:00+08:00",
+    "buyBranch": "机构专用",
+    "sellBranch": "机构专用",
+    "tradingPrice": 240.26,
+    "tradingVolume": 95000,
+    "tradingAmount": 22824700,
+    "stockCode": "300750",
+    "discountRate": 0
+  },
+  {
+    "date": "2025-06-13T00:00:00+08:00",
+    "buyBranch": "机构专用",
+    "sellBranch": "机构专用",
+    "tradingPrice": 248.2,
+    "tradingVolume": 73000,
+    "tradingAmount": 18118600,
+    "stockCode": "300750",
+    "discountRate": 0
+  },
+  {
+    "date": "2025-06-13T00:00:00+08:00",
+    "buyBranch": "机构专用",
+    "sellBranch": "中国国际金融股份有限公司上海分公司",
+    "tradingPrice": 248.2,
+    "tradingVolume": 39700,
+    "tradingAmount": 9853540,
+    "stockCode": "300750",
+    "discountRate": 0
+  }
+]

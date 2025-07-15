@@ -165,3 +165,20 @@ lxr_cn_com_trading_abnormal <- make_endpoint(
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Block Deal Data
+#'
+#' @inheritParams lxr_cn_com_senior_executive_shares_change
+#' @inherit common_return return
+#'
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/block-deal)
+#'
+#' @rdname lxr_cn_com_block_deal
+#' @export
+lxr_cn_com_block_deal <- make_endpoint(
+  endpoint = "cn/company/block-deal",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)
