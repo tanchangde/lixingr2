@@ -1,0 +1,47 @@
+[
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "厦门瑞庭投资有限公司",
+    "holdings": 1024704949,
+    "properties": "outstanding_shares_a",
+    "capitalization": 4403394911,
+    "proportionOfCapitalization": 0.2327
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "香港中央结算有限公司",
+    "holdings": 551607462,
+    "properties": "outstanding_shares_a",
+    "capitalization": 4403394911,
+    "proportionOfCapitalization": 0.1253
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "黄世霖",
+    "holdings": 466021310,
+    "properties": ["outstanding_shares_a", "oustanding_limited_shares"],
+    "capitalization": 4403394911,
+    "proportionOfCapitalization": 0.1058
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "宁波联合创新新能源投资管理合伙企业(有限合伙)",
+    "holdings": 284220608,
+    "properties": "outstanding_shares_a",
+    "capitalization": 4403394911,
+    "proportionOfCapitalization": 0.0645
+  },
+  {
+    "declarationDate": "2025-04-15T00:00:00+08:00",
+    "date": "2025-04-03T00:00:00+08:00",
+    "name": "李平",
+    "holdings": 201510277,
+    "properties": ["outstanding_shares_a", "oustanding_limited_shares"],
+    "capitalization": 4403394911,
+    "proportionOfCapitalization": 0.0458
+  }
+]

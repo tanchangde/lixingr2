@@ -224,3 +224,17 @@ save_json_response(
   resp_cn_com_inquiry,
   "./tests/testthat/fixtures/cn_com_inquiry.json"
 )
+
+resp_cn_com_majority_shareholders <- lxr_cn_com_majority_shareholders(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  start_date = "2024-07-15",
+  end_date = "2025-07-15",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_majority_shareholders,
+  "./tests/testthat/fixtures/cn_com_majority_shareholders.json"
+)
