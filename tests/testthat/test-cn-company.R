@@ -69,3 +69,10 @@ test_that("resp_cn_com_pledge response is correctly converted to a data frame", 
   expect_true(is.data.frame(result))
   expect_true(all(purrr::map_lgl(result, ~ !is.list(.))))
 })
+
+test_that("cn_com_operation_revenue_constitution response is correctly converted to a data frame", {
+  result <- mock_lxr_unnest(test_path("fixtures", "cn_com_operation_revenue_constitution.json"))
+
+  expect_true(is.data.frame(result))
+  expect_true(all(purrr::map_lgl(result, ~ !is.list(.))))
+})

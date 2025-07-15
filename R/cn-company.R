@@ -200,3 +200,18 @@ lxr_cn_com_pledge <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Revenue Composition Data
+#'
+#' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/operation-revenue-constitution)
+#'
+#' @rdname lxr_cn_com_operation_revenue_constitution
+#' @export
+lxr_cn_com_operation_revenue_constitution <- make_endpoint(
+  endpoint = "cn/company/operation-revenue-constitution",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)

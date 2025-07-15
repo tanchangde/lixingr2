@@ -1,0 +1,341 @@
+[
+  {
+    "date": "2024-12-30T16:00:00.000Z",
+    "declarationDate": "2025-03-14T16:00:00.000Z",
+    "dataList": [
+      {
+        "classifyType": "industries",
+        "itemName": "合计",
+        "revenue": 362012554000,
+        "revenuePercentage": 100,
+        "costs": 273518959000,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2444
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "电气机械及器材制造业",
+        "revenue": 356519551000,
+        "revenuePercentage": 98.4826,
+        "costs": 268494348000,
+        "costPercentage": 98.163,
+        "grossProfitMargin": 0.2469,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "采选冶炼行业",
+        "revenue": 5493003000,
+        "revenuePercentage": 1.5174,
+        "costs": 5024611000,
+        "costPercentage": 1.837,
+        "grossProfitMargin": 0.0853,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "合计",
+        "revenue": 344524735000,
+        "revenuePercentage": 95.1693,
+        "costs": 265082812000,
+        "costPercentage": 96.9157,
+        "grossProfitMargin": 0.2306
+      },
+      {
+        "classifyType": "products",
+        "itemName": "动力电池系统",
+        "revenue": 253041337000,
+        "revenuePercentage": 69.8985,
+        "costs": 192461282000,
+        "costPercentage": 70.3649,
+        "grossProfitMargin": 0.2394,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "储能电池系统",
+        "revenue": 57290460000,
+        "revenuePercentage": 15.8255,
+        "costs": 41914003000,
+        "costPercentage": 15.324,
+        "grossProfitMargin": 0.2684,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池材料及回收",
+        "revenue": 28699935000,
+        "revenuePercentage": 7.9279,
+        "costs": 25682916000,
+        "costPercentage": 9.3898,
+        "grossProfitMargin": 0.1051,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池矿产资源",
+        "revenue": 5493003000,
+        "revenuePercentage": 1.5174,
+        "costs": 5024611000,
+        "costPercentage": 1.837,
+        "grossProfitMargin": 0.0853,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "合计",
+        "revenue": 362012554000,
+        "revenuePercentage": 100,
+        "costs": 273518959000,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2444
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境内",
+        "revenue": 251677045000,
+        "revenuePercentage": 69.5216,
+        "costs": 195678188000,
+        "costPercentage": 71.541,
+        "grossProfitMargin": 0.2225,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境外",
+        "revenue": 110335509000,
+        "revenuePercentage": 30.4784,
+        "costs": 77840771000,
+        "costPercentage": 28.459,
+        "grossProfitMargin": 0.2945,
+        "parentItemName": "合计"
+      }
+    ]
+  },
+  {
+    "date": "2024-06-29T16:00:00.000Z",
+    "declarationDate": "2024-07-26T16:00:00.000Z",
+    "dataList": [
+      {
+        "classifyType": "industries",
+        "itemName": "合计",
+        "revenue": 166766833600,
+        "revenuePercentage": 100,
+        "costs": 122517848800,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2653
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "电气机械及器材制造业",
+        "revenue": 164137974700,
+        "revenuePercentage": 98.4236,
+        "costs": 120094358700,
+        "costPercentage": 98.0219,
+        "grossProfitMargin": 0.2683,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "采选冶炼行业",
+        "revenue": 2628858900,
+        "revenuePercentage": 1.5764,
+        "costs": 2423490100,
+        "costPercentage": 1.9781,
+        "grossProfitMargin": 0.0781,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "合计",
+        "revenue": 158435301100,
+        "revenuePercentage": 95.0041,
+        "costs": 118430919400,
+        "costPercentage": 96.6642,
+        "grossProfitMargin": 0.2525
+      },
+      {
+        "classifyType": "products",
+        "itemName": "动力电池系统",
+        "revenue": 112648720900,
+        "revenuePercentage": 67.5486,
+        "costs": 82348937800,
+        "costPercentage": 67.2138,
+        "grossProfitMargin": 0.269,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "储能电池系统",
+        "revenue": 28824714700,
+        "revenuePercentage": 17.2844,
+        "costs": 20501765100,
+        "costPercentage": 16.7337,
+        "grossProfitMargin": 0.2887,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池材料及回收",
+        "revenue": 14333006600,
+        "revenuePercentage": 8.5946,
+        "costs": 13156726400,
+        "costPercentage": 10.7386,
+        "grossProfitMargin": 0.0821,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池矿产资源",
+        "revenue": 2628858900,
+        "revenuePercentage": 1.5764,
+        "costs": 2423490100,
+        "costPercentage": 1.9781,
+        "grossProfitMargin": 0.0781,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "合计",
+        "revenue": 166766833700,
+        "revenuePercentage": 100,
+        "costs": 122517848800,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2653
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境内",
+        "revenue": 116237916600,
+        "revenuePercentage": 69.7009,
+        "costs": 86972391100,
+        "costPercentage": 70.9875,
+        "grossProfitMargin": 0.2518,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境外",
+        "revenue": 50528917100,
+        "revenuePercentage": 30.2991,
+        "costs": 35545457700,
+        "costPercentage": 29.0125,
+        "grossProfitMargin": 0.2965,
+        "parentItemName": "合计"
+      }
+    ]
+  },
+  {
+    "date": "2023-12-30T16:00:00.000Z",
+    "declarationDate": "2024-03-15T16:00:00.000Z",
+    "dataList": [
+      {
+        "classifyType": "industries",
+        "itemName": "合计",
+        "revenue": 400917044900,
+        "revenuePercentage": 100,
+        "costs": 309070433900,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2291
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "电气机械及器材制造业",
+        "revenue": 393182894000,
+        "revenuePercentage": 98.0709,
+        "costs": 302872543800,
+        "costPercentage": 97.9947,
+        "grossProfitMargin": 0.2297,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "industries",
+        "itemName": "采选冶炼行业",
+        "revenue": 7734150900,
+        "revenuePercentage": 1.9291,
+        "costs": 6197890100,
+        "costPercentage": 2.0053,
+        "grossProfitMargin": 0.1986,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "合计",
+        "revenue": 386489874200,
+        "revenuePercentage": 96.4015,
+        "costs": 303337610000,
+        "costPercentage": 98.1451,
+        "grossProfitMargin": 0.2151
+      },
+      {
+        "classifyType": "products",
+        "itemName": "动力电池系统",
+        "revenue": 285252917300,
+        "revenuePercentage": 71.1501,
+        "costs": 221714193000,
+        "costPercentage": 71.7358,
+        "grossProfitMargin": 0.2227,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "储能电池系统",
+        "revenue": 59900521900,
+        "revenuePercentage": 14.9409,
+        "costs": 45647782000,
+        "costPercentage": 14.7694,
+        "grossProfitMargin": 0.2379,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池材料及回收",
+        "revenue": 33602284100,
+        "revenuePercentage": 8.3814,
+        "costs": 29777744900,
+        "costPercentage": 9.6346,
+        "grossProfitMargin": 0.1138,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "products",
+        "itemName": "电池矿产资源",
+        "revenue": 7734150900,
+        "revenuePercentage": 1.9291,
+        "costs": 6197890100,
+        "costPercentage": 2.0053,
+        "grossProfitMargin": 0.1986,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "合计",
+        "revenue": 400917044900,
+        "revenuePercentage": 100,
+        "costs": 309070434000,
+        "costPercentage": 100,
+        "grossProfitMargin": 0.2291
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境内",
+        "revenue": 269924895000,
+        "revenuePercentage": 67.3269,
+        "costs": 211078991800,
+        "costPercentage": 68.2948,
+        "grossProfitMargin": 0.218,
+        "parentItemName": "合计"
+      },
+      {
+        "classifyType": "region",
+        "itemName": "境外",
+        "revenue": 130992149900,
+        "revenuePercentage": 32.6731,
+        "costs": 97991442200,
+        "costPercentage": 31.7052,
+        "grossProfitMargin": 0.2519,
+        "parentItemName": "合计"
+      }
+    ]
+  }
+]

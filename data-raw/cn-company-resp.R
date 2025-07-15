@@ -145,3 +145,17 @@ save_json_response(
   resp_cn_com_pledge,
   "./tests/testthat/fixtures/cn_com_pledge.json"
 )
+
+resp_cn_com_operation_revenue_constitution <- lxr_cn_com_operation_revenue_constitution(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  start_date = "2023-07-01",
+  end_date = "2025-07-15",
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_operation_revenue_constitution,
+  "./tests/testthat/fixtures/cn_com_operation_revenue_constitution.json"
+)
+
