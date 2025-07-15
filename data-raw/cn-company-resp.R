@@ -171,3 +171,14 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_indices.json"
 )
 
+resp_cn_com_industries <- lxr_cn_com_industries(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  date = "2025-07-01",
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_industries,
+  "./tests/testthat/fixtures/cn_com_industries.json"
+)

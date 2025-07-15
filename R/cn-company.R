@@ -233,3 +233,18 @@ lxr_cn_com_indices <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "date")
 )
+
+#' Retrieve Industry Data
+#'
+#' @inheritParams lxr_cn_com_indices
+#' @inherit lxr_cn_com_indices details
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/industries)
+#'
+#' @rdname lxr_cn_com_industries
+#' @export
+lxr_cn_com_industries <- make_endpoint(
+  endpoint = "cn/company/industries",
+  required = c("token"),
+  optional = c("stock_code", "date")
+)

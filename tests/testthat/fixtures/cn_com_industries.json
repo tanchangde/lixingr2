@@ -1,0 +1,56 @@
+[
+  {
+    "areaCode": "cn",
+    "stockCode": "C030103",
+    "source": "cni",
+    "name": "电气部件与设备"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "C0301",
+    "source": "cni",
+    "name": "工业品"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "C03",
+    "source": "cni",
+    "name": "工业"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630000",
+    "source": "sw",
+    "name": "电气设备"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630300",
+    "source": "sw",
+    "name": "电源设备"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630305",
+    "source": "sw",
+    "name": "储能设备"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630000",
+    "source": "sw_2021",
+    "name": "电力设备"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630700",
+    "source": "sw_2021",
+    "name": "电池"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "630701",
+    "source": "sw_2021",
+    "name": "锂电池"
+  }
+]
