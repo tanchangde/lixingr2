@@ -215,3 +215,21 @@ lxr_cn_com_operation_revenue_constitution <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Stock Index
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_param
+#' 
+#' @details When `date` is NULL, the query will return the current data.
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/indices)
+#'
+#' @rdname lxr_cn_com_indices
+#' @export
+lxr_cn_com_indices <- make_endpoint(
+  endpoint = "cn/company/indices",
+  required = c("token"),
+  optional = c("stock_code", "date")
+)

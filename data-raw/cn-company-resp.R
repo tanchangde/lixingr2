@@ -159,3 +159,15 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_operation_revenue_constitution.json"
 )
 
+resp_cn_com_indices <- lxr_cn_com_indices(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "600900",
+  date = "2023-07-01",
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_indices,
+  "./tests/testthat/fixtures/cn_com_indices.json"
+)
+

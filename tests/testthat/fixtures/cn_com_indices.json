@@ -1,0 +1,363 @@
+[
+  {
+    "areaCode": "cn",
+    "stockCode": "000860",
+    "source": "csi",
+    "name": "结构调整"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399373",
+    "source": "cni",
+    "name": "大盘价值"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000922",
+    "source": "csi",
+    "name": "中证红利"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000821",
+    "source": "csi",
+    "name": "300红利"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399371",
+    "source": "cni",
+    "name": "国证价值"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "H30356",
+    "source": "csi",
+    "name": "800价值"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "930955",
+    "source": "csi",
+    "name": "红利低波100"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "H50040",
+    "source": "csi",
+    "name": "上红低波"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931375",
+    "source": "csi",
+    "name": "300质量低波"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "1000011",
+    "source": "lxri",
+    "name": "A股非金融"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "1000005",
+    "source": "lxri",
+    "name": "上海非金融A股"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "1000004",
+    "source": "lxri",
+    "name": "上海A股"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "950090",
+    "source": "csi",
+    "name": "50AH优选"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931476",
+    "source": "csi",
+    "name": "ESG 120策略"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931395",
+    "source": "csi",
+    "name": "沪港深300"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931373",
+    "source": "csi",
+    "name": "股息龙头"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "930846",
+    "source": "csi",
+    "name": "300SNLV"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "930740",
+    "source": "csi",
+    "name": "300红利LV"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "930723",
+    "source": "csi",
+    "name": "沪港深F100"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "930614",
+    "source": "csi",
+    "name": "环保50"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399974",
+    "source": "csi",
+    "name": "国企改革"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399313",
+    "source": "cni",
+    "name": "巨潮100"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399311",
+    "source": "cni",
+    "name": "国证1000"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399310",
+    "source": "cni",
+    "name": "国证A50"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000995",
+    "source": "csi",
+    "name": "全指公用"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000977",
+    "source": "csi",
+    "name": "内地低碳"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000969",
+    "source": "csi",
+    "name": "300非周"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000937",
+    "source": "csi",
+    "name": "中证公用"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000925",
+    "source": "csi",
+    "name": "基本面50"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000906",
+    "source": "csi",
+    "name": "中证800"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000903",
+    "source": "csi",
+    "name": "中证A100"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000842",
+    "source": "csi",
+    "name": "800等权"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000827",
+    "source": "csi",
+    "name": "中证环保"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000300",
+    "source": "csi",
+    "name": "沪深300"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000056",
+    "source": "csi",
+    "name": "上证国企"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000042",
+    "source": "csi",
+    "name": "上证央企"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000021",
+    "source": "csi",
+    "name": "180治理"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000016",
+    "source": "csi",
+    "name": "上证50"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000010",
+    "source": "csi",
+    "name": "上证180"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "H30199",
+    "source": "csi",
+    "name": "电力指数"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931802",
+    "source": "csi",
+    "name": "中证龙头"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "1000002",
+    "source": "lxri",
+    "name": "A股全指"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931755",
+    "source": "csi",
+    "name": "SEEE碳中和"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399438",
+    "source": "cni",
+    "name": "绿色电力"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399314",
+    "source": "cni",
+    "name": "巨潮大盘"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "932039",
+    "source": "csi",
+    "name": "央企股东回报"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000043",
+    "source": "csi",
+    "name": "超大盘"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931446",
+    "source": "csi",
+    "name": "东证红利低波"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000052",
+    "source": "csi",
+    "name": "50基本"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000825",
+    "source": "csi",
+    "name": "央企红利"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000001",
+    "source": "csi",
+    "name": "上证指数"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000955",
+    "source": "csi",
+    "name": "中证国企"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000985",
+    "source": "csi",
+    "name": "中证全指"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931069",
+    "source": "csi",
+    "name": "中金300"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "H30455",
+    "source": "csi",
+    "name": "沪港深500"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "000917",
+    "source": "csi",
+    "name": "300公用"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931397",
+    "source": "csi",
+    "name": "A股通50"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931168",
+    "source": "csi",
+    "name": "绿色价值100"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "931733",
+    "source": "csi",
+    "name": "绿色能源"
+  },
+  {
+    "areaCode": "cn",
+    "stockCode": "399398",
+    "source": "cni",
+    "name": "绩效指数"
+  },
+  {}
+]
