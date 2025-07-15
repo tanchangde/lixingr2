@@ -164,3 +164,4 @@ lxr_cn_com_trading_abnormal <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
+

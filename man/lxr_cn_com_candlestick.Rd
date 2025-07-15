@@ -62,7 +62,7 @@ on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
 Can be set via option "lxg.retry_on".}
 
 \item{.return_format}{Format of the returned data. Must be one of \code{"json"},
-\code{"list"}, or \code{"tibble"}. Defaults to \code{"json"}.}
+\code{"list"}, or \code{"tibble"}. Defaults to \code{"list"}.}
 }
 \value{
 A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:

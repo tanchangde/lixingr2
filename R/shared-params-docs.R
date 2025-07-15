@@ -13,7 +13,7 @@
 #'   on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
 #'   Can be set via option "lxg.retry_on".
 #' @param .return_format Format of the returned data. Must be one of `"json"`,
-#'   `"list"`, or `"tibble"`. Defaults to `"json"`.
+#'   `"list"`, or `"tibble"`. Defaults to `"list"`.
 #'
 #' @name common_params
 NULL
