@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2023-11-24T00:00:00+08:00",
+    "pledgor": "李平",
+    "pledgee": "中信建投证券股份有限公司",
+    "pledgeMatters": "本公司实际控制人李平将持有的本公司1692700股流通受限股份质押给中信建投证券股份有限公司，质押开始日期为2023年11月23日，终止日期为2024年11月22日。",
+    "pledgeSharesNature": "流通受限股份",
+    "pledgeAmount": 1692700,
+    "pledgePercentageOfTotalEquity": 0.0004,
+    "pledgeStartDate": "2023-11-23T00:00:00+08:00",
+    "pledgeEndDate": "2024-11-22T00:00:00+08:00",
+    "accumulatedPledgePercentageOfTotalEquity": 0.0068
+  },
+  {
+    "date": "2023-11-24T00:00:00+08:00",
+    "pledgor": "李平",
+    "pledgee": "中信建投证券股份有限公司",
+    "pledgeMatters": "本公司实际控制人李平将持有的本公司5307300股流通受限股份质押给中信建投证券股份有限公司，质押开始日期为2022年11月23日，终止日期为2024年11月22日。",
+    "pledgeSharesNature": "流通受限股份",
+    "pledgeAmount": 5307300,
+    "pledgePercentageOfTotalEquity": 0.0012,
+    "pledgeStartDate": "2022-11-23T00:00:00+08:00",
+    "pledgeEndDate": "2024-11-22T00:00:00+08:00",
+    "accumulatedPledgePercentageOfTotalEquity": 0.0068
+  },
+  {
+    "date": "2023-09-21T00:00:00+08:00",
+    "pledgor": "李平",
+    "pledgee": "广发证券资产管理(广东)有限公司",
+    "pledgeMatters": "本公司实际控制人李平将2022年09月29日质押给广发证券资产管理(广东)有限公司的5760000股解除质押，解除日期为2023年09月20日。",
+    "pledgePercentageOfTotalEquity": 0.0013,
+    "pledgeStartDate": "2022-09-29T00:00:00+08:00",
+    "pledgeEndDate": "2023-09-20T00:00:00+08:00",
+    "accumulatedPledgePercentageOfTotalEquity": 0.0064,
+    "pledgeDischargeDate": "2023-09-20T00:00:00+08:00",
+    "pledgeDischargeAmount": 5760000
+  },
+  {
+    "date": "2023-09-21T00:00:00+08:00",
+    "pledgor": "李平",
+    "pledgee": "安信证券资产管理有限公司",
+    "pledgeMatters": "本公司实际控制人李平将持有的本公司6260000股流通受限股份质押给安信证券资产管理有限公司，质押开始日期为2023年09月19日。",
+    "pledgeSharesNature": "流通受限股份",
+    "pledgeAmount": 6260000,
+    "pledgePercentageOfTotalEquity": 0.0014,
+    "pledgeStartDate": "2023-09-19T00:00:00+08:00",
+    "accumulatedPledgePercentageOfTotalEquity": 0.0064
+  },
+  {
+    "date": "2023-05-05T00:00:00+08:00",
+    "pledgor": "李平",
+    "pledgee": "广发证券资产管理(广东)有限公司",
+    "pledgeMatters": "本公司实际控制人李平将持有的本公司4680000股流通受限股份质押给广发证券资产管理(广东)有限公司，质押开始日期为2023年04月25日。",
+    "pledgeSharesNature": "流通受限股份",
+    "pledgeAmount": 4680000,
+    "pledgePercentageOfTotalEquity": 0.0011,
+    "pledgeStartDate": "2023-04-25T00:00:00+08:00",
+    "accumulatedPledgePercentageOfTotalEquity": 0.0063
+  }
+]

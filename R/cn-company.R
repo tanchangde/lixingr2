@@ -182,3 +182,21 @@ lxr_cn_com_block_deal <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Equity Pledge Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/pledge)
+#'
+#' @rdname lxr_cn_com_pledge
+#' @export
+lxr_cn_com_pledge <- make_endpoint(
+  endpoint = "cn/company/pledge",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)
