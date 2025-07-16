@@ -388,3 +388,18 @@ lxr_cn_com_customers <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Supplier Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/suppliers)
+#'
+#' @rdname lxr_cn_com_suppliers
+#' @export
+lxr_cn_com_suppliers <- make_endpoint(
+  endpoint = "cn/company/suppliers",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)

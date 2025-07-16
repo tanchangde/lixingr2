@@ -322,3 +322,17 @@ save_json_response(
   resp_cn_com_customers,
   "./tests/testthat/fixtures/cn_com_customers.json"
 )
+
+resp_cn_com_suppliers <- lxr_cn_com_suppliers(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  start_date = "2023-07-01",
+  end_date = "2025-07-01",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_suppliers,
+  "./tests/testthat/fixtures/cn_com_suppliers.json"
+)
