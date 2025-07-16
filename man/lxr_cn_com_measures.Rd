@@ -49,6 +49,15 @@ Can be set via option "lxg.retry_on".}
 \item{.return_format}{Format of the returned data. Must be one of \code{"json"},
 \code{"list"}, or \code{"tibble"}. Defaults to \code{"list"}.}
 }
+\value{
+A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:
+\itemize{
+\item \code{"json"}: Returns raw JSON data.
+\item \code{"list"}: Returns data as an R list.
+\item \code{"tibble"}: Returns data as a tibble (if implemented).
+\item \code{"resp"}: Returns the performed request object.
+}
+}
 \description{
 Retrieve Regulatory Measures Information
 }

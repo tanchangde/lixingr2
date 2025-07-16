@@ -221,6 +221,7 @@ lxr_cn_com_operation_revenue_constitution <- make_endpoint(
 #' @inheritParams common_params
 #' @inheritParams stock_code_param
 #' @inheritParams date_param
+#' @inherit common_return return
 #' 
 #' @details When `date` is NULL, the query will return the current data.
 #'
@@ -238,6 +239,7 @@ lxr_cn_com_indices <- make_endpoint(
 #'
 #' @inheritParams lxr_cn_com_indices
 #' @inherit lxr_cn_com_indices details
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/industries)
 #'
@@ -252,6 +254,7 @@ lxr_cn_com_industries <- make_endpoint(
 #' Retrieve Announcement Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/announcement)
 #'
@@ -266,6 +269,7 @@ lxr_cn_com_announcement <- make_endpoint(
 #' Retrieve Regulatory Measures Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/measures)
 #'
@@ -280,6 +284,7 @@ lxr_cn_com_measures <- make_endpoint(
 #' Retrieve Inquiry Letter Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/inquiry)
 #'
@@ -294,6 +299,7 @@ lxr_cn_com_inquiry <- make_endpoint(
 #' Retrieve Majority Shareholders Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/majority-shareholders)
 #'
@@ -308,6 +314,7 @@ lxr_cn_com_majority_shareholders <- make_endpoint(
 #' Retrieve Top 10 Circulating Shareholders Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/nolimit-shareholders)
 #'
@@ -322,6 +329,7 @@ lxr_cn_com_nolimit_shareholders <- make_endpoint(
 #' Retrieve Public Fund Shareholders Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/fund-shareholders)
 #'
@@ -336,6 +344,7 @@ lxr_cn_com_fund_shareholders <- make_endpoint(
 #' Retrieve Fund Company Shareholders Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/fund-collection-shareholders)
 #'
@@ -350,6 +359,7 @@ lxr_cn_com_fund_collection_shareholders <- make_endpoint(
 #' Retrieve Dividend Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/dividend)
 #'
@@ -364,6 +374,7 @@ lxr_cn_com_dividend <- make_endpoint(
 #' Retrieve Allotment Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/allotment)
 #'
@@ -378,6 +389,7 @@ lxr_cn_com_allotment <- make_endpoint(
 #' Retrieve Customer Information
 #'
 #' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
 #'
 #' @seealso [API documentation](https://open.lixinger.com/api/cn/company/customers)
 #'
