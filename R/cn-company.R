@@ -346,3 +346,17 @@ lxr_cn_com_fund_collection_shareholders <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Dividend Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/dividend)
+#'
+#' @rdname lxr_cn_com_dividend
+#' @export
+lxr_cn_com_dividend <- make_endpoint(
+  endpoint = "cn/company/dividend",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)

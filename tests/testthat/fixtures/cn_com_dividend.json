@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2025-03-15T00:00:00+08:00",
+    "fsEndDate": "2024-12-31T00:00:00+08:00",
+    "currency": "CNY",
+    "registerDate": "2025-04-21T00:00:00+08:00",
+    "exDate": "2025-04-22T00:00:00+08:00",
+    "paymentDate": "2025-04-22T00:00:00+08:00",
+    "bonusSharesFromProfit": 0,
+    "bonusSharesFromCapitalReserve": 0,
+    "dividend": 4.553,
+    "dividendAmount": 19975847621,
+    "status": "implemented",
+    "annualNetProfit": 50744682000,
+    "annualNetProfitDividendRatio": 0.3937
+  },
+  {
+    "date": "2024-12-11T00:00:00+08:00",
+    "fsEndDate": "2024-12-11T00:00:00+08:00",
+    "currency": "CNY",
+    "registerDate": "2025-01-23T00:00:00+08:00",
+    "exDate": "2025-01-24T00:00:00+08:00",
+    "paymentDate": "2025-01-24T00:00:00+08:00",
+    "bonusSharesFromProfit": 0,
+    "bonusSharesFromCapitalReserve": 0,
+    "dividend": 1.23,
+    "dividendAmount": 5396594169,
+    "status": "implemented",
+    "annualNetProfit": 50744682000,
+    "annualNetProfitDividendRatio": 0.1063
+  },
+  {
+    "date": "2024-07-27T00:00:00+08:00",
+    "fsEndDate": "2024-06-30T00:00:00+08:00",
+    "currency": "CNY",
+    "bonusSharesFromProfit": 0,
+    "bonusSharesFromCapitalReserve": 0,
+    "dividend": 0,
+    "status": "board_director_plan"
+  }
+]
