@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "marketCap": 2017760,
+    "holdings": 8000,
+    "name": "东吴基金管理有限公司",
+    "fundCollectionCode": "50410000",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "marketCap": 2017760,
+    "holdings": 8000,
+    "name": "东吴基金管理有限公司",
+    "fundCollectionCode": "50410000",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "marketCap": 1866428,
+    "holdings": 7400,
+    "name": "中欧基金管理有限公司",
+    "fundCollectionCode": "50570000",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "marketCap": 1866428,
+    "holdings": 7400,
+    "name": "中欧基金管理有限公司",
+    "fundCollectionCode": "50570000",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "marketCap": 40138290,
+    "holdings": 159140,
+    "name": "安信基金管理有限责任公司",
+    "fundCollectionCode": "50700000",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  }
+]

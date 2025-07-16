@@ -266,3 +266,17 @@ save_json_response(
   resp_cn_com_fund_shareholders,
   "./tests/testthat/fixtures/cn_com_fund_shareholders.json"
 )
+
+resp_cn_com_fund_collection_shareholders <- lxr_cn_com_fund_collection_shareholders(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "300750",
+  start_date = "2024-07-01",
+  end_date = "2025-07-01",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_fund_collection_shareholders,
+  "./tests/testthat/fixtures/cn_com_fund_collection_shareholders.json"
+)

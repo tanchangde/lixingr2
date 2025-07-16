@@ -332,3 +332,17 @@ lxr_cn_com_fund_shareholders <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Fund Company Shareholders Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/fund-collection-shareholders)
+#'
+#' @rdname lxr_cn_com_fund_collection_shareholders
+#' @export
+lxr_cn_com_fund_collection_shareholders <- make_endpoint(
+  endpoint = "cn/company/fund-collection-shareholders",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)
