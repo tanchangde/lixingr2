@@ -79,10 +79,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
 
     names(query_params) <- purrr::map_chr(
       names(query_params),
-      ~ stringr::str_replace_all(
-        .x, "_[a-z]",
-        ~ toupper(stringr::str_sub(.x, start = -1))
-      )
+      ~ snakecase::to_lower_camel_case(.x)
     )
 
     array_params <- c("stockCodes", "mutualMarkets", "metricsList")
