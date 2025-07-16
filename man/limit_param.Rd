@@ -4,8 +4,7 @@
 \alias{limit_param}
 \title{Limit Parameter}
 \arguments{
-\item{limit}{The number of latest records to return. This parameter is only
-effective when requesting data within a date range.}
+\item{limit}{The number of latest records to return.}
 }
 \description{
 Limit Parameter

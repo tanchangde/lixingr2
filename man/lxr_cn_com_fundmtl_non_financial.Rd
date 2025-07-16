@@ -27,6 +27,7 @@ lxr_cn_com_fundmtl_non_financial(
 \item{metrics_list}{A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
 When the length of \code{stock_codes} is greater than 1, a maximum of 48 metrics can be selected;
 when the length of \code{stock_codes} equals 1, a maximum of 36 metrics can be retrieved.
+The \code{limit} parameter is only effective when requesting data within a date range.
 
 Currently supported metrics:
 
@@ -111,8 +112,7 @@ If not provided, the default value is last Monday. The interval between
 the start and end dates must not exceed 10 years. The date should be based
 on Beijing Time (UTC+8).}
 
-\item{limit}{The number of latest records to return. This parameter is only
-effective when requesting data within a date range.}
+\item{limit}{The number of latest records to return.}
 
 \item{.max_tries}{Maximum number of retry attempts. Can be set via option
 "lxg.max_tries". Default is 4.}

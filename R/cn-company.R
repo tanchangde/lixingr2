@@ -117,7 +117,8 @@ lxr_cn_com_shareholders_num <- make_endpoint(
 #' @inherit common_return return
 #'
 #' @details The `stock_code` parameter is only effective when requesting data
-#'   within a date range.
+#'   within a date range. The `limit` parameter is only effective when 
+#'   requesting data within a date range.
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change)
 #'
@@ -427,6 +428,7 @@ lxr_cn_com_suppliers <- make_endpoint(
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
 #'   When the length of `stock_codes` is greater than 1, a maximum of 48 metrics can be selected;
 #'   when the length of `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
+#'   The `limit` parameter is only effective when requesting data within a date range.
 #'   
 #' Currently supported metrics:
 #'

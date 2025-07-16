@@ -55,8 +55,7 @@ NULL
 
 #' Limit Parameter
 #'
-#' @param limit The number of latest records to return. This parameter is only
-#'   effective when requesting data within a date range.
+#' @param limit The number of latest records to return.
 #'
 #' @name limit_param
 NULL

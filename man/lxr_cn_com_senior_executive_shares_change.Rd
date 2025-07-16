@@ -33,8 +33,7 @@ If not provided, the default value is last Monday. The interval between
 the start and end dates must not exceed 10 years. The date should be based
 on Beijing Time (UTC+8).}
 
-\item{limit}{The number of latest records to return. This parameter is only
-effective when requesting data within a date range.}
+\item{limit}{The number of latest records to return.}
 
 \item{.max_tries}{Maximum number of retry attempts. Can be set via option
 "lxg.max_tries". Default is 4.}
@@ -67,7 +66,8 @@ Retrieve Senior Executive Shareholding Change Data
 }
 \details{
 The \code{stock_code} parameter is only effective when requesting data
-within a date range.
+within a date range. The \code{limit} parameter is only effective when
+requesting data within a date range.
 }
 \seealso{
 \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change}{API documentation}

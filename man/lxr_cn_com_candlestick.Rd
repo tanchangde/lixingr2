@@ -44,8 +44,7 @@ Required when requesting adjusted data; defaults to \code{end_date} if not provi
 Must be used with \code{start_date} and must be less than or equal to \code{start_date}.
 Required when requesting adjusted data; defaults to \code{start_date} if not provided.}
 
-\item{limit}{The number of latest records to return. This parameter is only
-effective when requesting data within a date range.}
+\item{limit}{The number of latest records to return.}
 
 \item{.max_tries}{Maximum number of retry attempts. Can be set via option
 "lxg.max_tries". Default is 4.}
