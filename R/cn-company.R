@@ -374,3 +374,17 @@ lxr_cn_com_allotment <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Customer Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/customers)
+#'
+#' @rdname lxr_cn_com_customers
+#' @export
+lxr_cn_com_customers <- make_endpoint(
+  endpoint = "cn/company/customers",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)

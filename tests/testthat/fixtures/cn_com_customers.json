@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2024-12-31T00:00:00+08:00",
+    "declarationDate": "2025-03-15T00:00:00+08:00",
+    "dataList": [
+      {
+        "trader": "第一名",
+        "tradeAmount": 54173399000,
+        "ratio": 0.1496
+      },
+      {
+        "trader": "第二名",
+        "tradeAmount": 27868873000,
+        "ratio": 0.077
+      },
+      {
+        "trader": "第三名",
+        "tradeAmount": 22441092000,
+        "ratio": 0.062
+      },
+      {
+        "trader": "第四名",
+        "tradeAmount": 17447788000,
+        "ratio": 0.0482
+      },
+      {
+        "trader": "第五名",
+        "tradeAmount": 12133080000,
+        "ratio": 0.0335
+      }
+    ],
+    "top5Customer": {
+      "tradeAmount": 134064232000,
+      "ratio": 0.3703
+    }
+  },
+  {
+    "date": "2023-12-31T00:00:00+08:00",
+    "declarationDate": "2024-03-16T00:00:00+08:00",
+    "dataList": [
+      {
+        "trader": "第一名",
+        "tradeAmount": 50116537000,
+        "ratio": 0.125
+      },
+      {
+        "trader": "第二名",
+        "tradeAmount": 32350912900,
+        "ratio": 0.0807
+      },
+      {
+        "trader": "第三名",
+        "tradeAmount": 26191226400,
+        "ratio": 0.0653
+      },
+      {
+        "trader": "第四名",
+        "tradeAmount": 24657369500,
+        "ratio": 0.0615
+      },
+      {
+        "trader": "第五名",
+        "tradeAmount": 14142953600,
+        "ratio": 0.0353
+      }
+    ],
+    "top5Customer": {
+      "tradeAmount": 147458999400,
+      "ratio": 0.3678
+    }
+  }
+]
