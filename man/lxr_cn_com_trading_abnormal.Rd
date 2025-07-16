@@ -14,7 +14,8 @@ lxr_cn_com_trading_abnormal(
   .max_tries = getOption("lxg.max_tries", 4L),
   .backoff_fun = getOption("lxg.backoff_fun", NULL),
   .retry_on = getOption("lxg.retry_on", NULL),
-  .return_format = "list"
+  .return_format = "list",
+  .verbosity = getOption("lxg.verbosity", NULL)
 )
 }
 \arguments{
@@ -51,6 +52,17 @@ Can be set via option "lxg.retry_on".}
 
 \item{.return_format}{Format of the returned data. Must be one of \code{"json"},
 \code{"list"}, or \code{"tibble"}. Defaults to \code{"list"}.}
+
+\item{.verbosity}{Controls the verbosity of printed information. This is a wrapper
+around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
+\itemize{
+\item \code{0}: No output.
+\item \code{1}: Show headers.
+\item \code{2}: Show headers and bodies.
+\item \code{3}: Show headers, bodies, and curl status messages.
+}
+
+Can be set via the option "lxg.verbosity".}
 }
 \value{
 A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:

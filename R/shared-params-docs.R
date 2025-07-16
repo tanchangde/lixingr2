@@ -12,6 +12,15 @@
 #'   represents a transient error that should trigger a retry. Default retries
 #'   on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
 #'   Can be set via option "lxg.retry_on".
+#' @param .verbosity Controls the verbosity of printed information. This is a wrapper
+#'   around [httr2::req_verbose()] that uses an integer to specify verbosity levels:
+#'
+#'   * `0`: No output.
+#'   * `1`: Show headers.
+#'   * `2`: Show headers and bodies.
+#'   * `3`: Show headers, bodies, and curl status messages.
+#'
+#'   Can be set via the option "lxg.verbosity".
 #' @param .return_format Format of the returned data. Must be one of `"json"`,
 #'   `"list"`, or `"tibble"`. Defaults to `"list"`.
 #'

@@ -62,7 +62,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     .max_tries = rlang::expr(getOption("lxg.max_tries", 4L)),
     .backoff_fun = rlang::expr(getOption("lxg.backoff_fun", NULL)),
     .retry_on = rlang::expr(getOption("lxg.retry_on", NULL)),
-    .return_format = rlang::expr("list")
+    .return_format = rlang::expr("list"),
+    .verbosity = rlang::expr(getOption("lxg.verbosity", NULL))
   )
 
   check_calls <- purrr::map(
@@ -98,14 +99,15 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
     backoff_fun <- .backoff_fun
     retry_on <- .retry_on
     return_format <- .return_format
+    verbosity <- .verbosity
 
     if (!return_format %in% c("json", "list", "tibble", "resp")) {
-      rlang::abort("Invalid return_format. Must be 'json', 'list', 'tibble' or 'resp'." )
+      rlang::abort("Invalid return_format. Must be 'json', 'list', 'tibble' or 'resp'.")
     }
 
     if (is.null(backoff_fun)) {
       backoff_fun <- function(attempt) {
-        base   <- 0.5 * 2^(attempt - 1)
+        base <- 0.5 * 2^(attempt - 1)
         jitter <- stats::runif(1, 0, 0.4)
         min(base + jitter, 10)
       }
@@ -130,7 +132,7 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       )
 
     performed_req <- req |>
-      httr2::req_perform()
+      httr2::req_perform(verbosity = verbosity)
 
     switch(return_format,
       json = httr2::resp_body_string(performed_req),

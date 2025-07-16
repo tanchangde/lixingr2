@@ -5,7 +5,7 @@ test_that("generated function has correct formals", {
   fmls <- formals(fn)
   expect_setequal(names(fmls), c(
     "foo", "bar", "opt_x", ".max_tries",
-    ".backoff_fun", ".retry_on", ".return_format"
+    ".backoff_fun", ".retry_on", ".return_format", ".verbosity"
   ))
   expect_true(rlang::is_missing(fmls$foo))
   expect_true(rlang::is_missing(fmls$bar))
@@ -91,7 +91,7 @@ test_that("backoff_fun receives correct attempt numbers", {
     request = function(...) list(),
     req_headers = function(req, ...) req,
     req_url_path_append = function(req, ...) req,
-    req_perform = function(req) list(status = 200L),
+    req_perform = function(req, ...) list(status = 200L),
     req_body_json = function(req, ...) req,
     resp_body_string = function(req, ...) req,
     resp_body_json = function(req, ...) req,
