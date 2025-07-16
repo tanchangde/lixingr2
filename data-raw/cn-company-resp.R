@@ -336,3 +336,17 @@ save_json_response(
   resp_cn_com_suppliers,
   "./tests/testthat/fixtures/cn_com_suppliers.json"
 )
+
+resp_cn_com_fundmtl_non_financial <- lxr_cn_com_fundmtl_non_financial(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  date = "2025-07-08",
+  stock_codes = c("300750", "600519", "600157"),
+  metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos"),
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_fundmtl_non_financial,
+  "./tests/testthat/fixtures/cn_com_fundmtl_non_financial.json"
+)
+
