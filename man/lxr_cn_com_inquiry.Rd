@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Inquiry Letter Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/inquiry}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/inquiry}{API documentation}
 }

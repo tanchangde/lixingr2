@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Supplier Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/suppliers}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/suppliers}{API documentation}
 }

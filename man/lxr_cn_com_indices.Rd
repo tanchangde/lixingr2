@@ -55,5 +55,5 @@ Retrieve Stock Index
 When \code{date} is NULL, the query will return the current data.
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/indices}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/indices}{API documentation}
 }

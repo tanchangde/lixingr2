@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Fund Company Shareholders Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/fund-collection-shareholders}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/fund-collection-shareholders}{API documentation}
 }

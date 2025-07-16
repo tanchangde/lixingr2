@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Majority Shareholders Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/majority-shareholders}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/majority-shareholders}{API documentation}
 }

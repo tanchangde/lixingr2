@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Top 10 Circulating Shareholders Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/nolimit-shareholders}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/nolimit-shareholders}{API documentation}
 }

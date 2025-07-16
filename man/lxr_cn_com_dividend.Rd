@@ -62,5 +62,5 @@ A parsed API response. The format of the returned data depends on the \code{.ret
 Retrieve Dividend Information
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/dividend}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/dividend}{API documentation}
 }

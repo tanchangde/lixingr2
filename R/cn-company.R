@@ -97,7 +97,7 @@ lxr_cn_com_candlestick <- make_endpoint(
 #' @inheritParams limit_param
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/shareholders-num)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/shareholders-num)
 #'
 #' @rdname lxr_cn_com_shareholders_num
 #' @export
@@ -137,7 +137,7 @@ lxr_cn_com_senior_executive_shares_change <- make_endpoint(
 #' @details The `stock_code` parameter is only effective when requesting data
 #'   within a date range.
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/major-shareholders-shares-change)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/major-shareholders-shares-change)
 #'
 #' @rdname lxr_cn_com_major_shareholders_shares_change
 #' @export
@@ -155,7 +155,7 @@ lxr_cn_com_major_shareholders_shares_change <- make_endpoint(
 #' @details The `stock_code` parameter is only effective when requesting data
 #'   within a date range.
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/trading-abnormal)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/trading-abnormal)
 #'
 #' @rdname lxr_cn_com_trading_abnormal
 #' @export
@@ -173,7 +173,7 @@ lxr_cn_com_trading_abnormal <- make_endpoint(
 #' @details The `stock_code` parameter is only effective when requesting data
 #'   within a date range.
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/block-deal)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/block-deal)
 #'
 #' @rdname lxr_cn_com_block_deal
 #' @export
@@ -191,7 +191,7 @@ lxr_cn_com_block_deal <- make_endpoint(
 #' @inheritParams limit_param
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/pledge)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/pledge)
 #'
 #' @rdname lxr_cn_com_pledge
 #' @export
@@ -206,7 +206,7 @@ lxr_cn_com_pledge <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/operation-revenue-constitution)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/operation-revenue-constitution)
 #'
 #' @rdname lxr_cn_com_operation_revenue_constitution
 #' @export
@@ -225,7 +225,7 @@ lxr_cn_com_operation_revenue_constitution <- make_endpoint(
 #' 
 #' @details When `date` is NULL, the query will return the current data.
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/indices)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/indices)
 #'
 #' @rdname lxr_cn_com_indices
 #' @export
@@ -241,7 +241,7 @@ lxr_cn_com_indices <- make_endpoint(
 #' @inherit lxr_cn_com_indices details
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/industries)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/industries)
 #'
 #' @rdname lxr_cn_com_industries
 #' @export
@@ -256,7 +256,7 @@ lxr_cn_com_industries <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/announcement)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/announcement)
 #'
 #' @rdname lxr_cn_com_announcement
 #' @export
@@ -271,7 +271,7 @@ lxr_cn_com_announcement <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/measures)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/measures)
 #'
 #' @rdname lxr_cn_com_measures
 #' @export
@@ -286,7 +286,7 @@ lxr_cn_com_measures <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/inquiry)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/inquiry)
 #'
 #' @rdname lxr_cn_com_inquiry
 #' @export
@@ -301,7 +301,7 @@ lxr_cn_com_inquiry <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/majority-shareholders)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/majority-shareholders)
 #'
 #' @rdname lxr_cn_com_majority_shareholders
 #' @export
@@ -316,7 +316,7 @@ lxr_cn_com_majority_shareholders <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/nolimit-shareholders)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/nolimit-shareholders)
 #'
 #' @rdname lxr_cn_com_nolimit_shareholders
 #' @export
@@ -331,7 +331,7 @@ lxr_cn_com_nolimit_shareholders <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/fund-shareholders)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fund-shareholders)
 #'
 #' @rdname lxr_cn_com_fund_shareholders
 #' @export
@@ -346,7 +346,7 @@ lxr_cn_com_fund_shareholders <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/fund-collection-shareholders)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fund-collection-shareholders)
 #'
 #' @rdname lxr_cn_com_fund_collection_shareholders
 #' @export
@@ -361,7 +361,7 @@ lxr_cn_com_fund_collection_shareholders <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/dividend)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/dividend)
 #'
 #' @rdname lxr_cn_com_dividend
 #' @export
@@ -376,7 +376,7 @@ lxr_cn_com_dividend <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/allotment)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/allotment)
 #'
 #' @rdname lxr_cn_com_allotment
 #' @export
@@ -391,7 +391,7 @@ lxr_cn_com_allotment <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/customers)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/customers)
 #'
 #' @rdname lxr_cn_com_customers
 #' @export
@@ -406,7 +406,7 @@ lxr_cn_com_customers <- make_endpoint(
 #' @inheritParams lxr_cn_com_pledge
 #' @inherit common_return return
 #'
-#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/suppliers)
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/suppliers)
 #'
 #' @rdname lxr_cn_com_suppliers
 #' @export

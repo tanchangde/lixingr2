@@ -70,5 +70,5 @@ The \code{stock_code} parameter is only effective when requesting data
 within a date range.
 }
 \seealso{
-\href{https://open.lixinger.com/api/cn/company/trading-abnormal}{API documentation}
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/trading-abnormal}{API documentation}
 }
