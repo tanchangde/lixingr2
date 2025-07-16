@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2022-04-18T00:00:00+08:00",
+    "exDate": "2022-04-29T00:00:00+08:00",
+    "currency": "CNY",
+    "allotmentRatio": 0.28,
+    "allotmentPrice": 8.46,
+    "allotmentShares": 1502907061,
+    "status": "implemented"
+  }
+]

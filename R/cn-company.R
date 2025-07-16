@@ -360,3 +360,17 @@ lxr_cn_com_dividend <- make_endpoint(
   required = c("token"),
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Allotment Information
+#'
+#' @inheritParams lxr_cn_com_pledge
+#'
+#' @seealso [API documentation](https://open.lixinger.com/api/cn/company/allotment)
+#'
+#' @rdname lxr_cn_com_allotment
+#' @export
+lxr_cn_com_allotment <- make_endpoint(
+  endpoint = "cn/company/allotment",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)

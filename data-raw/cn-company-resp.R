@@ -294,3 +294,17 @@ save_json_response(
   resp_cn_com_dividend,
   "./tests/testthat/fixtures/cn_com_dividend.json"
 )
+
+resp_cn_com_allotment <- lxr_cn_com_allotment(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "600958",
+  start_date = "2015-07-01",
+  end_date = "2025-07-01",
+  limit = 5,
+  .return_format = "resp"
+)
+
+save_json_response(
+  resp_cn_com_allotment,
+  "./tests/testthat/fixtures/cn_com_allotment.json"
+)
