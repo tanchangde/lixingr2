@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "holdings": 159140,
+    "marketCap": 40138290,
+    "netValueRatio": 0.0333,
+    "marketCapRank": 2,
+    "fundCode": "003957",
+    "name": "安信量化沪深300增强A",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "holdings": 8000,
+    "marketCap": 2017760,
+    "netValueRatio": 0.0236,
+    "marketCapRank": 9,
+    "fundCode": "970043",
+    "name": "东吴裕盈A份额",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "holdings": 7400,
+    "marketCap": 1866428,
+    "netValueRatio": 0.0705,
+    "marketCapRank": 1,
+    "fundCode": "021305",
+    "name": "中欧品质精选混合A",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0
+  },
+  {
+    "date": "2025-03-31T00:00:00+08:00",
+    "holdings": 65667361,
+    "marketCap": 16609902291,
+    "netValueRatio": 0.1994,
+    "marketCapRank": 1,
+    "fundCode": "159915",
+    "name": "易方达创业板ETF",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.0168
+  },
+  {
+    "date": "2025-03-31T00:00:00+08:00",
+    "holdings": 43208625,
+    "marketCap": 10929189607,
+    "netValueRatio": 0.0323,
+    "marketCapRank": 2,
+    "fundCode": "510300",
+    "name": "华泰柏瑞沪深300ETF",
+    "outstandingSharesA": 3902556333,
+    "proportionOfOutstandingSharesA": 0.0111
+  }
+]
