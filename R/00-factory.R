@@ -125,7 +125,8 @@ make_endpoint <- function(endpoint, required, optional = NULL) {
       httr2::req_retry(
         max_tries = max_tries,
         backoff = backoff_fun,
-        is_transient = retry_on
+        is_transient = retry_on,
+        retry_on_failure = TRUE
       )
 
     performed_req <- req |>
