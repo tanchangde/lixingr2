@@ -6,33 +6,33 @@
 \arguments{
 \item{token}{Authentication token, must be a character string.}
 
-\item{.max_tries}{Maximum number of retry attempts. Can be set via option
-"lxg.max_tries". Default is 4.}
+\item{.hdrs}{Additional headers to include in the request, passed as a named
+list. Default is \code{list("Content-Type" = "application/json")}.}
 
-\item{.backoff_fun}{Function to calculate backoff delay in seconds between
-retries. Default is an exponential backoff with jitter. The delay increases
-with the number of retry attempts and includes randomness to reduce conflicts.
-The maximum delay is capped at 10 seconds. Can be set via option "lxg.backoff_fun".}
+\item{.config}{Additional configuration parameters, passed as a named list.
+Can be partially or fully overridden.
+Default is \code{list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,  return_format = "list", verbosity = NULL)}.
 
-\item{.retry_on}{Predicate function that takes a single argument (the
-response) and returns TRUE or FALSE to specify whether the response
-represents a transient error that should trigger a retry. Default retries
-on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
-Can be set via option "lxg.retry_on".}
+\code{max_tries}: Maximum number of retry attempts.
 
-\item{.verbosity}{Controls the verbosity of printed information. This is a wrapper
-around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
+\code{backoff_fun}: Function to calculate backoff delay in seconds between retries.
+Default is an exponential backoff with jitter. The delay increases with
+the number of retry attempts and includes randomness to reduce conflicts.
+The maximum delay is capped at 10 seconds.
+
+\code{retry_on}: Predicate function that takes a single argument (the response)
+and returns TRUE or FALSE to specify whether the response represents a
+transient error that should trigger a retry. Default retries on HTTP status
+codes 429 (Too Many Requests) and 500+ (Server Errors).
+
+\code{verbosity}: Controls the verbosity of printed information. This is a
+wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
 \itemize{
 \item \code{0}: No output.
 \item \code{1}: Show headers.
 \item \code{2}: Show headers and bodies.
 \item \code{3}: Show headers, bodies, and curl status messages.
-}
-
-Can be set via the option "lxg.verbosity".}
-
-\item{.return_format}{Format of the returned data. Must be one of \code{"json"},
-\code{"list"}, or \code{"tibble"}. Defaults to \code{"list"}.}
+}}
 }
 \description{
 Common Parameter Descriptions

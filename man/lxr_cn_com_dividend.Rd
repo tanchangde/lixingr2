@@ -10,11 +10,8 @@ lxr_cn_com_dividend(
   start_date = NULL,
   end_date = NULL,
   limit = NULL,
-  .max_tries = getOption("lxg.max_tries", 4L),
-  .backoff_fun = getOption("lxg.backoff_fun", NULL),
-  .retry_on = getOption("lxg.retry_on", NULL),
-  .return_format = "list",
-  .verbosity = getOption("lxg.verbosity", NULL)
+  .hdrs = list(),
+  .config = list()
 )
 }
 \arguments{
@@ -32,36 +29,37 @@ on Beijing Time (UTC+8).}
 
 \item{limit}{The number of latest records to return.}
 
-\item{.max_tries}{Maximum number of retry attempts. Can be set via option
-"lxg.max_tries". Default is 4.}
+\item{.hdrs}{Additional headers to include in the request, passed as a named
+list. Default is \code{list("Content-Type" = "application/json")}.}
 
-\item{.backoff_fun}{Function to calculate backoff delay in seconds between
-retries. Default is an exponential backoff with jitter. The delay increases
-with the number of retry attempts and includes randomness to reduce conflicts.
-The maximum delay is capped at 10 seconds. Can be set via option "lxg.backoff_fun".}
+\item{.config}{Additional configuration parameters, passed as a named list.
+Can be partially or fully overridden.
+Default is \code{list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,  return_format = "list", verbosity = NULL)}.
 
-\item{.retry_on}{Predicate function that takes a single argument (the
-response) and returns TRUE or FALSE to specify whether the response
-represents a transient error that should trigger a retry. Default retries
-on HTTP status codes 429 (Too Many Requests) and 500+ (Server Errors).
-Can be set via option "lxg.retry_on".}
+\code{max_tries}: Maximum number of retry attempts.
 
-\item{.return_format}{Format of the returned data. Must be one of \code{"json"},
-\code{"list"}, or \code{"tibble"}. Defaults to \code{"list"}.}
+\code{backoff_fun}: Function to calculate backoff delay in seconds between retries.
+Default is an exponential backoff with jitter. The delay increases with
+the number of retry attempts and includes randomness to reduce conflicts.
+The maximum delay is capped at 10 seconds.
 
-\item{.verbosity}{Controls the verbosity of printed information. This is a wrapper
-around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
+\code{retry_on}: Predicate function that takes a single argument (the response)
+and returns TRUE or FALSE to specify whether the response represents a
+transient error that should trigger a retry. Default retries on HTTP status
+codes 429 (Too Many Requests) and 500+ (Server Errors).
+
+\code{verbosity}: Controls the verbosity of printed information. This is a
+wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
 \itemize{
 \item \code{0}: No output.
 \item \code{1}: Show headers.
 \item \code{2}: Show headers and bodies.
 \item \code{3}: Show headers, bodies, and curl status messages.
-}
-
-Can be set via the option "lxg.verbosity".}
+}}
 }
 \value{
-A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:
+A parsed API response. The format of the returned data depends on the
+\code{.return_format} parameter:
 \itemize{
 \item \code{"json"}: Returns raw JSON data.
 \item \code{"list"}: Returns data as an R list.

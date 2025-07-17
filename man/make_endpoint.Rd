@@ -2,20 +2,22 @@
 % Please edit documentation in R/00-factory.R
 \name{make_endpoint}
 \alias{make_endpoint}
-\title{Generate API endpoint function}
+\title{Endpoint factory}
 \usage{
-make_endpoint(endpoint, required, optional = NULL)
+make_endpoint(client = new_client(), endpoint, required, optional = NULL)
 }
 \arguments{
-\item{endpoint}{API path, the personalized part of the API path}
+\item{client}{An API client.}
 
-\item{required}{Character vector of required parameter names}
+\item{endpoint}{Character. API path relative to \code{base_url}.}
 
-\item{optional}{Character vector of optional parameter names}
+\item{required}{Character vector. Names of parameters \strong{required} by this endpoint.}
+
+\item{optional}{Character vector. Names of optional parameters.}
 }
 \value{
-Returns an API endpoint function
+A user-callable function.
 }
 \description{
-Generate API endpoint function
+Endpoint factory
 }

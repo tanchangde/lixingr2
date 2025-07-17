@@ -4,7 +4,8 @@
 \alias{common_return}
 \title{Common Return Descriptions}
 \value{
-A parsed API response. The format of the returned data depends on the \code{.return_format} parameter:
+A parsed API response. The format of the returned data depends on the
+\code{.return_format} parameter:
 \itemize{
 \item \code{"json"}: Returns raw JSON data.
 \item \code{"list"}: Returns data as an R list.

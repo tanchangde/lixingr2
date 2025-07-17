@@ -13,8 +13,8 @@ save_json_response <- function(resp, path) {
 
 resp_cn_com <- lxr_cn_com(
   token = Sys.getenv("LIXINGR_TOKEN"),
-  stock_code = c("300750", "600519", "600157"),
-  .return_format = "resp"
+  stock_codes = c("300750", "600519", "600157"),
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -25,7 +25,7 @@ save_json_response(
 resp_cn_com_profile <- lxr_cn_com_profile(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_codes = c("300750", "600519", "600579"),
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -39,7 +39,7 @@ resp_cn_com_equity_change <- lxr_cn_com_equity_change(
   start_date = "2024-10-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -54,7 +54,7 @@ resp_cn_com_candlestick <- lxr_cn_com_candlestick(
   start_date = "2025-06-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -67,7 +67,7 @@ resp_cn_com_shareholders_num <- lxr_cn_com_shareholders_num(
   stock_code = "300750",
   start_date = "2024-06-01",
   end_date = "2025-07-01",
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -82,7 +82,7 @@ resp_cn_com_senior_executive_shares_change <-
     start_date = "2020-07-08",
     end_date = "2025-07-01",
     limit = 5,
-    .return_format = "resp"
+    .config = list("return_format" = "resp")
   )
 
 save_json_response(
@@ -97,7 +97,7 @@ resp_cn_com_major_shareholders_shares_change <-
     start_date = "2015-07-01",
     end_date = "2025-07-01",
     limit = 5,
-    .return_format = "resp"
+    .config = list("return_format" = "resp")
   )
 
 save_json_response(
@@ -110,7 +110,7 @@ resp_cn_com_trading_abnormal <- lxr_cn_com_trading_abnormal(
   start_date = "2020-03-01",
   end_date = "2025-07-01",
   stock_code = "300750",
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -124,7 +124,7 @@ resp_cn_com_block_deal <- lxr_cn_com_block_deal(
   start_date = "2015-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -138,7 +138,7 @@ resp_cn_com_pledge <- lxr_cn_com_pledge(
   start_date = "2022-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -151,7 +151,7 @@ resp_cn_com_operation_revenue_constitution <- lxr_cn_com_operation_revenue_const
   stock_code = "300750",
   start_date = "2023-07-01",
   end_date = "2025-07-15",
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -163,7 +163,7 @@ resp_cn_com_indices <- lxr_cn_com_indices(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "600900",
   date = "2023-07-01",
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -175,7 +175,7 @@ resp_cn_com_industries <- lxr_cn_com_industries(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "300750",
   date = "2025-07-01",
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -189,7 +189,7 @@ resp_cn_com_announcement <- lxr_cn_com_announcement(
   start_date = "2024-07-01",
   end_date = "2025-07-15",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -203,7 +203,7 @@ resp_cn_com_measures <- lxr_cn_com_measures(
   start_date = "2016-07-01",
   end_date = "2025-07-15",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -217,7 +217,7 @@ resp_cn_com_inquiry <- lxr_cn_com_inquiry(
   start_date = "2015-07-15",
   end_date = "2025-07-15",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -231,7 +231,7 @@ resp_cn_com_majority_shareholders <- lxr_cn_com_majority_shareholders(
   start_date = "2024-07-15",
   end_date = "2025-07-15",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -245,7 +245,7 @@ resp_cn_com_nolimit_shareholders <- lxr_cn_com_nolimit_shareholders(
   start_date = "2024-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -259,7 +259,7 @@ resp_cn_com_fund_shareholders <- lxr_cn_com_fund_shareholders(
   start_date = "2024-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -273,7 +273,7 @@ resp_cn_com_fund_collection_shareholders <- lxr_cn_com_fund_collection_sharehold
   start_date = "2024-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -287,7 +287,7 @@ resp_cn_com_dividend <- lxr_cn_com_dividend(
   start_date = "2024-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -301,7 +301,7 @@ resp_cn_com_allotment <- lxr_cn_com_allotment(
   start_date = "2015-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -315,7 +315,7 @@ resp_cn_com_customers <- lxr_cn_com_customers(
   start_date = "2023-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -329,7 +329,7 @@ resp_cn_com_suppliers <- lxr_cn_com_suppliers(
   start_date = "2023-07-01",
   end_date = "2025-07-01",
   limit = 5,
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(
@@ -342,7 +342,7 @@ resp_cn_com_fundmtl_non_financial <- lxr_cn_com_fundmtl_non_financial(
   date = "2025-07-08",
   stock_codes = c("300750", "600519", "600157"),
   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos"),
-  .return_format = "resp"
+  .config = list("return_format" = "resp")
 )
 
 save_json_response(

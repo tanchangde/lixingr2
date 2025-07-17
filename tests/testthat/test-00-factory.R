@@ -1,20 +1,26 @@
 make_ep <- getFromNamespace("make_endpoint", "lixingr2")
 
 test_that("generated function has correct formals", {
-  fn <- make_ep("dummy", required = c("foo", "bar"), optional = c("opt_x"))
+  fn <- make_ep(
+    endpoint = "cn/company",
+    required = "token",
+    optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
+    )
   fmls <- formals(fn)
   expect_setequal(names(fmls), c(
-    "foo", "bar", "opt_x", ".max_tries",
-    ".backoff_fun", ".retry_on", ".return_format", ".verbosity"
+    "token", "stock_codes", "fs_table_type", "mutual_markets", "include_delisted",
+    ".hdrs", ".config"
   ))
-  expect_true(rlang::is_missing(fmls$foo))
-  expect_true(rlang::is_missing(fmls$bar))
-  expect_identical(fmls$opt_x, rlang::expr(NULL))
-})
+  expect_true(rlang::is_missing(fmls$token))
+
+  optional_params <- c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
+  for (param in optional_params) {
+    expect_identical(fmls[[param]], rlang::expr(NULL))}
+  })
 
 test_that("required parameters are enforced", {
-  fn <- make_ep("dummy", required = "foo")
-  expect_error(fn(), regexp = "`foo` is absent")
+  fn <- make_ep(endpoint = "cn/company", required = "token")
+  expect_error(fn(), regexp = "`token` is absent")
 })
 
 test_that("parameter cleaning & camelCase conversion works", {
@@ -33,7 +39,7 @@ test_that("parameter cleaning & camelCase conversion works", {
   )
 
   fn <- make_ep(
-    "test/path",
+    endpoint = "cn/company",
     required = c("token", "stock_codes"),
     optional = c("adjust_forward_date", "metrics_list")
   )
@@ -71,18 +77,21 @@ test_that("NULL parameters and internal parameters are excluded", {
     .package = "httr2"
   )
 
-  fn <- make_ep("dummy", required = "foo", optional = c("opt"))
-  fn(foo = 1, opt = NULL)
+  fn <- make_ep(
+    endpoint = "cn/company",
+    required = "token",
+    optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted"))
+  fn(token = "admin", stock_codes = NULL)
 
   body <- captured$body$data
-  expect_false("opt" %in% names(body))
+  expect_false("stock_codes" %in% names(body))
   expect_false(any(grepl("^\\.", names(body))))
 })
 
 test_that("backoff_fun receives correct attempt numbers", {
   ep <- make_endpoint(
-    endpoint = "dummy",
-    required = "foo"
+    endpoint = "cn/company",
+    required = "token",
   )
 
   attempts_seen <- integer()
@@ -105,7 +114,7 @@ test_that("backoff_fun receives correct attempt numbers", {
     .package = "httr2"
   )
 
-  ep(foo = "abc", .max_tries = 4)
+  ep(token = "admin", .config = list(max_tries = 5L))
 
-  expect_identical(attempts_seen, 1:3)
+  expect_identical(attempts_seen, 1:4)
 })

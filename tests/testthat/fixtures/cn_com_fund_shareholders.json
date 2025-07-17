@@ -1,57 +1,57 @@
 [
   {
     "date": "2025-06-30T00:00:00+08:00",
-    "holdings": 159140,
-    "marketCap": 40138290,
-    "netValueRatio": 0.0333,
-    "marketCapRank": 2,
-    "fundCode": "003957",
-    "name": "安信量化沪深300增强A",
+    "holdings": 6265100,
+    "marketCap": 1580183522,
+    "netValueRatio": 0.0847,
+    "marketCapRank": 3,
+    "fundCode": "007119",
+    "name": "睿远成长价值混合A",
     "outstandingSharesA": 3902556433,
-    "proportionOfOutstandingSharesA": 0
+    "proportionOfOutstandingSharesA": 0.0016
   },
   {
     "date": "2025-06-30T00:00:00+08:00",
-    "holdings": 8000,
-    "marketCap": 2017760,
-    "netValueRatio": 0.0236,
-    "marketCapRank": 9,
-    "fundCode": "970043",
-    "name": "东吴裕盈A份额",
+    "holdings": 4300000,
+    "marketCap": 1084546000,
+    "netValueRatio": 0.0922,
+    "marketCapRank": 2,
+    "fundCode": "008969",
+    "name": "睿远均衡价值三年持有混合A",
     "outstandingSharesA": 3902556433,
-    "proportionOfOutstandingSharesA": 0
+    "proportionOfOutstandingSharesA": 0.0011
   },
   {
     "date": "2025-06-30T00:00:00+08:00",
-    "holdings": 7400,
-    "marketCap": 1866428,
-    "netValueRatio": 0.0705,
-    "marketCapRank": 1,
-    "fundCode": "021305",
-    "name": "中欧品质精选混合A",
+    "holdings": 700000,
+    "marketCap": 176554000,
+    "netValueRatio": 0.035,
+    "marketCapRank": 3,
+    "fundCode": "014362",
+    "name": "睿远稳进配置两年持有混合A",
     "outstandingSharesA": 3902556433,
-    "proportionOfOutstandingSharesA": 0
+    "proportionOfOutstandingSharesA": 0.0002
   },
   {
-    "date": "2025-03-31T00:00:00+08:00",
-    "holdings": 65667361,
-    "marketCap": 16609902291,
-    "netValueRatio": 0.1994,
-    "marketCapRank": 1,
-    "fundCode": "159915",
-    "name": "易方达创业板ETF",
-    "outstandingSharesA": 3902556333,
-    "proportionOfOutstandingSharesA": 0.0168
-  },
-  {
-    "date": "2025-03-31T00:00:00+08:00",
-    "holdings": 43208625,
-    "marketCap": 10929189607,
-    "netValueRatio": 0.0323,
+    "date": "2025-06-30T00:00:00+08:00",
+    "holdings": 496000,
+    "marketCap": 125101120,
+    "netValueRatio": 0.0153,
     "marketCapRank": 2,
-    "fundCode": "510300",
-    "name": "华泰柏瑞沪深300ETF",
-    "outstandingSharesA": 3902556333,
-    "proportionOfOutstandingSharesA": 0.0111
+    "fundCode": "018756",
+    "name": "睿远稳益增强30天持有债券A",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0.0001
+  },
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "holdings": 464899,
+    "marketCap": 117256825,
+    "netValueRatio": 0.1787,
+    "marketCapRank": 1,
+    "fundCode": "007664",
+    "name": "永赢创业板A",
+    "outstandingSharesA": 3902556433,
+    "proportionOfOutstandingSharesA": 0.0001
   }
 ]
