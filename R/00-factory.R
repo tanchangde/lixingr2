@@ -132,7 +132,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
     json   = httr2::resp_body_string(resp),
     list   = httr2::resp_body_json(resp),
     tibble =  {
-      performed_req
+      resp
       },
     resp   = resp
   )

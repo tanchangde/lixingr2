@@ -217,6 +217,21 @@ lxr_cn_com_operation_revenue_constitution <- make_endpoint(
   optional = c("stock_code", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Operating Data
+#'
+#' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/operating-data)
+#'
+#' @rdname lxr_cn_com_operating_data
+#' @export
+lxr_cn_com_operating_data <- make_endpoint(
+  endpoint = "cn/company/operating-data",
+  required = c("token"),
+  optional = c("stock_code", "start_date", "end_date", "limit")
+)
+
 #' Retrieve Stock Index
 #'
 #' @inheritParams common_params
@@ -524,3 +539,4 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+

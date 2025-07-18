@@ -1,0 +1,88 @@
+[
+  {
+    "date": "2025-03-31T00:00:00+08:00",
+    "declarationDate": "2025-04-30T00:00:00+08:00",
+    "dataList": [
+      {
+        "itemName": "按产品档次",
+        "unitText": "万元"
+      },
+      {
+        "itemName": "主营业务收入",
+        "unitText": "万元",
+        "parentItemName": "按产品档次"
+      },
+      {
+        "itemName": "茅台酒",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 4355747.74
+      },
+      {
+        "itemName": "系列酒",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 702247.98
+      },
+      {
+        "itemName": "按销售渠道",
+        "unitText": "万元"
+      },
+      {
+        "itemName": "主营业务收入",
+        "unitText": "万元",
+        "parentItemName": "按销售渠道"
+      },
+      {
+        "itemName": "直销",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 2322045.62
+      },
+      {
+        "itemName": "批发",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 2735950.1
+      },
+      {
+        "itemName": "按地区分",
+        "unitText": "万元"
+      },
+      {
+        "itemName": "主营业务收入",
+        "unitText": "万元",
+        "parentItemName": "按地区分"
+      },
+      {
+        "itemName": "国内",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 4946141.69
+      },
+      {
+        "itemName": "国外",
+        "unitText": "万元",
+        "parentItemName": "主营业务收入",
+        "value": 111854.03
+      },
+      {
+        "itemName": "经销商数量",
+        "unitText": "万元"
+      },
+      {
+        "itemName": "国内",
+        "unitText": "个",
+        "parentItemName": "经销商数量",
+        "value": 2174
+      },
+      {
+        "itemName": "国外",
+        "unitText": "个",
+        "parentItemName": "经销商数量",
+        "value": 109
+      }
+    ],
+    "startDate": "2025-01-01T00:00:00+08:00"
+  }
+]

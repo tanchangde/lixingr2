@@ -159,6 +159,19 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_operation_revenue_constitution.json"
 )
 
+resp_cn_com_operating_data <- lxr_cn_com_operating_data(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "600519",
+  start_date = "2023-07-01",
+  end_date = "2025-07-01",
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_cn_com_operating_data,
+  "./tests/testthat/fixtures/cn_com_operating_data.json"
+)
+
 resp_cn_com_indices <- lxr_cn_com_indices(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "600900",
@@ -349,4 +362,3 @@ save_json_response(
   resp_cn_com_fundmtl_non_financial,
   "./tests/testthat/fixtures/cn_com_fundmtl_non_financial.json"
 )
-
