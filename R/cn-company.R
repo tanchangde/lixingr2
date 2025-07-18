@@ -540,3 +540,108 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
   optional = c("date", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Fundamental Data of Listed Banks
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' 
+#' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
+#'   When the length of `stock_codes` is greater than 1, a maximum of 48 metrics can be selected;
+#'   when the length of `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
+#'   The `limit` parameter is only effective when requesting data within a date range.
+#'   
+#' Currently supported metrics:
+#'
+#' **Valuation Metrics**
+#' 
+#' - PE-TTM : `pe_ttm`
+#' - PE-TTM (ex-NRI) : `d_pe_ttm`
+#' - PB : `pb`
+#' - PB (ex-Goodwill) : `pb_wo_gw`
+#' - PS-TTM : `ps_ttm`
+#' - Dividend Yield : `dyr`
+#' - PCF-TTM : `pcf_ttm`
+#' - Stock Price : `sp`
+#' - Price Change (%) : `spc`
+#' - Intraday Range (%) : `spa`
+#' - Trading Volume : `tv`
+#' - Trading Value : `ta`
+#' - Turnover Rate (%) : `to_r`
+#' - Number of Shareholders : `shn`
+#' - Market Capitalization : `mc`
+#' - A-share Market Cap : `mc_om`
+#' - Tradable Market Cap : `cmc`
+#' - Free-float Market Cap : `ecmc`
+#' - Free-float Market Cap / Holder : `ecmc_psh`
+#' - Margin Purchase Value : `fpa`
+#' - Margin Repayment Value : `fra`
+#' - Margin Financing Balance : `fb`
+#' - Short-sale Value : `ssa`
+#' - Short-sale Repayment Value : `sra`
+#' - Short Interest Balance : `sb`
+#' - Northbound Connect Holdings (Shares) : `ha_sh`
+#' - Northbound Connect Holdings (Value)  : `ha_shm`
+#' - Northbound Connect Net Buy (Value)   : `mm_nba`
+#'
+#' **Valuation Statistics Metrics**
+#' 
+#' Format: `metricsName.granularity.statisticsDataType`
+#'
+#' *metricsName*
+#' 
+#' - PE-TTM : `pe_ttm`
+#' - PE-TTM (ex-NRI) : `d_pe_ttm`
+#' - PB : `pb`
+#' - PB (ex-Goodwill) : `pb_wo_gw`
+#' - PS-TTM : `ps_ttm`
+#'
+#' *granularity*
+#' 
+#' - Since Listing : `fs`
+#' - 20 Years : `y20`
+#' - 10 Years : `y10`
+#' - 5 Years : `y5`
+#' - 3 Years : `y3`
+#' - 1 Year : `y1`
+#'
+#' *statisticsDataType*
+#' 
+#' - Percentile Position (%) : `cvpos`
+#' - 20th-percentile Value : `q2v`
+#' - 50th-percentile Value : `q5v`
+#' - 80th-percentile Value : `q8v`
+#' - Minimum Value : `minv`
+#' - Maximum Value : `maxv`
+#' - Maximum Positive Value : `maxpv`
+#' - Average Value : `avgv`
+#'
+#' @inherit common_return return
+#' 
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either 
+#'   `start_date` or `date` must be provided. `limit` is only effective when
+#'   requesting data within a date range.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fundamental/bank)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fundmtl_bank(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2025-07-01",
+#'   end_date = "2025-07-08",
+#'   stock_codes = "600036",,
+#'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
+#' )
+#' } 
+#'
+#' @rdname lxr_cn_com_fundmtl_bank
+#' @export
+lxr_cn_com_fundmtl_bank <- make_endpoint(
+  endpoint = "cn/company/fundamental/bank",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)
