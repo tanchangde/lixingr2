@@ -645,3 +645,35 @@ lxr_cn_com_fundmtl_bank <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Fundamental Data of Listed Securities
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inheritParams metrics_list_cn_com_fundmtl
+#' @inherit lxr_cn_com_fundmtl_bank details 
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fundamental/security)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fundmtl_security(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2025-07-01",
+#'   end_date = "2025-07-15",
+#'   stock_codes = "600030",,
+#'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
+#' )
+#' } 
+#'
+#' @rdname lxr_cn_com_fundmtl_security
+#' @export
+lxr_cn_com_fundmtl_security <- make_endpoint(
+  endpoint = "cn/company/fundamental/security",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)

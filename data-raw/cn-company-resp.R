@@ -376,3 +376,19 @@ save_json_response(
   resp_cn_com_fundmtl_bank,
   "./tests/testthat/fixtures/cn_com_fundmtl_bank.json"
 )
+
+resp_cn_com_fundmtl_security <- lxr_cn_com_fundmtl_security(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  start_date = "2025-07-01",
+  end_date = "2025-07-15",
+  stock_codes = "600030", ,
+  metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos"),
+  limit = 5,
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_cn_com_fundmtl_security,
+  "./tests/testthat/fixtures/cn_com_fundmtl_security.json"
+)
+
