@@ -126,11 +126,32 @@ new_client <- function(
 #'   `httr2` response.
 #' @export
 send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list()) {
+  if (!inherits(client, "api_client")) {
+    cli::cli_abort(c(
+      "Invalid client object",
+      "x" = "client must be created with {.code new_client()}",
+      "i" = "You provided: {.cls {class(client)}}"
+    ))
+  }
+
+  if (!is.character(path) || length(path) != 1) {
+    cli::cli_abort(c(
+      "Invalid path",
+      "x" = "path must be a single character string",
+      "i" = "You provided: {.cls {class(path)}} of length {length(path)}"
+    ))
+  }
+
   cfg <- utils::modifyList(client$default_cfg, cfg)
   hdrs <- purrr::reduce(list(client$default_hdrs, hdrs), utils::modifyList)
 
-  if (!cfg$return_format %in% c("json", "list", "tibble", "resp")) {
-    rlang::abort("`return_format` must be 'json', 'list', 'tibble' or 'resp'.")
+  valid_formats <- c("json", "list", "tibble", "resp")
+  if (!cfg$return_format %in% valid_formats) {
+    cli::cli_abort(c(
+      "Invalid return_format",
+      "x" = "return_format must be one of: {.or {valid_formats}}",
+      "i" = "You provided: {.val {cfg$return_format}}"
+    ))
   }
 
   if (is.null(cfg$backoff_fun)) {
@@ -157,15 +178,68 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
       retry_on_failure = TRUE
     )
 
-  resp <- httr2::req_perform(req, verbosity = cfg$verbosity)
+  resp <- tryCatch({
+    httr2::req_perform(req, verbosity = cfg$verbosity)
+  },
+  httr2_error = function(e) {
+    cli::cli_abort(c(
+      "Network request failed",
+      "x" = conditionMessage(e),
+      "i" = "Check your internet connection and API endpoint"
+    ), parent = e)
+  },
+  error = function(e) {
+    cli::cli_abort(c(
+      "Unexpected error during request",
+      "x" = conditionMessage(e)
+    ), parent = e)
+  })
+
+  status_code <- httr2::resp_status(resp)
+  if (status_code >= 400) {
+    error_body <- tryCatch(
+      httr2::resp_body_json(resp),
+      error = function(e) httr2::resp_body_string(resp)
+    )
+
+    error_msg <- if (is.list(error_body)) {
+      error_body$message %||%
+        error_body$error %||%
+        error_body$error_message %||%
+        error_body$detail %||%
+        jsonlite::toJSON(error_body, auto_unbox = TRUE)
+    } else {
+      error_body
+    }
+
+    error_title <- switch(
+      as.character(status_code),
+      "400" = "Bad Request",
+      "401" = "Unauthorized",
+      "403" = "Forbidden",
+      "404" = "Not Found",
+      "429" = "Too Many Requests",
+      "500" = "Internal Server Error",
+      "502" = "Bad Gateway",
+      "503" = "Service Unavailable",
+      paste("HTTP Error", status_code)
+    )
+
+    cli::cli_abort(c(
+      "{error_title}",
+      "x" = "Status code: {.strong {status_code}}",
+      "!" = "API error: {error_msg}",
+      "i" = "Endpoint: {.url {client$base_url}/{path}}"
+    ), class = paste0("http_", status_code))
+  }
 
   switch(cfg$return_format,
-    json   = httr2::resp_body_string(resp),
-    list   = httr2::resp_body_json(resp),
-    tibble =  {
-      resp
-      },
-    resp   = resp
+         json   = httr2::resp_body_string(resp),
+         list   = httr2::resp_body_json(resp),
+         tibble =  {
+           resp
+         },
+         resp   = resp
   )
 }
 
