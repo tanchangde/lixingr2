@@ -160,10 +160,17 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
     ~ rlang::expr(rlang::check_required(!!rlang::sym(.x)))
   )
 
+  all_body_args <- c(required, optional)
+
   fn_body <- rlang::expr({
     !!!checks
-    env <- as.list(environment())
-    body_args <- purrr::discard(env, is.null)
+
+    body_args <- rlang::env_get_list(
+      env     = rlang::current_env(),
+      nm      = !!all_body_args,
+      default = list(rlang::missing_arg())
+    ) |>
+      purrr::discard(is.null)
     names(body_args) <- (!!client$name_transform)(names(body_args))
 
     body_args <- purrr::imap(body_args, function(x, nm) {
