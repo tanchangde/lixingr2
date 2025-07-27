@@ -60,7 +60,7 @@ lxr_unnest <- function(df) {
 #' @param array_params Character vector. Parameters that must be encoded as JSON
 #'    arrays rather than scalars.
 #'
-#' @return A list representing the API client.
+#' @return An S3 object of class "api_client".
 #' @export
 new_client <- function(
     base_url = "https://open.lixinger.com/api",
@@ -74,12 +74,43 @@ new_client <- function(
     ),
     name_transform = snakecase::to_lower_camel_case,
     array_params = c("stockCodes", "mutualMarkets", "metricsList")) {
-  list(
-    base_url       = base_url,
-    default_hdrs   = default_hdrs,
-    default_cfg    = default_cfg,
-    name_transform = name_transform,
-    array_params   = array_params
+
+  if (!is.list(default_hdrs)) {
+    cli::cli_abort(c(
+      "Invalid {.var default_hdrs}",
+      "x" = "{.var default_hdrs} must be a list",
+      "i" = "You provided: {.cls {class(default_hdrs)}}"
+    ))
+  }
+
+  if (!is.function(name_transform)) {
+    cli::cli_abort(c(
+      "Invalid {.var name_transform}",
+      "x" = "{.var name_transform} must be a function",
+      "i" = "You provided: {.cls {class(name_transform)}}"
+    ))
+  }
+
+  tryCatch(
+    httr2::url_parse(base_url),
+    error = function(e) {
+      cli::cli_abort(c(
+        "Invalid URL format",
+        "x" = "Could not parse base_url: {.url {base_url}}",
+        "i" = "Make sure it's a valid URL"
+      ))
+    }
+  )
+
+  structure(
+    list(
+      base_url       = base_url,
+      default_hdrs   = default_hdrs,
+      default_cfg    = default_cfg,
+      name_transform = name_transform,
+      array_params   = array_params
+    ),
+    class = c("api_client", "list")
   )
 }
 

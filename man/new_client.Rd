@@ -30,7 +30,7 @@ convention required by the API (default:\code{snakecase::to_lower_camel_case}).}
 arrays rather than scalars.}
 }
 \value{
-A list representing the API client.
+An S3 object of class "api_client".
 }
 \description{
 Builds a lightweight client object that stores the base URL, default HTTP
