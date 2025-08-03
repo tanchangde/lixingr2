@@ -5,9 +5,6 @@
 \title{Metrics List Parameter}
 \arguments{
 \item{metrics_list}{A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-When the length of \code{stock_codes} is greater than 1, a maximum of 48 metrics can be selected;
-when the length of \code{stock_codes} equals 1, a maximum of 36 metrics can be retrieved.
-The \code{limit} parameter is only effective when requesting data within a date range.
 
 Currently supported metrics:
 

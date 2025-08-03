@@ -89,9 +89,6 @@ NULL
 #' Metrics List Parameter
 #' 
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'   When the length of `stock_codes` is greater than 1, a maximum of 48 metrics can be selected;
-#'   when the length of `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
-#'   The `limit` parameter is only effective when requesting data within a date range.
 #'   
 #' Currently supported metrics:
 #'

@@ -23,9 +23,6 @@ lxr_cn_com_fundmtl_non_financial(
 \code{c("300750", "600519", "600157")}.}
 
 \item{metrics_list}{A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-When the length of \code{stock_codes} is greater than 1, a maximum of 48 metrics can be selected;
-when the length of \code{stock_codes} equals 1, a maximum of 36 metrics can be retrieved.
-The \code{limit} parameter is only effective when requesting data within a date range.
 
 Currently supported metrics:
 
@@ -157,7 +154,9 @@ Retrieve Non-Financial Fundamental Data
 The length of \code{stock_codes} must be between 1 and 100. When assigning
 a value to \code{start_date}, the length of \code{stock_codes} must be 1. Either
 \code{start_date} or \code{date} must be provided. \code{limit} is only effective when
-requesting data within a date range.
+requesting data within a date range. When the length of \code{stock_codes} is
+greater than 1, a maximum of 48 metrics can be selected; when the length of
+\code{stock_codes} equals 1, a maximum of 36 metrics can be retrieved.
 }
 \examples{
 \dontrun{
