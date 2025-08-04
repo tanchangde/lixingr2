@@ -407,3 +407,17 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_fundmtl_insurance.json"
 )
 
+resp_cn_com_fundmtl_other_financial <- lxr_cn_com_fundmtl_other_financial(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  start_date = "2025-07-01",
+  end_date = "2025-07-15",
+  stock_codes = "600901", ,
+  metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos"),
+  limit = 5,
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_cn_com_fundmtl_other_financial,
+  "./tests/testthat/fixtures/cn_com_fundmtl_other_financial.json"
+)
