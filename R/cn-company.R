@@ -117,7 +117,7 @@ lxr_cn_com_shareholders_num <- make_endpoint(
 #' @inherit common_return return
 #'
 #' @details The `stock_code` parameter is only effective when requesting data
-#'   within a date range. The `limit` parameter is only effective when 
+#'   within a date range. The `limit` parameter is only effective when
 #'   requesting data within a date range.
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/senior-executive-shares-change)
@@ -238,7 +238,7 @@ lxr_cn_com_operating_data <- make_endpoint(
 #' @inheritParams stock_code_param
 #' @inheritParams date_param
 #' @inherit common_return return
-#' 
+#'
 #' @details When `date` is NULL, the query will return the current data.
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/indices)
@@ -439,20 +439,20 @@ lxr_cn_com_suppliers <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' 
+#'
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'   
+#'
 #' Currently supported metrics:
 #'
 #' **Valuation Metrics**
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
 #' - PB (ex-Goodwill) : `pb_wo_gw`
 #' - PS-TTM : `ps_ttm`
 #' - Dividend Yield : `dyr`
-#' - PCF-TTM : `pcf_ttm`             
+#' - PCF-TTM : `pcf_ttm`
 #' - EV/EBIT : `ev_ebit_r`
 #' - EV/EBITDA : `ev_ebitda_r`
 #' - Earnings Yield (E/P) : `ey`
@@ -479,43 +479,43 @@ lxr_cn_com_suppliers <- make_endpoint(
 #' - Northbound Connect Net Buy (Value)   : `mm_nba`
 #'
 #' **Valuation Statistics Metrics**
-#' 
+#'
 #' Format: `metricsName.granularity.statisticsDataType`
 #'
 #' *metricsName*
-#' 
-#' - PE-TTM : `pe_ttm`  
-#' - PE-TTM (ex-NRI) : `d_pe_ttm`  
-#' - PB : `pb`  
-#' - PB (ex-Goodwill) : `pb_wo_gw`  
+#'
+#' - PE-TTM : `pe_ttm`
+#' - PE-TTM (ex-NRI) : `d_pe_ttm`
+#' - PB : `pb`
+#' - PB (ex-Goodwill) : `pb_wo_gw`
 #' - PS-TTM : `ps_ttm`
 #'
 #' *granularity*
-#' 
-#' - Since Listing : `fs`  
-#' - 20 Years : `y20`  
-#' - 10 Years : `y10`  
-#' - 5 Years : `y5`  
-#' - 3 Years : `y3`  
+#'
+#' - Since Listing : `fs`
+#' - 20 Years : `y20`
+#' - 10 Years : `y10`
+#' - 5 Years : `y5`
+#' - 3 Years : `y3`
 #' - 1 Year : `y1`
 #'
 #' *statisticsDataType*
-#' 
-#' - Percentile Position (%) : `cvpos`  
-#' - 20th-percentile Value : `q2v`  
-#' - 50th-percentile Value : `q5v`  
-#' - 80th-percentile Value : `q8v`  
-#' - Minimum Value : `minv`  
-#' - Maximum Value : `maxv`  
-#' - Maximum Positive Value : `maxpv`  
+#'
+#' - Percentile Position (%) : `cvpos`
+#' - 20th-percentile Value : `q2v`
+#' - 50th-percentile Value : `q5v`
+#' - 80th-percentile Value : `q8v`
+#' - Minimum Value : `minv`
+#' - Maximum Value : `maxv`
+#' - Maximum Positive Value : `maxpv`
 #' - Average Value : `avgv`
 #'
 #' @inherit common_return return
-#' 
+#'
 #' @details The length of `stock_codes` must be between 1 and 100. When assigning
-#'   a value to `start_date`, the length of `stock_codes` must be 1. Either 
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
 #'   `start_date` or `date` must be provided. `limit` is only effective when
-#'   requesting data within a date range. When the length of `stock_codes` is 
+#'   requesting data within a date range. When the length of `stock_codes` is
 #'   greater than 1, a maximum of 48 metrics can be selected; when the length of
 #'   `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
 #'
@@ -529,7 +529,7 @@ lxr_cn_com_suppliers <- make_endpoint(
 #'   stock_codes = c("300750", "600519", "600157"),
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos")
 #' )
-#' } 
+#' }
 #'
 #' @rdname lxr_cn_com_fundmtl_non_financial
 #' @export
@@ -546,13 +546,13 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' 
+#'
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'   
+#'
 #' Currently supported metrics:
 #'
 #' **Valuation Metrics**
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
@@ -583,11 +583,11 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #' - Northbound Connect Net Buy (Value)   : `mm_nba`
 #'
 #' **Valuation Statistics Metrics**
-#' 
+#'
 #' Format: `metricsName.granularity.statisticsDataType`
 #'
 #' *metricsName*
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
@@ -595,7 +595,7 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #' - PS-TTM : `ps_ttm`
 #'
 #' *granularity*
-#' 
+#'
 #' - Since Listing : `fs`
 #' - 20 Years : `y20`
 #' - 10 Years : `y10`
@@ -604,7 +604,7 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #' - 1 Year : `y1`
 #'
 #' *statisticsDataType*
-#' 
+#'
 #' - Percentile Position (%) : `cvpos`
 #' - 20th-percentile Value : `q2v`
 #' - 50th-percentile Value : `q5v`
@@ -628,7 +628,7 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #'   stock_codes = "600036",,
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
-#' } 
+#' }
 #'
 #' @rdname lxr_cn_com_fundmtl_bank
 #' @export
@@ -660,7 +660,7 @@ lxr_cn_com_fundmtl_bank <- make_endpoint(
 #'   stock_codes = "600030",,
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
-#' } 
+#' }
 #'
 #' @rdname lxr_cn_com_fundmtl_security
 #' @export
@@ -678,11 +678,11 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'   
+#'
 #' Currently supported metrics:
 #'
 #' **Valuation Metrics**
-#' 
+#'
 #' - PEV : `pev`
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
@@ -714,11 +714,11 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' - Northbound Connect Net Buy (Value)   : `mm_nba`
 #'
 #' **Valuation Statistics Metrics**
-#' 
+#'
 #' Format: `metricsName.granularity.statisticsDataType`
 #'
 #' *metricsName*
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
@@ -727,7 +727,7 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' - PEV : `pev``
 #'
 #' *granularity*
-#' 
+#'
 #' - Since Listing : `fs`
 #' - 20 Years : `y20`
 #' - 10 Years : `y10`
@@ -736,7 +736,7 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' - 1 Year : `y1`
 #'
 #' *statisticsDataType*
-#' 
+#'
 #' - Percentile Position (%) : `cvpos`
 #' - 20th-percentile Value : `q2v`
 #' - 50th-percentile Value : `q5v`
@@ -745,7 +745,7 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' - Maximum Value : `maxv`
 #' - Maximum Positive Value : `maxpv`
 #' - Average Value : `avgv`
-#' 
+#'
 #' @inherit lxr_cn_com_fundmtl_non_financial details
 #' @inherit common_return return
 #'
@@ -760,7 +760,7 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #'   stock_codes = "601318",,
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
-#' } 
+#' }
 #'
 #' @rdname lxr_cn_com_fundmtl_insurance
 #' @export
@@ -792,7 +792,7 @@ lxr_cn_com_fundmtl_insurance <- make_endpoint(
 #'   stock_codes = "600901",,
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
-#' } 
+#' }
 #'
 #' @rdname lxr_cn_com_fundmtl_other_financial
 #' @export
