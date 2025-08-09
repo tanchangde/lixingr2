@@ -801,3 +801,48 @@ lxr_cn_com_fundmtl_other_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Financial Statement Data for Non-Financial Listed Companies
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @param metrics_list A vector of metrics in the format 
+#'   `[granularity].[tableName].[fieldName].[expressionCalculateType]`. 
+#'   For example, to retrieve the cumulative original value of total operating 
+#'   income and the year-on-year value of accounts receivable for the current 
+#'   period, set `metrics_list` to `c("q.ps.toi.t", "q.bs.ar.c_y2y")`. Refer to 
+#'   the API documentation for the full list of supported metrics.
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
+#'   `start_date` or `date` must be provided. Passing `latest` as the value for
+#'   `date` will retrieve the most recent financial statement data within the
+#'   last 1.1 years.`limit` is only effective when requesting data within a date 
+#'   range. When the length of `stock_codes` is greater than 1, a maximum of 48 
+#'   metrics can be selected; when the length of `stock_codes` equals 1, 
+#'   a maximum of 128 metrics can be retrieved.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fs_non_financial(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2024-07-01",
+#'   end_date = "2025-07-01",
+#'   stock_codes = "300750",,
+#'   metrics_list = "q.ps.toi.t"
+#' )
+#' }
+#'
+#' @rdname lxr_cn_com_fs_non_financial
+#' @export
+lxr_cn_com_fs_non_financial <- make_endpoint(
+  endpoint = "cn/company/fs/non_financial",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)
