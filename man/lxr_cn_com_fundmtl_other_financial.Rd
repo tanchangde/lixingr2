@@ -164,7 +164,7 @@ lxr_cn_com_fundmtl_other_financial(
   stock_codes = "600901",,
   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 )
-} 
+}
 
 }
 \seealso{

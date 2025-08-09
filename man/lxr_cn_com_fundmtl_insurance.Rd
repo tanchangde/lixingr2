@@ -166,7 +166,7 @@ lxr_cn_com_fundmtl_insurance(
   stock_codes = "601318",,
   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 )
-} 
+}
 
 }
 \seealso{
