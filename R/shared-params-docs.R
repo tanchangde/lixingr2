@@ -20,13 +20,20 @@
 #'   transient error that should trigger a retry. Default retries on HTTP status
 #'   codes 429 (Too Many Requests) and 500+ (Server Errors).
 #' 
+#'   `return_format`:
+#' 
+#'   - `"json"`: Returns raw JSON data.
+#'   - `"list"`: Returns data as an R list.
+#'   - `"tibble"`: Returns data as a tibble (if implemented).
+#'   - `"resp"`: Returns the performed request object.
+#' 
 #'   `verbosity`: Controls the verbosity of printed information. This is a 
 #'   wrapper around [httr2::req_verbose()] that uses an integer to specify verbosity levels:
 #' 
-#'    * `0`: No output.
-#'    * `1`: Show headers.
-#'    * `2`: Show headers and bodies.
-#'    * `3`: Show headers, bodies, and curl status messages.
+#'    - `0`: No output.
+#'    - `1`: Show headers.
+#'    - `2`: Show headers and bodies.
+#'    - `3`: Show headers, bodies, and curl status messages.
 #'
 #' @name common_params
 NULL
@@ -75,13 +82,7 @@ NULL
 
 #' Common Return Descriptions
 #'
-#' @return A parsed API response. The format of the returned data depends on the
-#'   `.return_format` parameter:
-#'   
-#'   - `"json"`: Returns raw JSON data.
-#'   - `"list"`: Returns data as an R list.
-#'   - `"tibble"`: Returns data as a tibble (if implemented).
-#'   - `"resp"`: Returns the performed request object.
+#' @return A parsed API response. 
 #'
 #' @name common_return
 NULL

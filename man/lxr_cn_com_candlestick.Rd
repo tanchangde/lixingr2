@@ -63,6 +63,14 @@ and returns TRUE or FALSE to specify whether the response represents a
 transient error that should trigger a retry. Default retries on HTTP status
 codes 429 (Too Many Requests) and 500+ (Server Errors).
 
+\code{return_format}:
+\itemize{
+\item \code{"json"}: Returns raw JSON data.
+\item \code{"list"}: Returns data as an R list.
+\item \code{"tibble"}: Returns data as a tibble (if implemented).
+\item \code{"resp"}: Returns the performed request object.
+}
+
 \code{verbosity}: Controls the verbosity of printed information. This is a
 wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
 \itemize{
@@ -73,14 +81,7 @@ wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses a
 }}
 }
 \value{
-A parsed API response. The format of the returned data depends on the
-\code{.return_format} parameter:
-\itemize{
-\item \code{"json"}: Returns raw JSON data.
-\item \code{"list"}: Returns data as an R list.
-\item \code{"tibble"}: Returns data as a tibble (if implemented).
-\item \code{"resp"}: Returns the performed request object.
-}
+A parsed API response.
 }
 \description{
 Adjusted prices are calculated only for the selected time period,
