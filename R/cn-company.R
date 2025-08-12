@@ -846,3 +846,30 @@ lxr_cn_com_fs_non_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Financial Statement Data for Listed Banks
+#'
+#' @inheritParams lxr_cn_com_fs_non_financial
+#' @inherit common_return return
+#' @inherit lxr_cn_com_fs_non_financial details
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/bank)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fs_bank(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2024-03-31",
+#'   end_date = "2025-03-31",
+#'   stock_codes = "600016",,
+#'   metrics_list = "q.ps.oi.t"
+#' )
+#' }
+#'
+#' @rdname lxr_cn_com_fs_bank
+#' @export
+lxr_cn_com_fs_bank <- make_endpoint(
+  endpoint = "cn/company/fs/bank",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)
