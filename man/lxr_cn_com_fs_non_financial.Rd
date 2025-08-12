@@ -19,8 +19,7 @@ lxr_cn_com_fs_non_financial(
 \arguments{
 \item{token}{Authentication token, must be a character string.}
 
-\item{stock_codes}{A vector of stock codes as character strings. Example format:
-\code{c("300750", "600519", "600157")}.}
+\item{stock_codes}{A vector of stock codes as character strings.}
 
 \item{metrics_list}{A vector of metrics in the format
 \verb{[granularity].[tableName].[fieldName].[expressionCalculateType]}.

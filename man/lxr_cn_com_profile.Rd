@@ -9,8 +9,7 @@ lxr_cn_com_profile(token, stock_codes, .hdrs = list(), .config = list())
 \arguments{
 \item{token}{Authentication token, must be a character string.}
 
-\item{stock_codes}{A vector of stock codes as character strings. Example format:
-\code{c("300750", "600519", "600157")}.}
+\item{stock_codes}{A vector of stock codes as character strings.}
 
 \item{.hdrs}{Additional headers to include in the request, passed as a named
 list. Default is \code{list("Content-Type" = "application/json")}.}

@@ -67,8 +67,7 @@ NULL
 
 #' Stock Codes Parameter
 #'
-#' @param stock_codes A vector of stock codes as character strings. Example format:
-#'   `c("300750", "600519", "600157")`.
+#' @param stock_codes A vector of stock codes as character strings.
 #'
 #' @name stock_codes_param
 NULL

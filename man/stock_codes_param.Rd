@@ -4,8 +4,7 @@
 \alias{stock_codes_param}
 \title{Stock Codes Parameter}
 \arguments{
-\item{stock_codes}{A vector of stock codes as character strings. Example format:
-\code{c("300750", "600519", "600157")}.}
+\item{stock_codes}{A vector of stock codes as character strings.}
 }
 \description{
 Stock Codes Parameter
