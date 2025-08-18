@@ -809,11 +809,11 @@ lxr_cn_com_fundmtl_other_financial <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' @param metrics_list A vector of metrics in the format 
-#'   `[granularity].[tableName].[fieldName].[expressionCalculateType]`. 
-#'   For example, to retrieve the cumulative original value of total operating 
-#'   income and the year-on-year value of accounts receivable for the current 
-#'   period, set `metrics_list` to `c("q.ps.toi.t", "q.bs.ar.c_y2y")`. Refer to 
+#' @param metrics_list A vector of metrics in the format
+#'   `[granularity].[tableName].[fieldName].[expressionCalculateType]`.
+#'   For example, to retrieve the cumulative original value of total operating
+#'   income and the year-on-year value of accounts receivable for the current
+#'   period, set `metrics_list` to `c("q.ps.toi.t", "q.bs.ar.c_y2y")`. Refer to
 #'   the API documentation for the full list of supported metrics.
 #' @inherit common_return return
 #'
@@ -821,9 +821,9 @@ lxr_cn_com_fundmtl_other_financial <- make_endpoint(
 #'   a value to `start_date`, the length of `stock_codes` must be 1. Either
 #'   `start_date` or `date` must be provided. Passing `latest` as the value for
 #'   `date` will retrieve the most recent financial statement data within the
-#'   last 1.1 years.`limit` is only effective when requesting data within a date 
-#'   range. When the length of `stock_codes` is greater than 1, a maximum of 48 
-#'   metrics can be selected; when the length of `stock_codes` equals 1, 
+#'   last 1.1 years.`limit` is only effective when requesting data within a date
+#'   range. When the length of `stock_codes` is greater than 1, a maximum of 48
+#'   metrics can be selected; when the length of `stock_codes` equals 1,
 #'   a maximum of 128 metrics can be retrieved.
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial)
@@ -870,6 +870,33 @@ lxr_cn_com_fs_non_financial <- make_endpoint(
 #' @export
 lxr_cn_com_fs_bank <- make_endpoint(
   endpoint = "cn/company/fs/bank",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)
+
+#' Retrieve Financial Statement Data for Listed Securities Companies
+#'
+#' @inheritParams lxr_cn_com_fs_non_financial
+#' @inherit common_return return
+#' @inherit lxr_cn_com_fs_non_financial details
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/security)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fs_security(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2024-03-31",
+#'   end_date = "2025-03-31",
+#'   stock_codes = "600030",,
+#'   metrics_list = "q.ps.oi.t"
+#' )
+#' }
+#'
+#' @rdname lxr_cn_com_fs_security
+#' @export
+lxr_cn_com_fs_security <- make_endpoint(
+  endpoint = "cn/company/fs/security",
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
