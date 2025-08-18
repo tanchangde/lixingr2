@@ -927,3 +927,30 @@ lxr_cn_com_fs_insurance <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Financial Statement Data for Listed 其他金融公司
+#'
+#' @inheritParams lxr_cn_com_fs_non_financial
+#' @inherit common_return return
+#' @inherit lxr_cn_com_fs_non_financial details
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/other_financial)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_cn_com_fs_other_financial(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   start_date = "2024-03-31",
+#'   end_date = "2025-03-31",
+#'   stock_codes = "600901",,
+#'   metrics_list = "q.ps.oi.t"
+#' )
+#' }
+#'
+#' @rdname lxr_cn_com_fs_other_financial
+#' @export
+lxr_cn_com_fs_other_financial <- make_endpoint(
+  endpoint = "cn/company/fs/other_financial",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)

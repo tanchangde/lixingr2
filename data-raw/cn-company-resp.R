@@ -479,3 +479,17 @@ save_json_response(
   "./tests/testthat/fixtures/cn_com_fs_insurance.json"
 )
 
+resp_cn_com_fs_other_financial <- lxr_cn_com_fs_other_financial(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  start_date = "2024-03-31",
+  end_date = "2025-03-31",
+  stock_codes = "601318", ,
+  metrics_list = "q.ps.oi.t",
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_cn_com_fs_other_financial,
+  "./tests/testthat/fixtures/cn_com_fs_other_financial.json"
+)
+
