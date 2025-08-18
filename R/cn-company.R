@@ -954,3 +954,114 @@ lxr_cn_com_fs_other_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve A-Share Popularity Data
+#'
+#' * `lxr_cn_company_hot_tr_dri()` retrieves dividend reinvestment yield data.
+#' * `lxr_cn_company_hot_mm_ha()` retrieves Stock Connect data.
+#' * `lxr_cn_company_hot_mtasl()` retrieves margin trading and securities lending data.
+#' * `lxr_cn_company_hot_esc()` retrieves senior executive shareholding change data.
+#' * `lxr_cn_company_hot_mssc()` retrieves major shareholder shareholding change data.
+#' * `lxr_cn_company_hot_t_a()` retrieves trading abnormality data.
+#' * `lxr_cn_company_hot_elr()` retrieves restricted shares unlocking data.
+#' * `lxr_cn_company_hot_ple()` retrieves equity pledge data.
+#' * `lxr_cn_company_hot_capita()` retrieves per capita indicators data.
+#' * `lxr_cn_company_hot_shnc()` retrieves shareholder number change data.
+#' * `lxr_cn_company_hot_df()` retrieves dividend financing data.
+#' * `lxr_cn_company_hot_npd()` retrieves dividend distribution data.
+#' * `lxr_cn_company_hot_tr()` retrieves turnover rate data.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_tr_dri <- make_endpoint(
+  endpoint = "cn/company/hot/tr_dri",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_mm_ha <- make_endpoint(
+  endpoint = "cn/company/hot/mm_ha",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_mtasl <- make_endpoint(
+  endpoint = "cn/company/hot/mtasl",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_esc <- make_endpoint(
+  endpoint = "cn/company/hot/esc",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_mssc <- make_endpoint(
+  endpoint = "cn/company/hot/mssc",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_t_a <- make_endpoint(
+  endpoint = "cn/company/hot/t_a",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_elr <- make_endpoint(
+  endpoint = "cn/company/hot/elr",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_ple <- make_endpoint(
+  endpoint = "cn/company/hot/ple",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_capita <- make_endpoint(
+  endpoint = "cn/company/hot/capita",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_shnc <- make_endpoint(
+  endpoint = "cn/company/hot/shnc",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_df <- make_endpoint(
+  endpoint = "cn/company/hot/df",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_npd <- make_endpoint(
+  endpoint = "cn/company/hot/npd",
+  required = c("token", "stock_codes")
+)
+
+#' @rdname lxr_cn_company_hot
+#' @export
+lxr_cn_company_hot_tr <- make_endpoint(
+  endpoint = "cn/company/hot/tr",
+  required = c("token", "stock_codes")
+)

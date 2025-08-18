@@ -492,4 +492,3 @@ save_json_response(
   resp_cn_com_fs_other_financial,
   "./tests/testthat/fixtures/cn_com_fs_other_financial.json"
 )
-
