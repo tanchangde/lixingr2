@@ -1065,3 +1065,31 @@ lxr_cn_company_hot_tr <- make_endpoint(
   endpoint = "cn/company/hot/tr",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Capital Flow Data
+#'
+#' * `lxr_cn_company_mutual_market()` retrieves Stock Connect data.
+#' * `lxr_cn_company_mtasl_history()` retrieves historical margin trading and
+#'   securities lending data.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+
+#' @rdname lxr_cn_company_capital_flow
+#' @export
+lxr_cn_company_mutual_market <- make_endpoint(
+  endpoint = "cn/company/mutual-market",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
+#' @rdname lxr_cn_company_capital_flow
+#' @export
+lxr_cn_company_mtasl_history <- make_endpoint(
+  endpoint = "cn/company/margin-trading-and-securities-lending",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
