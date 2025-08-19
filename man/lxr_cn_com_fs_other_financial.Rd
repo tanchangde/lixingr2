@@ -64,7 +64,7 @@ codes 429 (Too Many Requests) and 500+ (Server Errors).
 \itemize{
 \item \code{"json"}: Returns raw JSON data.
 \item \code{"list"}: Returns data as an R list.
-\item \code{"tibble"}: Returns data as a tibble (if implemented).
+\item \code{"tibble"}: Returns data as a tibble (experimental).
 \item \code{"resp"}: Returns the performed request object.
 }
 

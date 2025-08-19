@@ -24,7 +24,7 @@
 #' 
 #'   - `"json"`: Returns raw JSON data.
 #'   - `"list"`: Returns data as an R list.
-#'   - `"tibble"`: Returns data as a tibble (if implemented).
+#'   - `"tibble"`: Returns data as a tibble (experimental).
 #'   - `"resp"`: Returns the performed request object.
 #' 
 #'   `verbosity`: Controls the verbosity of printed information. This is a 

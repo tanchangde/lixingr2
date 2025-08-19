@@ -171,7 +171,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
     httr2::req_url_path_append(path) |>
     httr2::req_headers(!!!hdrs) |>
     httr2::req_body_json(body, auto_unbox = FALSE) |>
-    httr2::req_error(is_error = ~ FALSE) |>
+    httr2::req_error(is_error = ~FALSE) |>
     httr2::req_retry(
       max_tries        = cfg$max_tries,
       backoff          = cfg$backoff_fun,
@@ -179,18 +179,20 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
       retry_on_failure = TRUE
     )
 
-  resp <- tryCatch({
-    httr2::req_perform(req, verbosity = cfg$verbosity)
-  },
-  error = function(e) {
-    if (inherits(e, "httr2_error")) {
-      cli::cli_abort(c(
-        "Network request failed",
-        "x" = conditionMessage(e),
-        "i" = "Check your internet connection and API endpoint"
-      ), parent = e)
+  resp <- tryCatch(
+    {
+      httr2::req_perform(req, verbosity = cfg$verbosity)
+    },
+    error = function(e) {
+      if (inherits(e, "httr2_error")) {
+        cli::cli_abort(c(
+          "Network request failed",
+          "x" = conditionMessage(e),
+          "i" = "Check your internet connection and API endpoint"
+        ), parent = e)
+      }
     }
-  })
+  )
 
   status_code <- httr2::resp_status(resp)
   if (status_code >= 400) {
@@ -205,8 +207,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
       as.character(error_body)
     }
 
-    error_title <- switch(
-      as.character(status_code),
+    error_title <- switch(as.character(status_code),
       "400" = "Bad Request",
       "401" = "Unauthorized",
       "403" = "Forbidden",
@@ -227,12 +228,22 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
   }
 
   switch(cfg$return_format,
-         json   = httr2::resp_body_string(resp),
-         list   = httr2::resp_body_json(resp),
-         tibble =  {
-           resp
-         },
-         resp   = resp
+    json = httr2::resp_body_string(resp),
+    list = httr2::resp_body_json(resp),
+    tibble = {
+      resp_data <- httr2::resp_body_json(resp, simplifyVector = TRUE) |>
+        magrittr::use_series("data")
+
+      if (length(resp_data) > 0) {
+        resp_data |>
+          jsonlite::flatten() |>
+          lxr_unnest() |>
+          tibble::as_tibble()
+      } else {
+        cli::cli_abort("i" = "Query was successful, but no data returned.")
+      }
+    },
+    resp = resp
   )
 }
 
