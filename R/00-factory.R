@@ -171,6 +171,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
     httr2::req_url_path_append(path) |>
     httr2::req_headers(!!!hdrs) |>
     httr2::req_body_json(body, auto_unbox = FALSE) |>
+    httr2::req_error(is_error = ~ FALSE) |>
     httr2::req_retry(
       max_tries        = cfg$max_tries,
       backoff          = cfg$backoff_fun,
@@ -181,35 +182,27 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
   resp <- tryCatch({
     httr2::req_perform(req, verbosity = cfg$verbosity)
   },
-  httr2_error = function(e) {
-    cli::cli_abort(c(
-      "Network request failed",
-      "x" = conditionMessage(e),
-      "i" = "Check your internet connection and API endpoint"
-    ), parent = e)
-  },
   error = function(e) {
-    cli::cli_abort(c(
-      "Unexpected error during request",
-      "x" = conditionMessage(e)
-    ), parent = e)
+    if (inherits(e, "httr2_error")) {
+      cli::cli_abort(c(
+        "Network request failed",
+        "x" = conditionMessage(e),
+        "i" = "Check your internet connection and API endpoint"
+      ), parent = e)
+    }
   })
 
   status_code <- httr2::resp_status(resp)
   if (status_code >= 400) {
+    error_body_raw <- httr2::resp_body_string(resp)
     error_body <- tryCatch(
-      httr2::resp_body_json(resp),
-      error = function(e) httr2::resp_body_string(resp)
+      jsonlite::fromJSON(error_body_raw, simplifyVector = FALSE),
+      error = function(e) error_body_raw
     )
-
     error_msg <- if (is.list(error_body)) {
-      error_body$message %||%
-        error_body$error %||%
-        error_body$error_message %||%
-        error_body$detail %||%
-        jsonlite::toJSON(error_body, auto_unbox = TRUE)
+      jsonlite::toJSON(error_body, pretty = TRUE, auto_unbox = TRUE)
     } else {
-      error_body
+      as.character(error_body)
     }
 
     error_title <- switch(
@@ -229,7 +222,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
       "{error_title}",
       "x" = "Status code: {.strong {status_code}}",
       "!" = "API error: {error_msg}",
-      "i" = "Endpoint: {.url {client$base_url}/{path}}"
+      "i" = "Endpoint: {.url {paste0(client$base_url, '/', path)}}"
     ), class = paste0("http_", status_code))
   }
 

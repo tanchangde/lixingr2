@@ -104,38 +104,7 @@ test_that("backoff_fun receives correct attempt numbers", {
     req_body_json = function(req, ...) req,
     resp_body_string = function(req, ...) req,
     resp_body_json = function(req, ...) req,
-    resp_status = function(req) 200L,
-    req_retry = function(req, max_tries, backoff, ...) {
-      for (i in seq_len(max_tries - 1)) {
-        backoff(i)
-        attempts_seen <<- c(attempts_seen, i)
-      }
-      req
-    },
-    .package = "httr2"
-  )
-
-  ep(token = "admin", .config = list(max_tries = 5L))
-
-  expect_identical(attempts_seen, 1:4)
-})
-
-test_that("backoff_fun receives correct attempt numbers", {
-  ep <- make_endpoint(
-    endpoint = "cn/company",
-    required = "token",
-  )
-
-  attempts_seen <- integer()
-
-  local_mocked_bindings(
-    request = function(...) list(),
-    req_headers = function(req, ...) req,
-    req_url_path_append = function(req, ...) req,
-    req_perform = function(req, ...) list(status = 200L),
-    req_body_json = function(req, ...) req,
-    resp_body_string = function(req, ...) req,
-    resp_body_json = function(req, ...) req,
+    req_error = function(req, ...) req,
     resp_status = function(req) 200L,
     req_retry = function(req, max_tries, backoff, ...) {
       for (i in seq_len(max_tries - 1)) {
