@@ -74,7 +74,6 @@ new_client <- function(
     ),
     name_transform = snakecase::to_lower_camel_case,
     array_params = c("stockCodes", "mutualMarkets", "metricsList")) {
-
   if (!is.list(default_hdrs)) {
     cli::cli_abort(c(
       "Invalid {.var default_hdrs}",
