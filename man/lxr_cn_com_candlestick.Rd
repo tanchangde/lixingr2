@@ -20,7 +20,7 @@ lxr_cn_com_candlestick(
 \arguments{
 \item{token}{Authentication token, must be a character string.}
 
-\item{stock_code}{A single stock code as a character string, e.g., "300750".}
+\item{stock_code}{A single stock code as a character string.}
 
 \item{type}{Adjustment type, e.g., \code{"lxr_fc_rights"}. Supported types include:
 No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
@@ -49,7 +49,7 @@ list. Default is \code{list("Content-Type" = "application/json")}.}
 
 \item{.config}{Additional configuration parameters, passed as a named list.
 Can be partially or fully overridden.
-Default is \code{list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,  return_format = "list", verbosity = NULL)}.
+Default is \code{list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL, return_format = "list", verbosity = NULL)}.
 
 \code{max_tries}: Maximum number of retry attempts.
 

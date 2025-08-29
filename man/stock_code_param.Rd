@@ -4,7 +4,7 @@
 \alias{stock_code_param}
 \title{Stock Code Parameter}
 \arguments{
-\item{stock_code}{A single stock code as a character string, e.g., "300750".}
+\item{stock_code}{A single stock code as a character string.}
 }
 \description{
 Stock Code Parameter

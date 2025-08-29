@@ -21,3 +21,18 @@ save_json_response(
   resp_hk_com,
   "./tests/testthat/fixtures/hk_com.json"
 )
+
+resp_hk_com_candlestick <- lxr_hk_com_candlestick(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  type = "lxr_fc_rights",
+  start_date = "2025-06-01",
+  end_date = "2025-07-01",
+  limit = 5,
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_hk_com_candlestick,
+  "./tests/testthat/fixtures/hk_com_candlestick.json"
+)

@@ -4,32 +4,32 @@
 #' @param .hdrs Additional headers to include in the request, passed as a named
 #'   list. Default is `list("Content-Type" = "application/json")`.
 #' @param .config Additional configuration parameters, passed as a named list.
-#'   Can be partially or fully overridden. 
-#'   Default is `list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL, 
+#'   Can be partially or fully overridden.
+#'   Default is `list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,
 #'   return_format = "list", verbosity = NULL)`.
-#' 
+#'
 #'   `max_tries`: Maximum number of retry attempts.
-#' 
+#'
 #'   `backoff_fun`: Function to calculate backoff delay in seconds between retries.
-#'   Default is an exponential backoff with jitter. The delay increases with 
-#'   the number of retry attempts and includes randomness to reduce conflicts. 
+#'   Default is an exponential backoff with jitter. The delay increases with
+#'   the number of retry attempts and includes randomness to reduce conflicts.
 #'   The maximum delay is capped at 10 seconds.
-#' 
+#'
 #'   `retry_on`: Predicate function that takes a single argument (the response)
-#'   and returns TRUE or FALSE to specify whether the response represents a 
+#'   and returns TRUE or FALSE to specify whether the response represents a
 #'   transient error that should trigger a retry. Default retries on HTTP status
 #'   codes 429 (Too Many Requests) and 500+ (Server Errors).
-#' 
+#'
 #'   `return_format`:
-#' 
+#'
 #'   - `"json"`: Returns raw JSON data.
 #'   - `"list"`: Returns data as an R list.
 #'   - `"tibble"`: Returns data as a tibble (experimental).
 #'   - `"resp"`: Returns the performed request object.
-#' 
-#'   `verbosity`: Controls the verbosity of printed information. This is a 
+#'
+#'   `verbosity`: Controls the verbosity of printed information. This is a
 #'   wrapper around [httr2::req_verbose()] that uses an integer to specify verbosity levels:
-#' 
+#'
 #'    - `0`: No output.
 #'    - `1`: Show headers.
 #'    - `2`: Show headers and bodies.
@@ -60,7 +60,7 @@ NULL
 
 #' Stock Code Parameter
 #'
-#' @param stock_code A single stock code as a character string, e.g., "300750".
+#' @param stock_code A single stock code as a character string.
 #'
 #' @name stock_code_param
 NULL
@@ -81,19 +81,19 @@ NULL
 
 #' Common Return Descriptions
 #'
-#' @return A parsed API response. 
+#' @return A parsed API response.
 #'
 #' @name common_return
 NULL
 
 #' Metrics List Parameter
-#' 
+#'
 #' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'   
+#'
 #' Currently supported metrics:
 #'
 #' **Valuation Metrics**
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
@@ -124,11 +124,11 @@ NULL
 #' - Northbound Connect Net Buy (Value)   : `mm_nba`
 #'
 #' **Valuation Statistics Metrics**
-#' 
+#'
 #' Format: `metricsName.granularity.statisticsDataType`
 #'
 #' *metricsName*
-#' 
+#'
 #' - PE-TTM : `pe_ttm`
 #' - PE-TTM (ex-NRI) : `d_pe_ttm`
 #' - PB : `pb`
@@ -136,7 +136,7 @@ NULL
 #' - PS-TTM : `ps_ttm`
 #'
 #' *granularity*
-#' 
+#'
 #' - Since Listing : `fs`
 #' - 20 Years : `y20`
 #' - 10 Years : `y10`
@@ -145,7 +145,7 @@ NULL
 #' - 1 Year : `y1`
 #'
 #' *statisticsDataType*
-#' 
+#'
 #' - Percentile Position (%) : `cvpos`
 #' - 20th-percentile Value : `q2v`
 #' - 50th-percentile Value : `q5v`
@@ -154,6 +154,6 @@ NULL
 #' - Maximum Value : `maxv`
 #' - Maximum Positive Value : `maxpv`
 #' - Average Value : `avgv`
-#' 
+#'
 #' @name metrics_list_cn_com_fundmtl
 NULL
