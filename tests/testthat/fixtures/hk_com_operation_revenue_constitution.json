@@ -1,0 +1,224 @@
+[
+  {
+    "date": "2025-06-29T16:00:00.000Z",
+    "declarationDate": "2025-08-13T08:30:00.000Z",
+    "currency": "CNY",
+    "dataList": [
+      {
+        "itemName": "按服務類型分"
+      },
+      {
+        "itemName": "增值服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 183501000000,
+        "costs": 73367000000,
+        "grossProfitMargin": 0.6002
+      },
+      {
+        "itemName": "營銷服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 67615000000,
+        "costs": 29336000000,
+        "grossProfitMargin": 0.5661
+      },
+      {
+        "itemName": "金融科技及企業服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 110443000000,
+        "costs": 53894000000,
+        "grossProfitMargin": 0.512
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按服務類型分",
+        "revenue": 2967000000,
+        "costs": 2423000000,
+        "grossProfitMargin": 0.1834
+      },
+      {
+        "itemName": "按地區分"
+      },
+      {
+        "itemName": "中國內地",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "合計",
+        "revenue": 364526000000,
+        "costs": 159020000000,
+        "grossProfitMargin": 0.5638
+      }
+    ]
+  },
+  {
+    "date": "2025-03-30T16:00:00.000Z",
+    "declarationDate": "2025-05-14T08:31:00.000Z",
+    "currency": "CNY",
+    "dataList": [
+      {
+        "itemName": "按服務類型分"
+      },
+      {
+        "itemName": "增值服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 92133000000,
+        "costs": 37222000000,
+        "grossProfitMargin": 0.596
+      },
+      {
+        "itemName": "網絡廣告",
+        "parentItemName": "按服務類型分",
+        "revenue": 31853000000,
+        "costs": 14159000000,
+        "grossProfitMargin": 0.5555
+      },
+      {
+        "itemName": "金融科技及企業服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 54907000000,
+        "costs": 27310000000,
+        "grossProfitMargin": 0.5026
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按服務類型分",
+        "revenue": 1129000000,
+        "costs": 838000000,
+        "grossProfitMargin": 0.2578
+      },
+      {
+        "itemName": "按地區分"
+      },
+      {
+        "itemName": "中國內地",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "合計",
+        "revenue": 180022000000,
+        "costs": 79529000000,
+        "grossProfitMargin": 0.5582
+      }
+    ]
+  },
+  {
+    "date": "2024-12-30T16:00:00.000Z",
+    "declarationDate": "2025-04-08T09:02:00.000Z",
+    "currency": "CNY",
+    "dataList": [
+      {
+        "itemName": "按服務類型分"
+      },
+      {
+        "itemName": "增值服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 319168000000,
+        "costs": 137511000000,
+        "grossProfitMargin": 0.5692
+      },
+      {
+        "itemName": "網絡廣告",
+        "parentItemName": "按服務類型分",
+        "revenue": 121374000000,
+        "costs": 54142000000,
+        "grossProfitMargin": 0.5539
+      },
+      {
+        "itemName": "金融科技及企業服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 211956000000,
+        "costs": 112255000000,
+        "grossProfitMargin": 0.4704
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按服務類型分",
+        "revenue": 7759000000,
+        "costs": 7103000000,
+        "grossProfitMargin": 0.0845
+      },
+      {
+        "itemName": "按地區分"
+      },
+      {
+        "itemName": "中國內地",
+        "parentItemName": "按地區分",
+        "revenue": 595458000000
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按地區分",
+        "revenue": 64799000000
+      },
+      {
+        "itemName": "合計",
+        "revenue": 660257000000,
+        "costs": 311011000000,
+        "grossProfitMargin": 0.529
+      }
+    ]
+  },
+  {
+    "date": "2024-09-29T16:00:00.000Z",
+    "declarationDate": "2024-11-13T08:30:00.000Z",
+    "currency": "CNY",
+    "dataList": [
+      {
+        "itemName": "按服務類型分"
+      },
+      {
+        "itemName": "增值服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 240146000000,
+        "costs": 102646000000,
+        "grossProfitMargin": 0.5726
+      },
+      {
+        "itemName": "網絡廣告",
+        "parentItemName": "按服務類型分",
+        "revenue": 86370000000,
+        "costs": 39335000000,
+        "grossProfitMargin": 0.5446
+      },
+      {
+        "itemName": "金融科技及企業服務",
+        "parentItemName": "按服務類型分",
+        "revenue": 155831000000,
+        "costs": 82590000000,
+        "grossProfitMargin": 0.47
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按服務類型分",
+        "revenue": 5464000000,
+        "costs": 4647000000,
+        "grossProfitMargin": 0.1495
+      },
+      {
+        "itemName": "按地區分"
+      },
+      {
+        "itemName": "中國內地",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "其他",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "合計",
+        "revenue": 487811000000,
+        "costs": 229218000000,
+        "grossProfitMargin": 0.5301
+      }
+    ]
+  }
+]

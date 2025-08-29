@@ -36,3 +36,16 @@ save_json_response(
   resp_hk_com_candlestick,
   "./tests/testthat/fixtures/hk_com_candlestick.json"
 )
+
+resp_hk_com_operation_revenue_constitution <- lxr_hk_com_operation_revenue_constitution(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2024-07-01",
+  end_date = "2025-07-15",
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_hk_com_operation_revenue_constitution,
+  "./tests/testthat/fixtures/hk_com_operation_revenue_constitution.json"
+)

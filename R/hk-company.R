@@ -57,3 +57,18 @@ lxr_hk_com_candlestick <- make_endpoint(
     "adjust_forward_date", "adjust_backward_date", "limit"
   )
 )
+
+#' Retrieve Revenue Composition Data
+#'
+#' @inheritParams lxr_cn_com_pledge
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/operation-revenue-constitution)
+#'
+#' @rdname lxr_hk_com_operation_revenue_constitution
+#' @export
+lxr_hk_com_operation_revenue_constitution <- make_endpoint(
+  endpoint = "hk/company/operation-revenue-constitution",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
