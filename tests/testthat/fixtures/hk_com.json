@@ -1,0 +1,14 @@
+[
+  {
+    "stockCode": "00700",
+    "exchange": "hk",
+    "market": "h",
+    "ipoDate": "2004-06-16T00:00:00+08:00",
+    "areaCode": "hk",
+    "fsTableType": "non_financial",
+    "mutualMarkets": "ah",
+    "name": "腾讯控股",
+    "listingStatus": "normally_listed",
+    "sharesPerLot": 100
+  }
+]
