@@ -72,3 +72,94 @@ lxr_hk_com_operation_revenue_constitution <- make_endpoint(
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
+
+#' Retrieve Non-Financial Fundamental Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#'
+#' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
+#'
+#' Currently supported metrics:
+#'
+#' **Valuation Metrics**
+#'
+#' - PE-TTM : `pe_ttm`
+#' - PB : `pb`
+#' - PS-TTM : `ps_ttm`
+#' - Dividend Yield : `dyr`
+#' - PCF-TTM : `pcf_ttm`
+#' - Stock Price : `sp`
+#' - Price Change (%) : `spc`
+#' - Intraday Range (%) : `spa`
+#' - Trading Volume : `tv`
+#' - Trading Value : `ta`
+#' - Turnover Rate (%) : `to_r`
+#' - Market Capitalization : `mc`
+#' - H-share Market Cap : `mc_om`
+#' - Southbound Shareholding Volume : `ah_sh`
+#' - Southbound Shareholding Value : `ah_shm`
+#' - Southbound Net Buy Value : `mm_nba`
+#' - Shares Per Lot : `sharesPerLot`
+#'
+#' **Valuation Statistics Metrics**
+#'
+#' Format: `metricsName.granularity.statisticsDataType`
+#'
+#' *metricsName*
+#'
+#' - PE-TTM : `pe_ttm`
+#' - PB : `pb`
+#' - PS-TTM : `ps_ttm`
+#'
+#' *granularity*
+#'
+#' - Since Listing : `fs`
+#' - 20 Years : `y20`
+#' - 10 Years : `y10`
+#' - 5 Years : `y5`
+#' - 3 Years : `y3`
+#' - 1 Year : `y1`
+#'
+#' *statisticsDataType*
+#'
+#' - Percentile Position (%) : `cvpos`
+#' - 20th-percentile Value : `q2v`
+#' - 50th-percentile Value : `q5v`
+#' - 80th-percentile Value : `q8v`
+#' - Minimum Value : `minv`
+#' - Maximum Value : `maxv`
+#' - Maximum Positive Value : `maxpv`
+#' - Average Value : `avgv`
+#'
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
+#'   `start_date` or `date` must be provided. `limit` is only effective when
+#'   requesting data within a date range. When the length of `stock_codes` is
+#'   greater than 1, a maximum of 48 metrics can be selected; when the length of
+#'   `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fundamental/non_financial)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_hk_com_fundmtl_non_financial(
+#'   token = Sys.getenv("LIXINGR_TOKEN"),
+#'   date = "2025-07-08",
+#'   stock_codes = "00700",
+#'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos")
+#' )
+#' }
+#'
+#' @rdname lxr_hk_com_fundmtl_non_financial
+#' @export
+lxr_hk_com_fundmtl_non_financial <- make_endpoint(
+  endpoint = "hk/company/fundamental/non_financial",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)

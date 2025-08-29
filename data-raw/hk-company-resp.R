@@ -49,3 +49,16 @@ save_json_response(
   resp_hk_com_operation_revenue_constitution,
   "./tests/testthat/fixtures/hk_com_operation_revenue_constitution.json"
 )
+
+resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  date = "2025-07-08",
+  stock_codes = "00700",
+  metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos"),
+  .config = list(return_format = "resp")
+)
+
+save_json_response(
+  resp_hk_com_fundmtl_non_financial,
+  "./tests/testthat/fixtures/hk_com_fundmtl_non_financial.json"
+)
