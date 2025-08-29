@@ -6,9 +6,10 @@
 \usage{
 lxr_cn_com_candlestick(
   token,
-  stock_code,
-  type,
-  start_date,
+  stock_code = NULL,
+  type = NULL,
+  date = NULL,
+  start_date = NULL,
   end_date = NULL,
   adjust_forward_date = NULL,
   adjust_backward_date = NULL,
@@ -25,6 +26,9 @@ lxr_cn_com_candlestick(
 \item{type}{Adjustment type, e.g., \code{"lxr_fc_rights"}. Supported types include:
 No adjustment: \code{ex_rights}, Lixinger pre-adjustment: \code{lxr_fc_rights},
 Pre-adjustment: \code{fc_rights}, Post-adjustment: \code{bc_rights}.}
+
+\item{date}{The date for which data is to be retrieved, as a character string
+in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).}
 
 \item{start_date}{The start date as a character string in "YYYY-MM-DD" format.
 The date should be based on Beijing Time (UTC+8).}
@@ -86,6 +90,10 @@ A parsed API response.
 \description{
 Adjusted prices are calculated only for the selected time period,
 while trading volume is not adjusted.
+}
+\details{
+The \code{stock_code} parameter is only effective when requesting data
+within a date range.
 }
 \seealso{
 \href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}

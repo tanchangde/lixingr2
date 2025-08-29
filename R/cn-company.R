@@ -69,15 +69,19 @@ lxr_cn_com_equity_change <- make_endpoint(
 #' @param type Adjustment type, e.g., `"lxr_fc_rights"`. Supported types include:
 #'   No adjustment: `ex_rights`, Lixinger pre-adjustment: `lxr_fc_rights`,
 #'   Pre-adjustment: `fc_rights`, Post-adjustment: `bc_rights`.
+#' @inheritParams date_param
+#' @inheritParams date_range_params
 #' @param adjust_forward_date The starting date for pre-adjustment as a character string.
 #'   Must be used with `end_date` and must be greater than or equal to `end_date`.
 #'   Required when requesting adjusted data; defaults to `end_date` if not provided.
 #' @param adjust_backward_date The starting date for post-adjustment as a character string.
 #'   Must be used with `start_date` and must be less than or equal to `start_date`.
 #'   Required when requesting adjusted data; defaults to `start_date` if not provided.
-#' @inheritParams date_range_params
 #' @inheritParams limit_param
 #' @inherit common_return return
+#'
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick)
 #'
@@ -85,8 +89,11 @@ lxr_cn_com_equity_change <- make_endpoint(
 #' @export
 lxr_cn_com_candlestick <- make_endpoint(
   endpoint = "cn/company/candlestick",
-  required = c("token", "stock_code", "type", "start_date"),
-  optional = c("end_date", "adjust_forward_date", "adjust_backward_date", "limit")
+  required = "token",
+  optional = c(
+    "stock_code", "type", "date", "start_date", "end_date",
+    "adjust_forward_date", "adjust_backward_date", "limit"
+  )
 )
 
 #' Retrieve Shareholders Number Data
