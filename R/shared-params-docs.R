@@ -35,6 +35,7 @@
 #'    - `2`: Show headers and bodies.
 #'    - `3`: Show headers, bodies, and curl status messages.
 #'
+#' @keywords internal
 #' @name common_params
 NULL
 
@@ -43,6 +44,7 @@ NULL
 #' @param date The date for which data is to be retrieved, as a character string
 #'   in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).
 #'
+#' @keywords internal
 #' @name date_param
 NULL
 
@@ -55,6 +57,7 @@ NULL
 #'   the start and end dates must not exceed 10 years. The date should be based
 #'   on Beijing Time (UTC+8).
 #'
+#' @keywords internal
 #' @name date_range_params
 NULL
 
@@ -62,6 +65,7 @@ NULL
 #'
 #' @param stock_code A single stock code as a character string.
 #'
+#' @keywords internal
 #' @name stock_code_param
 NULL
 
@@ -69,6 +73,7 @@ NULL
 #'
 #' @param stock_codes A vector of stock codes as character strings.
 #'
+#' @keywords internal
 #' @name stock_codes_param
 NULL
 
@@ -76,6 +81,7 @@ NULL
 #'
 #' @param limit The number of latest records to return.
 #'
+#' @keywords internal
 #' @name limit_param
 NULL
 
@@ -83,6 +89,7 @@ NULL
 #'
 #' @return A parsed API response.
 #'
+#' @keywords internal
 #' @name common_return
 NULL
 
@@ -155,5 +162,6 @@ NULL
 #' - Maximum Positive Value : `maxpv`
 #' - Average Value : `avgv`
 #'
+#' @keywords internal
 #' @name metrics_list_cn_com_fundmtl
 NULL
