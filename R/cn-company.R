@@ -964,119 +964,119 @@ lxr_cn_com_fs_other_financial <- make_endpoint(
 
 #' Retrieve A-Share Popularity Data
 #'
-#' * `lxr_cn_company_hot_tr_dri()` retrieves dividend reinvestment yield data.
-#' * `lxr_cn_company_hot_mm_ha()` retrieves Stock Connect data.
-#' * `lxr_cn_company_hot_mtasl()` retrieves margin trading and securities lending data.
-#' * `lxr_cn_company_hot_esc()` retrieves senior executive shareholding change data.
-#' * `lxr_cn_company_hot_mssc()` retrieves major shareholder shareholding change data.
-#' * `lxr_cn_company_hot_t_a()` retrieves trading abnormality data.
-#' * `lxr_cn_company_hot_elr()` retrieves restricted shares unlocking data.
-#' * `lxr_cn_company_hot_ple()` retrieves equity pledge data.
-#' * `lxr_cn_company_hot_capita()` retrieves per capita indicators data.
-#' * `lxr_cn_company_hot_shnc()` retrieves shareholder number change data.
-#' * `lxr_cn_company_hot_df()` retrieves dividend financing data.
-#' * `lxr_cn_company_hot_npd()` retrieves dividend distribution data.
-#' * `lxr_cn_company_hot_tr()` retrieves turnover rate data.
+#' * `lxr_cn_com_hot_tr_dri()` retrieves dividend reinvestment yield data.
+#' * `lxr_cn_com_hot_mm_ha()` retrieves Stock Connect data.
+#' * `lxr_cn_com_hot_mtasl()` retrieves margin trading and securities lending data.
+#' * `lxr_cn_com_hot_esc()` retrieves senior executive shareholding change data.
+#' * `lxr_cn_com_hot_mssc()` retrieves major shareholder shareholding change data.
+#' * `lxr_cn_com_hot_t_a()` retrieves trading abnormality data.
+#' * `lxr_cn_com_hot_elr()` retrieves restricted shares unlocking data.
+#' * `lxr_cn_com_hot_ple()` retrieves equity pledge data.
+#' * `lxr_cn_com_hot_capita()` retrieves per capita indicators data.
+#' * `lxr_cn_com_hot_shnc()` retrieves shareholder number change data.
+#' * `lxr_cn_com_hot_df()` retrieves dividend financing data.
+#' * `lxr_cn_com_hot_npd()` retrieves dividend distribution data.
+#' * `lxr_cn_com_hot_tr()` retrieves turnover rate data.
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_codes_param
 #' @inherit common_return return
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_tr_dri <- make_endpoint(
+lxr_cn_com_hot_tr_dri <- make_endpoint(
   endpoint = "cn/company/hot/tr_dri",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_mm_ha <- make_endpoint(
+lxr_cn_com_hot_mm_ha <- make_endpoint(
   endpoint = "cn/company/hot/mm_ha",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_mtasl <- make_endpoint(
+lxr_cn_com_hot_mtasl <- make_endpoint(
   endpoint = "cn/company/hot/mtasl",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_esc <- make_endpoint(
+lxr_cn_com_hot_esc <- make_endpoint(
   endpoint = "cn/company/hot/esc",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_mssc <- make_endpoint(
+lxr_cn_com_hot_mssc <- make_endpoint(
   endpoint = "cn/company/hot/mssc",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_t_a <- make_endpoint(
+lxr_cn_com_hot_t_a <- make_endpoint(
   endpoint = "cn/company/hot/t_a",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_elr <- make_endpoint(
+lxr_cn_com_hot_elr <- make_endpoint(
   endpoint = "cn/company/hot/elr",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_ple <- make_endpoint(
+lxr_cn_com_hot_ple <- make_endpoint(
   endpoint = "cn/company/hot/ple",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_capita <- make_endpoint(
+lxr_cn_com_hot_capita <- make_endpoint(
   endpoint = "cn/company/hot/capita",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_shnc <- make_endpoint(
+lxr_cn_com_hot_shnc <- make_endpoint(
   endpoint = "cn/company/hot/shnc",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_df <- make_endpoint(
+lxr_cn_com_hot_df <- make_endpoint(
   endpoint = "cn/company/hot/df",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_npd <- make_endpoint(
+lxr_cn_com_hot_npd <- make_endpoint(
   endpoint = "cn/company/hot/npd",
   required = c("token", "stock_codes")
 )
 
-#' @rdname lxr_cn_company_hot
+#' @rdname lxr_cn_com_hot
 #' @export
-lxr_cn_company_hot_tr <- make_endpoint(
+lxr_cn_com_hot_tr <- make_endpoint(
   endpoint = "cn/company/hot/tr",
   required = c("token", "stock_codes")
 )
 
 #' Retrieve Capital Flow Data
 #'
-#' * `lxr_cn_company_mutual_market()` retrieves Stock Connect data.
-#' * `lxr_cn_company_mtasl_history()` retrieves historical margin trading and
+#' * `lxr_cn_com_mutual_market()` retrieves Stock Connect data.
+#' * `lxr_cn_com_mtasl_history()` retrieves historical margin trading and
 #'   securities lending data.
 #'
 #' @inheritParams common_params
@@ -1085,17 +1085,17 @@ lxr_cn_company_hot_tr <- make_endpoint(
 #' @inheritParams limit_param
 #' @inherit common_return return
 
-#' @rdname lxr_cn_company_capital_flow
+#' @rdname lxr_cn_com_capital_flow
 #' @export
-lxr_cn_company_mutual_market <- make_endpoint(
+lxr_cn_com_mutual_market <- make_endpoint(
   endpoint = "cn/company/mutual-market",
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
 
-#' @rdname lxr_cn_company_capital_flow
+#' @rdname lxr_cn_com_capital_flow
 #' @export
-lxr_cn_company_mtasl_history <- make_endpoint(
+lxr_cn_com_mtasl_history <- make_endpoint(
   endpoint = "cn/company/margin-trading-and-securities-lending",
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
