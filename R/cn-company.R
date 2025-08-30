@@ -205,8 +205,8 @@ lxr_cn_com_block_deal <- make_endpoint(
 #' @export
 lxr_cn_com_pledge <- make_endpoint(
   endpoint = "cn/company/pledge",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Revenue Composition Data
@@ -220,8 +220,8 @@ lxr_cn_com_pledge <- make_endpoint(
 #' @export
 lxr_cn_com_operation_revenue_constitution <- make_endpoint(
   endpoint = "cn/company/operation-revenue-constitution",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Operating Data
@@ -235,8 +235,8 @@ lxr_cn_com_operation_revenue_constitution <- make_endpoint(
 #' @export
 lxr_cn_com_operating_data <- make_endpoint(
   endpoint = "cn/company/operating-data",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Stock Index
@@ -254,8 +254,8 @@ lxr_cn_com_operating_data <- make_endpoint(
 #' @export
 lxr_cn_com_indices <- make_endpoint(
   endpoint = "cn/company/indices",
-  required = c("token"),
-  optional = c("stock_code", "date")
+  required = c("token", "stock_code"),
+  optional = c("date")
 )
 
 #' Retrieve Industry Data
@@ -270,8 +270,8 @@ lxr_cn_com_indices <- make_endpoint(
 #' @export
 lxr_cn_com_industries <- make_endpoint(
   endpoint = "cn/company/industries",
-  required = c("token"),
-  optional = c("stock_code", "date")
+  required = c("token", "stock_code"),
+  optional = c("date")
 )
 
 #' Retrieve Announcement Information
@@ -285,8 +285,8 @@ lxr_cn_com_industries <- make_endpoint(
 #' @export
 lxr_cn_com_announcement <- make_endpoint(
   endpoint = "cn/company/announcement",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Regulatory Measures Information
@@ -300,8 +300,8 @@ lxr_cn_com_announcement <- make_endpoint(
 #' @export
 lxr_cn_com_measures <- make_endpoint(
   endpoint = "cn/company/measures",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Inquiry Letter Information
@@ -315,8 +315,8 @@ lxr_cn_com_measures <- make_endpoint(
 #' @export
 lxr_cn_com_inquiry <- make_endpoint(
   endpoint = "cn/company/inquiry",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Majority Shareholders Information
@@ -330,8 +330,8 @@ lxr_cn_com_inquiry <- make_endpoint(
 #' @export
 lxr_cn_com_majority_shareholders <- make_endpoint(
   endpoint = "cn/company/majority-shareholders",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Top 10 Circulating Shareholders Information
@@ -345,8 +345,8 @@ lxr_cn_com_majority_shareholders <- make_endpoint(
 #' @export
 lxr_cn_com_nolimit_shareholders <- make_endpoint(
   endpoint = "cn/company/nolimit-shareholders",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Public Fund Shareholders Information
@@ -360,8 +360,8 @@ lxr_cn_com_nolimit_shareholders <- make_endpoint(
 #' @export
 lxr_cn_com_fund_shareholders <- make_endpoint(
   endpoint = "cn/company/fund-shareholders",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Fund Company Shareholders Information
@@ -375,8 +375,8 @@ lxr_cn_com_fund_shareholders <- make_endpoint(
 #' @export
 lxr_cn_com_fund_collection_shareholders <- make_endpoint(
   endpoint = "cn/company/fund-collection-shareholders",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Dividend Information
@@ -390,8 +390,8 @@ lxr_cn_com_fund_collection_shareholders <- make_endpoint(
 #' @export
 lxr_cn_com_dividend <- make_endpoint(
   endpoint = "cn/company/dividend",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Allotment Information
@@ -405,8 +405,8 @@ lxr_cn_com_dividend <- make_endpoint(
 #' @export
 lxr_cn_com_allotment <- make_endpoint(
   endpoint = "cn/company/allotment",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Customer Information
@@ -420,8 +420,8 @@ lxr_cn_com_allotment <- make_endpoint(
 #' @export
 lxr_cn_com_customers <- make_endpoint(
   endpoint = "cn/company/customers",
-  required = c("token"),
-  optional = c("stock_code", "start_date", "end_date", "limit")
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
 )
 
 #' Retrieve Supplier Information

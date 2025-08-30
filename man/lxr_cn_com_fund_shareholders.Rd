@@ -6,8 +6,8 @@
 \usage{
 lxr_cn_com_fund_shareholders(
   token,
-  stock_code = NULL,
-  start_date = NULL,
+  stock_code,
+  start_date,
   end_date = NULL,
   limit = NULL,
   .hdrs = list(),

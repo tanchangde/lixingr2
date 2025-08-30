@@ -6,7 +6,7 @@
 \usage{
 lxr_cn_com_industries(
   token,
-  stock_code = NULL,
+  stock_code,
   date = NULL,
   .hdrs = list(),
   .config = list()
