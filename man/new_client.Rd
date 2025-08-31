@@ -10,7 +10,7 @@ new_client(
   default_cfg = list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL, return_format =
     "list", verbosity = NULL),
   name_transform = snakecase::to_lower_camel_case,
-  array_params = c("stockCodes", "mutualMarkets", "metricsList")
+  array_params = NULL
 )
 }
 \arguments{

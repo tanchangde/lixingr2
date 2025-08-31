@@ -73,7 +73,15 @@ new_client <- function(
       verbosity     = NULL
     ),
     name_transform = snakecase::to_lower_camel_case,
-    array_params = c("stockCodes", "mutualMarkets", "metricsList")) {
+    array_params = NULL) {
+
+  default_array_params <- c("stockCodes", "mutualMarkets", "metricsList")
+  final_array_params <- if (!is.null(array_params)) {
+    array_params
+  } else {
+    default_array_params
+  }
+
   if (!is.list(default_hdrs)) {
     cli::cli_abort(c(
       "Invalid {.var default_hdrs}",
@@ -107,7 +115,7 @@ new_client <- function(
       default_hdrs   = default_hdrs,
       default_cfg    = default_cfg,
       name_transform = name_transform,
-      array_params   = array_params
+      array_params   = final_array_params
     ),
     class = c("api_client", "list")
   )
