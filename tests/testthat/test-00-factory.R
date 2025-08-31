@@ -9,7 +9,7 @@ test_that("generated function has correct formals", {
   fmls <- formals(fn)
   expect_setequal(names(fmls), c(
     "token", "stock_codes", "fs_table_type", "mutual_markets", "include_delisted",
-    ".hdrs", ".config"
+    "options"
   ))
   expect_true(rlang::is_missing(fmls$token))
 
@@ -116,7 +116,7 @@ test_that("backoff_fun receives correct attempt numbers", {
     .package = "httr2"
   )
 
-  ep(token = "admin", .config = list(max_tries = 5L))
+  ep(token = "admin", options = list(call_config = list(max_tries = 5L)))
 
   expect_identical(attempts_seen, 1:4)
 })

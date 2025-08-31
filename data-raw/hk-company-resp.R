@@ -14,7 +14,7 @@ save_json_response <- function(resp, path) {
 resp_hk_com <- lxr_hk_com(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_codes = "00700",
-  .config = list(return_format = "resp")
+  options = list(call_config = list(return_format = "resp"))
 )
 
 save_json_response(
@@ -29,7 +29,7 @@ resp_hk_com_candlestick <- lxr_hk_com_candlestick(
   start_date = "2025-06-01",
   end_date = "2025-07-01",
   limit = 5,
-  .config = list(return_format = "resp")
+  options = list(call_config = list(return_format = "resp"))
 )
 
 save_json_response(
@@ -42,7 +42,7 @@ resp_hk_com_operation_revenue_constitution <- lxr_hk_com_operation_revenue_const
   stock_code = "00700",
   start_date = "2024-07-01",
   end_date = "2025-07-15",
-  .config = list(return_format = "resp")
+  options = list(call_config = list(return_format = "resp"))
 )
 
 save_json_response(
@@ -55,7 +55,7 @@ resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(
   date = "2025-07-08",
   stock_codes = "00700",
   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos"),
-  .config = list(return_format = "resp")
+  options = list(call_config = list(return_format = "resp"))
 )
 
 save_json_response(
@@ -70,7 +70,7 @@ resp_hk_com_fs_non_financial <- lxr_hk_com_fs_non_financial(
   stock_codes = "00700", ,
   metrics_list = "q.ps.toi.t",
   limit = 5,
-  .config = list(return_format = "resp")
+  options = list(call_config = list(return_format = "resp"))
 )
 
 save_json_response(

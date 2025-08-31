@@ -259,8 +259,7 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
   fmls <- c(
     rlang::set_names(purrr::map(required, ~ rlang::missing_arg()), required),
     rlang::set_names(purrr::map(optional, ~ rlang::expr(NULL)), optional),
-    .hdrs   = rlang::expr(list()),
-    .config = rlang::expr(list())
+    options = rlang::expr(list())
   )
 
   checks <- purrr::map(
@@ -285,12 +284,15 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
       if (nm %in% (!!client$array_params)) x else jsonlite::unbox(x)
     })
 
+    extra_headers <- options$extra_headers %||% list()
+    call_config <- options$call_config %||% list()
+
     send_request(
       client = !!client,
       path   = !!endpoint,
       body   = body_args,
-      hdrs   = .hdrs,
-      cfg    = .config
+      hdrs   = extra_headers,
+      cfg    = call_config
     )
   })
 

@@ -10,8 +10,7 @@ lxr_cn_com_suppliers(
   start_date,
   end_date = NULL,
   limit = NULL,
-  .hdrs = list(),
-  .config = list()
+  options = list()
 )
 }
 \arguments{
@@ -29,40 +28,39 @@ on Beijing Time (UTC+8).}
 
 \item{limit}{The number of latest records to return.}
 
-\item{.hdrs}{Additional headers to include in the request, passed as a named
-list. Default is \code{list("Content-Type" = "application/json")}.}
-
-\item{.config}{Additional configuration parameters, passed as a named list.
+\item{options}{A list for advanced control over the request.
+\itemize{
+\item \code{extra_headers}: Additional headers to include in the request, passed as a
+named list. Default is \code{list("Content-Type" = "application/json")}.
+\item \code{call_config}: Additional configuration parameters, passed as a named list.
 Can be partially or fully overridden.
 Default is \code{list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL, return_format = "list", verbosity = NULL)}.
-
-\code{max_tries}: Maximum number of retry attempts.
-
-\code{backoff_fun}: Function to calculate backoff delay in seconds between retries.
+\itemize{
+\item \code{max_tries}: Maximum number of retry attempts.
+\item \code{backoff_fun}: Function to calculate backoff delay in seconds between retries.
 Default is an exponential backoff with jitter. The delay increases with
 the number of retry attempts and includes randomness to reduce conflicts.
 The maximum delay is capped at 10 seconds.
-
-\code{retry_on}: Predicate function that takes a single argument (the response)
+\item \code{retry_on}: Predicate function that takes a single argument (the response)
 and returns TRUE or FALSE to specify whether the response represents a
 transient error that should trigger a retry. Default retries on HTTP status
 codes 429 (Too Many Requests) and 500+ (Server Errors).
-
-\code{return_format}:
+\item \code{return_format}: Output format options:
 \itemize{
 \item \code{"json"}: Returns raw JSON data.
 \item \code{"list"}: Returns data as an R list.
 \item \code{"tibble"}: Returns data as a tibble (experimental).
 \item \code{"resp"}: Returns the performed request object.
 }
-
-\code{verbosity}: Controls the verbosity of printed information. This is a
+\item \code{verbosity}: Controls the verbosity of printed information. This is a
 wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses an integer to specify verbosity levels:
 \itemize{
 \item \code{0}: No output.
 \item \code{1}: Show headers.
 \item \code{2}: Show headers and bodies.
 \item \code{3}: Show headers, bodies, and curl status messages.
+}
+}
 }}
 }
 \value{

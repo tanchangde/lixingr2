@@ -1,39 +1,40 @@
 #' Common Parameter Descriptions
 #'
 #' @param token Authentication token, must be a character string.
-#' @param .hdrs Additional headers to include in the request, passed as a named
-#'   list. Default is `list("Content-Type" = "application/json")`.
-#' @param .config Additional configuration parameters, passed as a named list.
-#'   Can be partially or fully overridden.
-#'   Default is `list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,
-#'   return_format = "list", verbosity = NULL)`.
+#' @param options A list for advanced control over the request.
+#'   
+#'   - `extra_headers`: Additional headers to include in the request, passed as a 
+#'     named list. Default is `list("Content-Type" = "application/json")`.
+#'   
+#'   - `call_config`: Additional configuration parameters, passed as a named list.
+#'     Can be partially or fully overridden.
+#'     Default is `list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL,
+#'     return_format = "list", verbosity = NULL)`.
 #'
-#'   `max_tries`: Maximum number of retry attempts.
+#'     - `max_tries`: Maximum number of retry attempts.
 #'
-#'   `backoff_fun`: Function to calculate backoff delay in seconds between retries.
-#'   Default is an exponential backoff with jitter. The delay increases with
-#'   the number of retry attempts and includes randomness to reduce conflicts.
-#'   The maximum delay is capped at 10 seconds.
+#'     - `backoff_fun`: Function to calculate backoff delay in seconds between retries.
+#'       Default is an exponential backoff with jitter. The delay increases with
+#'       the number of retry attempts and includes randomness to reduce conflicts.
+#'       The maximum delay is capped at 10 seconds.
 #'
-#'   `retry_on`: Predicate function that takes a single argument (the response)
-#'   and returns TRUE or FALSE to specify whether the response represents a
-#'   transient error that should trigger a retry. Default retries on HTTP status
-#'   codes 429 (Too Many Requests) and 500+ (Server Errors).
+#'     - `retry_on`: Predicate function that takes a single argument (the response)
+#'       and returns TRUE or FALSE to specify whether the response represents a
+#'       transient error that should trigger a retry. Default retries on HTTP status
+#'       codes 429 (Too Many Requests) and 500+ (Server Errors).
 #'
-#'   `return_format`:
+#'     - `return_format`: Output format options:
+#'       - `"json"`: Returns raw JSON data.
+#'       - `"list"`: Returns data as an R list.
+#'       - `"tibble"`: Returns data as a tibble (experimental).
+#'       - `"resp"`: Returns the performed request object.
 #'
-#'   - `"json"`: Returns raw JSON data.
-#'   - `"list"`: Returns data as an R list.
-#'   - `"tibble"`: Returns data as a tibble (experimental).
-#'   - `"resp"`: Returns the performed request object.
-#'
-#'   `verbosity`: Controls the verbosity of printed information. This is a
-#'   wrapper around [httr2::req_verbose()] that uses an integer to specify verbosity levels:
-#'
-#'    - `0`: No output.
-#'    - `1`: Show headers.
-#'    - `2`: Show headers and bodies.
-#'    - `3`: Show headers, bodies, and curl status messages.
+#'     - `verbosity`: Controls the verbosity of printed information. This is a
+#'       wrapper around [httr2::req_verbose()] that uses an integer to specify verbosity levels:
+#'       - `0`: No output.
+#'       - `1`: Show headers.
+#'       - `2`: Show headers and bodies.
+#'       - `3`: Show headers, bodies, and curl status messages.
 #'
 #' @keywords internal
 #' @name common_params
