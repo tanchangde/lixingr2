@@ -1,0 +1,29 @@
+[
+  {
+    "fromCurrency": "USD",
+    "toCurrency": "CNY",
+    "date": "2025-09-03T16:00:00.000Z",
+    "open": 7.1418,
+    "low": 7.1439,
+    "high": 7.1388,
+    "close": 7.1418
+  },
+  {
+    "fromCurrency": "USD",
+    "toCurrency": "CNY",
+    "date": "2025-09-02T16:00:00.000Z",
+    "open": 7.1393,
+    "low": 7.1495,
+    "high": 7.1378,
+    "close": 7.1429
+  },
+  {
+    "fromCurrency": "USD",
+    "toCurrency": "CNY",
+    "date": "2025-09-01T16:00:00.000Z",
+    "open": 7.1393,
+    "low": 7.1505,
+    "high": 7.1378,
+    "close": 7.1398
+  }
+]

@@ -38,3 +38,17 @@ save_json_response(
   resp_macro_interest_rates,
   "./tests/testthat/fixtures/resp_macro_interest_rates.json"
 )
+
+resp_macro_fx <- lxr_macro_fx(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  start_date = "2025-09-01",
+  end_date = "2025-09-06",
+  from_currency = "USD",
+  to_currency = "CNY",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_json_response(
+  resp_macro_fx,
+  "./tests/testthat/fixtures/resp_macro_fx.json"
+)
