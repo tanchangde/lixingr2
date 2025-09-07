@@ -41,3 +41,21 @@ lxr_macro_national_debt <- make_endpoint(
   required = c("token", "start_date", "end_date", "area_code", "metrics_list"),
   optional = c("limit")
 )
+
+#' Retrieve interest rate data
+#'
+#' @inheritParams lxr_macro_national_debt
+#' @param metrics_list A vector of string metrics. Refer to the API
+#'   documentation for the full list of supported metrics.
+#'
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=macro/interest-rates)
+#'
+#' @rdname lxr_macro_interest_rates
+#' @export
+lxr_macro_interest_rates <- make_endpoint(
+  endpoint = "macro/interest-rates",
+  required = c("token", "start_date", "end_date", "area_code", "metrics_list"),
+  optional = c("limit")
+)

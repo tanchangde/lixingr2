@@ -24,3 +24,17 @@ save_json_response(
   resp_macro_national_debt,
   "./tests/testthat/fixtures/resp_macro_national_debt.json"
 )
+
+resp_macro_interest_rates <- lxr_macro_interest_rates(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  area_code = "cn",
+  start_date = "2025-09-01",
+  end_date = "2025-09-06",
+  metrics_list = "cdnaaa_y1",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_json_response(
+  resp_macro_interest_rates,
+  "./tests/testthat/fixtures/resp_macro_interest_rates.json"
+)
