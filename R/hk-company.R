@@ -73,6 +73,20 @@ lxr_hk_com_operation_revenue_constitution <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Get Stock Industry Information
+#'
+#' @inherit lxr_cn_com_indices
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/industries)
+#'
+#' @rdname lxr_hk_com_industries
+#' @export
+lxr_hk_com_industries <- make_endpoint(
+  endpoint = "hk/company/industries",
+  required = c("token", "stock_code"),
+  optional = c("date")
+)
+
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params

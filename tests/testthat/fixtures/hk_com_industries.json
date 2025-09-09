@@ -1,0 +1,20 @@
+[
+  {
+    "areaCode": "hk",
+    "stockCode": "H702015",
+    "source": "hsi",
+    "name": "数码解决方案服务"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "H7020",
+    "source": "hsi",
+    "name": "软件服务"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "H70",
+    "source": "hsi",
+    "name": "资讯科技业"
+  }
+]
