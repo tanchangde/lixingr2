@@ -2,7 +2,7 @@
 % Please edit documentation in R/cn-company.R
 \name{lxr_cn_com_fs_other_financial}
 \alias{lxr_cn_com_fs_other_financial}
-\title{Retrieve Financial Statement Data for Listed 其他金融公司}
+\title{Retrieve Financial Statement Data for Listed Other Financial Companies}
 \usage{
 lxr_cn_com_fs_other_financial(
   token,
@@ -79,7 +79,7 @@ wrapper around \code{\link[httr2:req_verbose]{httr2::req_verbose()}} that uses a
 A parsed API response.
 }
 \description{
-Retrieve Financial Statement Data for Listed 其他金融公司
+Retrieve Financial Statement Data for Listed Other Financial Companies
 }
 \details{
 The length of \code{stock_codes} must be between 1 and 100. When assigning

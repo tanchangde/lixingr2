@@ -935,7 +935,7 @@ lxr_cn_com_fs_insurance <- make_endpoint(
   optional = c("date", "start_date", "end_date", "limit")
 )
 
-#' Retrieve Financial Statement Data for Listed 其他金融公司
+#' Retrieve Financial Statement Data for Listed Other Financial Companies
 #'
 #' @inheritParams lxr_cn_com_fs_non_financial
 #' @inherit common_return return
