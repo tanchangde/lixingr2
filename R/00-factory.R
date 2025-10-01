@@ -247,7 +247,7 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
           lxr_unnest() |>
           tibble::as_tibble()
       } else {
-        cli::cli_abort("i" = "Query was successful, but no data returned.")
+        cli::cli_abort(c("i" = "Query was successful, but no data returned."))
       }
     },
     resp = resp
