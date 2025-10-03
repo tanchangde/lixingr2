@@ -24,6 +24,23 @@ lxr_hk_com <- make_endpoint(
   optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
 )
 
+#' Get Company Profile Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/profile)
+#'
+#' @rdname lxr_hk_com_profile
+#' @export
+lxr_hk_com_profile <- make_endpoint(
+  endpoint = "hk/company/profile",
+  required = c("token", "stock_codes")
+)
+
 #' Retrieve Candlestick Data
 #'
 #' @description Adjusted prices are calculated only for the selected time period,

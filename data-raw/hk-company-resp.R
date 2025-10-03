@@ -22,6 +22,17 @@ save_json_response(
   "./tests/testthat/fixtures/hk_com.json"
 )
 
+resp_hk_com_profile <- lxr_hk_com_profile(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_codes = "00700",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_json_response(
+  resp_hk_com_profile,
+  "./tests/testthat/fixtures/hk_com_profile.json"
+)
+
 resp_hk_com_candlestick <- lxr_hk_com_candlestick(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "00700",
