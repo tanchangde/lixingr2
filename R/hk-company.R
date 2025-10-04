@@ -75,6 +75,24 @@ lxr_hk_com_candlestick <- make_endpoint(
   )
 )
 
+#' Retrieve Share Capital Change Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/equity-change)
+#'
+#' @rdname lxr_hk_com_equity_change
+#' @export
+lxr_hk_com_equity_change <- make_endpoint(
+  endpoint = "hk/company/equity-change",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 #' Retrieve Revenue Composition Data
 #'
 #' @inheritParams lxr_cn_com_pledge

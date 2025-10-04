@@ -1,23 +1,10 @@
-library(httr2)
-library(magrittr)
-library(jsonlite)
-library(lixingr2)
-
-save_json_response <- function(resp, path) {
-  resp |>
-    httr2::resp_body_json(simplifyVector = TRUE) %>%
-    magrittr::use_series("data") |>
-    jsonlite::toJSON(auto_unbox = TRUE, pretty = TRUE) |>
-    write(path)
-}
-
 resp_hk_com <- lxr_hk_com(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_codes = "00700",
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com,
   "./tests/testthat/fixtures/hk_com.json"
 )
@@ -28,7 +15,7 @@ resp_hk_com_profile <- lxr_hk_com_profile(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_profile,
   "./tests/testthat/fixtures/hk_com_profile.json"
 )
@@ -43,9 +30,23 @@ resp_hk_com_candlestick <- lxr_hk_com_candlestick(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_candlestick,
   "./tests/testthat/fixtures/hk_com_candlestick.json"
+)
+
+resp_hk_com_equity_change <- lxr_hk_com_equity_change(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2024-10-01",
+  end_date = "2025-10-01",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_equity_change,
+  "./tests/testthat/fixtures/hk_com_equity_change.json"
 )
 
 resp_hk_com_operation_revenue_constitution <- lxr_hk_com_operation_revenue_constitution(
@@ -56,7 +57,7 @@ resp_hk_com_operation_revenue_constitution <- lxr_hk_com_operation_revenue_const
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_operation_revenue_constitution,
   "./tests/testthat/fixtures/hk_com_operation_revenue_constitution.json"
 )
@@ -67,7 +68,7 @@ resp_hk_com_industries <- lxr_hk_com_industries(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_industries,
   "./tests/testthat/fixtures/hk_com_industries.json"
 )
@@ -80,7 +81,7 @@ resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_fundmtl_non_financial,
   "./tests/testthat/fixtures/hk_com_fundmtl_non_financial.json"
 )
@@ -95,7 +96,7 @@ resp_hk_com_fs_non_financial <- lxr_hk_com_fs_non_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_hk_com_fs_non_financial,
   "./tests/testthat/fixtures/hk_com_fs_non_financial.json"
 )

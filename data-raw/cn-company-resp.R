@@ -1,9 +1,4 @@
-library(httr2)
-library(magrittr)
-library(jsonlite)
-library(lixingr2)
-
-save_json_response <- function(resp, path) {
+save_resp_as_json <- function(resp, path) {
   resp |>
     httr2::resp_body_json(simplifyVector = TRUE) %>%
     magrittr::use_series("data") |>
@@ -17,7 +12,7 @@ resp_cn_com <- lxr_cn_com(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com,
   "./tests/testthat/fixtures/cn_com.json"
 )
@@ -28,7 +23,7 @@ resp_cn_com_profile <- lxr_cn_com_profile(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_profile,
   "./tests/testthat/fixtures/cn_com_profile.json"
 )
@@ -42,7 +37,7 @@ resp_cn_com_equity_change <- lxr_cn_com_equity_change(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_equity_change,
   "./tests/testthat/fixtures/cn_com_equity_change.json"
 )
@@ -57,7 +52,7 @@ resp_cn_com_candlestick <- lxr_cn_com_candlestick(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_candlestick,
   "./tests/testthat/fixtures/cn_com_candlestick.json"
 )
@@ -70,7 +65,7 @@ resp_cn_com_shareholders_num <- lxr_cn_com_shareholders_num(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_shareholders_num,
   "./tests/testthat/fixtures/cn_com_shareholders_num.json"
 )
@@ -85,7 +80,7 @@ resp_cn_com_senior_executive_shares_change <-
     options = list(call_config = list(return_format = "resp"))
   )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_senior_executive_shares_change,
   "./tests/testthat/fixtures/cn_com_senior_executive_shares_change.json"
 )
@@ -100,7 +95,7 @@ resp_cn_com_major_shareholders_shares_change <-
     options = list(call_config = list(return_format = "resp"))
   )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_major_shareholders_shares_change,
   "./tests/testthat/fixtures/cn_com_major_shareholders_shares_change.json"
 )
@@ -113,7 +108,7 @@ resp_cn_com_trading_abnormal <- lxr_cn_com_trading_abnormal(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_trading_abnormal,
   "./tests/testthat/fixtures/cn_com_trading_abnormal.json"
 )
@@ -127,7 +122,7 @@ resp_cn_com_block_deal <- lxr_cn_com_block_deal(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_block_deal,
   "./tests/testthat/fixtures/cn_com_block_deal.json"
 )
@@ -141,7 +136,7 @@ resp_cn_com_pledge <- lxr_cn_com_pledge(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_pledge,
   "./tests/testthat/fixtures/cn_com_pledge.json"
 )
@@ -154,7 +149,7 @@ resp_cn_com_operation_revenue_constitution <- lxr_cn_com_operation_revenue_const
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_operation_revenue_constitution,
   "./tests/testthat/fixtures/cn_com_operation_revenue_constitution.json"
 )
@@ -167,7 +162,7 @@ resp_cn_com_operating_data <- lxr_cn_com_operating_data(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_operating_data,
   "./tests/testthat/fixtures/cn_com_operating_data.json"
 )
@@ -179,7 +174,7 @@ resp_cn_com_indices <- lxr_cn_com_indices(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_indices,
   "./tests/testthat/fixtures/cn_com_indices.json"
 )
@@ -191,7 +186,7 @@ resp_cn_com_industries <- lxr_cn_com_industries(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_industries,
   "./tests/testthat/fixtures/cn_com_industries.json"
 )
@@ -205,7 +200,7 @@ resp_cn_com_announcement <- lxr_cn_com_announcement(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_announcement,
   "./tests/testthat/fixtures/cn_com_announcement.json"
 )
@@ -219,7 +214,7 @@ resp_cn_com_measures <- lxr_cn_com_measures(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_measures,
   "./tests/testthat/fixtures/cn_com_measures.json"
 )
@@ -233,7 +228,7 @@ resp_cn_com_inquiry <- lxr_cn_com_inquiry(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_inquiry,
   "./tests/testthat/fixtures/cn_com_inquiry.json"
 )
@@ -247,7 +242,7 @@ resp_cn_com_majority_shareholders <- lxr_cn_com_majority_shareholders(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_majority_shareholders,
   "./tests/testthat/fixtures/cn_com_majority_shareholders.json"
 )
@@ -261,7 +256,7 @@ resp_cn_com_nolimit_shareholders <- lxr_cn_com_nolimit_shareholders(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_nolimit_shareholders,
   "./tests/testthat/fixtures/cn_com_nolimit_shareholders.json"
 )
@@ -275,7 +270,7 @@ resp_cn_com_fund_shareholders <- lxr_cn_com_fund_shareholders(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fund_shareholders,
   "./tests/testthat/fixtures/cn_com_fund_shareholders.json"
 )
@@ -289,7 +284,7 @@ resp_cn_com_fund_collection_shareholders <- lxr_cn_com_fund_collection_sharehold
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fund_collection_shareholders,
   "./tests/testthat/fixtures/cn_com_fund_collection_shareholders.json"
 )
@@ -303,7 +298,7 @@ resp_cn_com_dividend <- lxr_cn_com_dividend(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_dividend,
   "./tests/testthat/fixtures/cn_com_dividend.json"
 )
@@ -317,7 +312,7 @@ resp_cn_com_allotment <- lxr_cn_com_allotment(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_allotment,
   "./tests/testthat/fixtures/cn_com_allotment.json"
 )
@@ -331,7 +326,7 @@ resp_cn_com_customers <- lxr_cn_com_customers(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_customers,
   "./tests/testthat/fixtures/cn_com_customers.json"
 )
@@ -345,7 +340,7 @@ resp_cn_com_suppliers <- lxr_cn_com_suppliers(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_suppliers,
   "./tests/testthat/fixtures/cn_com_suppliers.json"
 )
@@ -358,7 +353,7 @@ resp_cn_com_fundmtl_non_financial <- lxr_cn_com_fundmtl_non_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fundmtl_non_financial,
   "./tests/testthat/fixtures/cn_com_fundmtl_non_financial.json"
 )
@@ -372,7 +367,7 @@ resp_cn_com_fundmtl_bank <- lxr_cn_com_fundmtl_bank(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fundmtl_bank,
   "./tests/testthat/fixtures/cn_com_fundmtl_bank.json"
 )
@@ -387,7 +382,7 @@ resp_cn_com_fundmtl_security <- lxr_cn_com_fundmtl_security(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fundmtl_security,
   "./tests/testthat/fixtures/cn_com_fundmtl_security.json"
 )
@@ -402,7 +397,7 @@ resp_cn_com_fundmtl_insurance <- lxr_cn_com_fundmtl_insurance(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fundmtl_insurance,
   "./tests/testthat/fixtures/cn_com_fundmtl_insurance.json"
 )
@@ -417,7 +412,7 @@ resp_cn_com_fundmtl_other_financial <- lxr_cn_com_fundmtl_other_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fundmtl_other_financial,
   "./tests/testthat/fixtures/cn_com_fundmtl_other_financial.json"
 )
@@ -432,7 +427,7 @@ resp_cn_com_fs_non_financial <- lxr_cn_com_fs_non_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fs_non_financial,
   "./tests/testthat/fixtures/cn_com_fs_non_financial.json"
 )
@@ -446,7 +441,7 @@ resp_cn_com_fs_bank <- lxr_cn_com_fs_bank(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fs_bank,
   "./tests/testthat/fixtures/cn_com_fs_bank.json"
 )
@@ -460,7 +455,7 @@ resp_cn_com_fs_security <- lxr_cn_com_fs_security(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fs_security,
   "./tests/testthat/fixtures/cn_com_fs_security.json"
 )
@@ -474,7 +469,7 @@ resp_cn_com_fs_insurance <- lxr_cn_com_fs_insurance(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fs_insurance,
   "./tests/testthat/fixtures/cn_com_fs_insurance.json"
 )
@@ -488,7 +483,7 @@ resp_cn_com_fs_other_financial <- lxr_cn_com_fs_other_financial(
   options = list(call_config = list(return_format = "resp"))
 )
 
-save_json_response(
+save_resp_as_json(
   resp_cn_com_fs_other_financial,
   "./tests/testthat/fixtures/cn_com_fs_other_financial.json"
 )
