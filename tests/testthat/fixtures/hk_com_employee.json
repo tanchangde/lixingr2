@@ -1,0 +1,130 @@
+[
+  {
+    "_id": "67f77bdc2102509f075cc87f",
+    "date": "2024-12-31T00:00:00+08:00",
+    "declarationDate": "2025-04-08T00:00:00+08:00",
+    "stockId": 1000000000000700,
+    "dataList": [
+      {
+        "itemName": "员工总数",
+        "value": 58350,
+        "displayType": "number"
+      },
+      {
+        "itemName": "正式員工",
+        "value": 55460,
+        "displayType": "number",
+        "parentItemName": "按僱傭類型分"
+      },
+      {
+        "itemName": "其他類別",
+        "value": 2890,
+        "displayType": "number",
+        "parentItemName": "按僱傭類型分"
+      },
+      {
+        "itemName": "30歲以下",
+        "value": 18415,
+        "displayType": "number",
+        "parentItemName": "按年龄分 "
+      },
+      {
+        "itemName": "30至50歲",
+        "value": 39549,
+        "displayType": "number",
+        "parentItemName": "按年龄分 "
+      },
+      {
+        "itemName": "50歲以上",
+        "value": 386,
+        "displayType": "number",
+        "parentItemName": "按年龄分 "
+      },
+      {
+        "itemName": "男性",
+        "value": 41472,
+        "displayType": "number",
+        "parentItemName": "流失率按性别分 "
+      },
+      {
+        "itemName": "女性",
+        "value": 16878,
+        "displayType": "number",
+        "parentItemName": "流失率按性别分 "
+      },
+      {
+        "itemName": "管理層",
+        "value": 5836,
+        "displayType": "number",
+        "parentItemName": "按職級分"
+      },
+      {
+        "itemName": "非管理層",
+        "value": 52514,
+        "displayType": "number",
+        "parentItemName": "按職級分"
+      },
+      {
+        "itemName": "中國內地",
+        "value": 56247,
+        "displayType": "number",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "其他",
+        "value": 2103,
+        "displayType": "number",
+        "parentItemName": "按地區分"
+      },
+      {
+        "itemName": "总流失率",
+        "value": 14.3,
+        "displayType": "percentage"
+      },
+      {
+        "itemName": "30歲以下",
+        "value": 16.1,
+        "displayType": "percentage",
+        "parentItemName": "流失率按年齡分"
+      },
+      {
+        "itemName": "30至50歲",
+        "value": 13.5,
+        "displayType": "percentage",
+        "parentItemName": "流失率按年齡分"
+      },
+      {
+        "itemName": "50歲以上",
+        "value": 21,
+        "displayType": "percentage",
+        "parentItemName": "流失率按年齡分"
+      },
+      {
+        "itemName": "男性",
+        "value": 14.3,
+        "displayType": "percentage",
+        "parentItemName": "流失率按性别分 "
+      },
+      {
+        "itemName": "女性",
+        "value": 14.3,
+        "displayType": "percentage",
+        "parentItemName": "流失率按性别分 "
+      },
+      {
+        "itemName": "中國內地",
+        "value": 14.1,
+        "displayType": "percentage",
+        "parentItemName": "流失率按地區分"
+      },
+      {
+        "itemName": "其他",
+        "value": 19.1,
+        "displayType": "percentage",
+        "parentItemName": "流失率按地區分"
+      }
+    ],
+    "lastUpdated": "2025-04-10T00:00:00+08:00",
+    "source": "ds_task"
+  }
+]

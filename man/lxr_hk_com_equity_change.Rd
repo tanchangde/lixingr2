@@ -2,9 +2,19 @@
 % Please edit documentation in R/hk-company.R
 \name{lxr_hk_com_equity_change}
 \alias{lxr_hk_com_equity_change}
+\alias{lxr_hk_com_employee}
 \title{Retrieve Share Capital Change Data}
 \usage{
 lxr_hk_com_equity_change(
+  token,
+  stock_code,
+  start_date,
+  end_date = NULL,
+  limit = NULL,
+  options = list()
+)
+
+lxr_hk_com_employee(
   token,
   stock_code,
   start_date,
@@ -68,7 +78,11 @@ A parsed API response.
 }
 \description{
 Retrieve Share Capital Change Data
+
+Retrieve Employee Information
 }
 \seealso{
 \href{https://www.lixinger.com/open/api/doc?api-key=hk/company/equity-change}{API documentation}
+
+\href{https://www.lixinger.com/open/api/doc?api-key=hk/company/employee}{API documentation}
 }

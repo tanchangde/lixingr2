@@ -93,6 +93,24 @@ lxr_hk_com_equity_change <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Retrieve Employee Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/employee)
+#'
+#' @rdname lxr_hk_com_equity_change
+#' @export
+lxr_hk_com_employee <- make_endpoint(
+  endpoint = "hk/company/employee",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 #' Retrieve Revenue Composition Data
 #'
 #' @inheritParams lxr_cn_com_pledge
