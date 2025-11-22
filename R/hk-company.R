@@ -133,6 +133,24 @@ lxr_hk_com_repurchase <- make_endpoint(
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Short Selling Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/short-selling)
+#'
+#' @rdname lxr_hk_com_short_selling
+#' @export
+lxr_hk_com_short_selling <- make_endpoint(
+  endpoint = "hk/company/short-selling",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 #' Retrieve Revenue Composition Data
 #'
 #' @inheritParams lxr_cn_com_pledge
