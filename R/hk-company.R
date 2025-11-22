@@ -103,7 +103,7 @@ lxr_hk_com_equity_change <- make_endpoint(
 #'
 #' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/employee)
 #'
-#' @rdname lxr_hk_com_equity_change
+#' @rdname lxr_hk_com_employee
 #' @export
 lxr_hk_com_employee <- make_endpoint(
   endpoint = "hk/company/employee",
