@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "num": 832000,
+    "highestPrice": 666.5,
+    "lowestPrice": 657.5,
+    "totalPaid": 550960217.6,
+    "methodOfPurchase": "exchange",
+    "numPurchasedInYearSinceResolution": 65813000,
+    "ratioPurchasedSinceResolution": 0.0072,
+    "avgPrice": 662.2118,
+    "stockCode": "00700"
+  },
+  {
+    "date": "2025-09-29T00:00:00+08:00",
+    "num": 837000,
+    "highestPrice": 664,
+    "lowestPrice": 648,
+    "totalPaid": 550718881.2,
+    "methodOfPurchase": "exchange",
+    "numPurchasedInYearSinceResolution": 64981000,
+    "ratioPurchasedSinceResolution": 0.0071,
+    "avgPrice": 657.9676,
+    "stockCode": "00700"
+  },
+  {
+    "date": "2025-09-26T00:00:00+08:00",
+    "num": 850000,
+    "highestPrice": 652.5,
+    "lowestPrice": 640,
+    "totalPaid": 550321790,
+    "methodOfPurchase": "exchange",
+    "numPurchasedInYearSinceResolution": 64144000,
+    "ratioPurchasedSinceResolution": 0.007,
+    "avgPrice": 647.4374,
+    "stockCode": "00700"
+  },
+  {
+    "date": "2025-09-25T00:00:00+08:00",
+    "num": 844000,
+    "highestPrice": 658.5,
+    "lowestPrice": 644,
+    "totalPaid": 550300828.8,
+    "methodOfPurchase": "exchange",
+    "numPurchasedInYearSinceResolution": 63294000,
+    "ratioPurchasedSinceResolution": 0.0069,
+    "avgPrice": 652.0152,
+    "stockCode": "00700"
+  }
+]

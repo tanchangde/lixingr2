@@ -62,6 +62,19 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_employee.json"
 )
 
+resp_hk_com_repurchase <- lxr_hk_com_repurchase(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2025-09-25",
+  end_date = "2025-10-01",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_repurchase,
+  "./tests/testthat/fixtures/hk_com_repurchase.json"
+)
+
 resp_hk_com_operation_revenue_constitution <- lxr_hk_com_operation_revenue_constitution(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "00700",

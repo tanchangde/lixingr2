@@ -111,6 +111,28 @@ lxr_hk_com_employee <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Retrieve Repurchase Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/repurchase)
+#'
+#' @rdname lxr_hk_com_repurchase
+#' @export
+lxr_hk_com_repurchase <- make_endpoint(
+  endpoint = "hk/company/repurchase",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)
+
 #' Retrieve Revenue Composition Data
 #'
 #' @inheritParams lxr_cn_com_pledge
@@ -275,3 +297,5 @@ lxr_hk_com_fs_non_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+
