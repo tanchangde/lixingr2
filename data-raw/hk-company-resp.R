@@ -101,6 +101,18 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_operation_revenue_constitution.json"
 )
 
+resp_hk_com_indices <- lxr_hk_com_indices(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  date = "2025-07-01",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_indices,
+  "./tests/testthat/fixtures/hk_com_indices.json"
+)
+
 resp_hk_com_industries <- lxr_hk_com_industries(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "00700",
@@ -125,16 +137,15 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_announcement.json"
 )
 
-resp_hk_com_indices <- lxr_hk_com_indices(
+resp_hk_com_latest_shareholders <- lxr_hk_com_latest_shareholders(
   token = Sys.getenv("LIXINGR_TOKEN"),
   stock_code = "00700",
-  date = "2025-07-01",
   options = list(call_config = list(return_format = "resp"))
 )
 
 save_resp_as_json(
-  resp_hk_com_indices,
-  "./tests/testthat/fixtures/hk_com_indices.json"
+  resp_hk_com_latest_shareholders,
+  "./tests/testthat/fixtures/hk_com_latest_shareholders.json"
 )
 
 resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(

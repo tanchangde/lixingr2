@@ -166,6 +166,25 @@ lxr_hk_com_operation_revenue_constitution <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Retrieve Stock Index
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_param
+#' @inherit common_return return
+#'
+#' @details When `date` is NULL, the query will return the current data.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/indices)
+#'
+#' @rdname lxr_hk_com_indices
+#' @export
+lxr_hk_com_indices <- make_endpoint(
+  endpoint = "hk/company/indices",
+  required = c("token", "stock_code"),
+  optional = c("date")
+)
+
 #' Get Stock Industry Information
 #'
 #' @inherit lxr_cn_com_indices
@@ -179,8 +198,6 @@ lxr_hk_com_industries <- make_endpoint(
   required = c("token", "stock_code"),
   optional = c("date")
 )
-
-
 
 #' Retrieve Announcement Information
 #'
@@ -200,23 +217,19 @@ lxr_hk_com_announcement <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
-#' Retrieve Stock Index
+#' Retrieve Latest Shareholders Information
 #'
 #' @inheritParams common_params
 #' @inheritParams stock_code_param
-#' @inheritParams date_param
 #' @inherit common_return return
 #'
-#' @details When `date` is NULL, the query will return the current data.
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/latest-shareholders)
 #'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/indices)
-#'
-#' @rdname lxr_hk_com_indices
+#' @rdname lxr_hk_com_latest_shareholders
 #' @export
-lxr_hk_com_indices <- make_endpoint(
-  endpoint = "hk/company/indices",
-  required = c("token", "stock_code"),
-  optional = c("date")
+lxr_hk_com_latest_shareholders <- make_endpoint(
+  endpoint = "hk/company/latest-shareholders",
+  required = c("token", "stock_code")
 )
 
 #' Retrieve Non-Financial Fundamental Data

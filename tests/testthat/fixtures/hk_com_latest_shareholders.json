@@ -1,0 +1,162 @@
+[
+  {
+    "name": "马化腾",
+    "date": "2020-06-12T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 804859700,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.0842,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "李東生",
+    "date": "2025-04-15T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 82350,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "柯杨",
+    "date": "2025-04-15T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 64719,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "Stone Ian Charles",
+    "date": "2025-05-15T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 313951,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "楊紹信",
+    "date": "2025-05-16T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 50690,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "张秀兰",
+    "date": "2025-10-13T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 34281,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "name": "Naspers Limited",
+    "date": "2025-07-25T00:00:00+08:00",
+    "numOfSharesInterestedList": [
+      {
+        "value": 2105253100,
+        "sharesType": "L"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.2299,
+        "sharesType": "L"
+      }
+    ]
+  }
+]
