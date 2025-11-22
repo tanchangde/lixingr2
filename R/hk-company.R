@@ -180,6 +180,26 @@ lxr_hk_com_industries <- make_endpoint(
   optional = c("date")
 )
 
+
+
+#' Retrieve Announcement Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/announcement)
+#'
+#' @rdname lxr_hk_com_announcement
+#' @export
+lxr_hk_com_announcement <- make_endpoint(
+  endpoint = "hk/company/announcement",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 #' Retrieve Stock Index
 #'
 #' @inheritParams common_params
