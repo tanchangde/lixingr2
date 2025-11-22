@@ -180,6 +180,25 @@ lxr_hk_com_industries <- make_endpoint(
   optional = c("date")
 )
 
+#' Retrieve Stock Index
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_param
+#' @inherit common_return return
+#'
+#' @details When `date` is NULL, the query will return the current data.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/indices)
+#'
+#' @rdname lxr_hk_com_indices
+#' @export
+lxr_hk_com_indices <- make_endpoint(
+  endpoint = "hk/company/indices",
+  required = c("token", "stock_code"),
+  optional = c("date")
+)
+
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params

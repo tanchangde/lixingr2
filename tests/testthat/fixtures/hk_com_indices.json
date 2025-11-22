@@ -1,0 +1,86 @@
+[
+  {
+    "areaCode": "hk",
+    "stockCode": "1000015",
+    "source": "lxri",
+    "name": "港股全指"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSCEI",
+    "source": "hsi",
+    "name": "恒生中国企业指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSI",
+    "source": "hsi",
+    "name": "恒生指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSTECH",
+    "source": "hsi",
+    "name": "恒生科技指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSSCNE",
+    "source": "hsi",
+    "name": "恒生港股通新经济指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSIII",
+    "source": "hsi",
+    "name": "恒生互联网科技业指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSLMI",
+    "source": "hsi",
+    "name": "恒生综合大中型股指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSCESI",
+    "source": "hsi",
+    "name": "恒生中国企业精明指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSML25",
+    "source": "hsi",
+    "name": "恒生中国(香港上市)30指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSLI",
+    "source": "hsi",
+    "name": "恒生综合大型股指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSISC",
+    "source": "hsi",
+    "name": "恒指港股通指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSSCT",
+    "source": "hsi",
+    "name": "恒生港股通中国科技指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSAIT",
+    "source": "hsi",
+    "name": "恒生人工智能主题指数"
+  },
+  {
+    "areaCode": "hk",
+    "stockCode": "HSSCITI",
+    "source": "hsi",
+    "name": "恒生港股通科技主题指数"
+  }
+]

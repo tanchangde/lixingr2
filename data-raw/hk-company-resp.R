@@ -112,6 +112,18 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_industries.json"
 )
 
+resp_hk_com_indices <- lxr_hk_com_indices(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  date = "2025-07-01",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_indices,
+  "./tests/testthat/fixtures/hk_com_indices.json"
+)
+
 resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(
   token = Sys.getenv("LIXINGR_TOKEN"),
   date = "2025-07-08",
