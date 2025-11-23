@@ -232,6 +232,30 @@ lxr_hk_com_latest_shareholders <- make_endpoint(
   required = c("token", "stock_code")
 )
 
+#' Retrieve Shareholders Equity Change Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @details The `stock_code` parameter is only effective when requesting data
+#'   within a date range. When specifying `start_date` and `end_date`, the
+#'   interval cannot exceed 10 years. If `end_date` is omitted, it defaults to
+#'   the previous Monday per the API specification.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/shareholders-equity-change)
+#'
+#' @rdname lxr_hk_com_shareholders_equity_change
+#' @export
+lxr_hk_com_shareholders_equity_change <- make_endpoint(
+  endpoint = "hk/company/shareholders-equity-change",
+  required = c("token"),
+  optional = c("stock_code", "date", "start_date", "end_date", "limit")
+)
+
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params

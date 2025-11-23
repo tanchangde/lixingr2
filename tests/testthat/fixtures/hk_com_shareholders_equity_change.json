@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2025-08-18T00:00:00+08:00",
+    "name": "张秀兰",
+    "numOfSharesInvolvedList": [
+      {
+        "value": 1680,
+        "sharesType": "L"
+      }
+    ],
+    "numOfSharesInterestedList": [
+      {
+        "value": 37639,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0,
+        "sharesType": "L"
+      },
+      {
+        "value": 0,
+        "sharesType": "S"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-25T00:00:00+08:00",
+    "name": "Naspers Limited",
+    "numOfSharesInvolvedList": [
+      {
+        "value": 405200,
+        "sharesType": "L"
+      }
+    ],
+    "numOfSharesInterestedList": [
+      {
+        "value": 2105253100,
+        "sharesType": "L"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.2299,
+        "sharesType": "L"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-25T00:00:00+08:00",
+    "name": "Prosus N.V. (formerly known as \"Myriad International Holdings N.V.\")",
+    "numOfSharesInvolvedList": [
+      {
+        "value": 405200,
+        "sharesType": "L"
+      }
+    ],
+    "numOfSharesInterestedList": [
+      {
+        "value": 2105253100,
+        "sharesType": "L"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.2299,
+        "sharesType": "L"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-23T00:00:00+08:00",
+    "name": "Naspers Limited",
+    "numOfSharesInvolvedList": {},
+    "numOfSharesInterestedList": [
+      {
+        "value": 2106385200,
+        "sharesType": "L"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.2301,
+        "sharesType": "L"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-23T00:00:00+08:00",
+    "name": "Prosus N.V. (formerly known as \"Myriad International Holdings N.V.\")",
+    "numOfSharesInvolvedList": {},
+    "numOfSharesInterestedList": [
+      {
+        "value": 2106385200,
+        "sharesType": "L"
+      }
+    ],
+    "percentageOfIssuedVotingShares": [
+      {
+        "value": 0.2301,
+        "sharesType": "L"
+      }
+    ]
+  }
+]

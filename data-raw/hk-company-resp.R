@@ -148,6 +148,20 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_latest_shareholders.json"
 )
 
+resp_hk_com_shareholders_equity_change <- lxr_hk_com_shareholders_equity_change(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2025-01-01",
+  end_date = "2025-10-01",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_shareholders_equity_change,
+  "./tests/testthat/fixtures/hk_com_shareholders_equity_change.json"
+)
+
 resp_hk_com_fundmtl_non_financial <- lxr_hk_com_fundmtl_non_financial(
   token = Sys.getenv("LIXINGR_TOKEN"),
   date = "2025-07-08",
