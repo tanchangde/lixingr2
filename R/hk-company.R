@@ -256,6 +256,8 @@ lxr_hk_com_shareholders_equity_change <- make_endpoint(
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
 
+
+
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params
@@ -391,5 +393,27 @@ lxr_hk_com_fs_non_financial <- make_endpoint(
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
 )
+
+#' Retrieve Mainland Fund Shareholding Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @details The interval between `start_date` and `end_date` cannot exceed 10 years.
+#'   If `end_date` is omitted, it defaults to the previous Monday per the API specification.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-shareholders)
+#'
+#' @rdname lxr_hk_com_fund_shareholders
+#' @export
+lxr_hk_com_fund_shareholders <- make_endpoint(
+  endpoint = "hk/company/fund-shareholders",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 
 
