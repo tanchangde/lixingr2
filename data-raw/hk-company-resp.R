@@ -231,3 +231,17 @@ save_resp_as_json(
   resp_hk_com_dividend,
   "./tests/testthat/fixtures/hk_com_dividend.json"
 )
+
+resp_hk_com_split <- lxr_hk_com_split(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2014-01-01",
+  end_date = "2014-12-31",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_split,
+  "./tests/testthat/fixtures/hk_com_split.json"
+)

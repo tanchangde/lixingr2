@@ -448,3 +448,21 @@ lxr_hk_com_dividend <- make_endpoint(
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
+
+#' Retrieve Stock Split Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/split)
+#'
+#' @rdname lxr_hk_com_split
+#' @export
+lxr_hk_com_split <- make_endpoint(
+  endpoint = "hk/company/split",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
