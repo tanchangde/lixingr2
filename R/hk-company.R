@@ -484,3 +484,20 @@ lxr_hk_com_allotment <- make_endpoint(
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
+
+#' Retrieve Dividend Reinvestment Return Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/tr_dri)
+#'
+#' @rdname lxr_hk_com_hot_tr_dri
+#' @export
+lxr_hk_com_hot_tr_dri <- make_endpoint(
+  endpoint = "hk/company/hot/tr_dri",
+  required = c("token", "stock_codes")
+)
