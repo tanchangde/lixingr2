@@ -466,3 +466,21 @@ lxr_hk_com_split <- make_endpoint(
   required = c("token", "stock_code", "start_date"),
   optional = c("end_date", "limit")
 )
+
+#' Retrieve Allotment Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/allotment)
+#'
+#' @rdname lxr_hk_com_allotment
+#' @export
+lxr_hk_com_allotment <- make_endpoint(
+  endpoint = "hk/company/allotment",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)

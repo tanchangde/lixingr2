@@ -245,3 +245,17 @@ save_resp_as_json(
   resp_hk_com_split,
   "./tests/testthat/fixtures/hk_com_split.json"
 )
+
+resp_hk_com_allotment <- lxr_hk_com_allotment(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00823",
+  start_date = "2022-01-01",
+  end_date = "2024-01-01",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_allotment,
+  "./tests/testthat/fixtures/hk_com_allotment.json"
+)
