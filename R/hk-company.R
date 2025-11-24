@@ -256,8 +256,6 @@ lxr_hk_com_shareholders_equity_change <- make_endpoint(
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
 
-
-
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params
@@ -415,5 +413,20 @@ lxr_hk_com_fund_shareholders <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
-
-
+#' Retrieve Fund Collection Shareholders Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-collection-shareholders)
+#'
+#' @rdname lxr_hk_com_fund_collection_shareholders
+#' @export
+lxr_hk_com_fund_collection_shareholders <- make_endpoint(
+  endpoint = "hk/company/fund-collection-shareholders",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)

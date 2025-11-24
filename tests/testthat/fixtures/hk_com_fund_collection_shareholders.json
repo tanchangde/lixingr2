@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "marketCap": 608547149,
+    "holdings": 1005355,
+    "name": "国泰基金管理有限公司",
+    "fundCollectionCode": "50010000"
+  },
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "marketCap": 71996879,
+    "holdings": 118943,
+    "name": "国泰基金管理有限公司",
+    "fundCollectionCode": "50010000"
+  },
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "marketCap": 536550270,
+    "holdings": 886412,
+    "name": "国泰基金管理有限公司",
+    "fundCollectionCode": "50010000"
+  },
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "marketCap": 3522909678,
+    "holdings": 5820050,
+    "name": "南方基金管理股份有限公司",
+    "fundCollectionCode": "50020000"
+  },
+  {
+    "date": "2025-09-30T00:00:00+08:00",
+    "marketCap": 1001296749,
+    "holdings": 1654200,
+    "name": "南方基金管理股份有限公司",
+    "fundCollectionCode": "50020000"
+  }
+]
