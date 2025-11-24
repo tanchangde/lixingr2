@@ -217,3 +217,17 @@ save_resp_as_json(
   resp_hk_com_fund_collection_shareholders,
   "./tests/testthat/fixtures/hk_com_fund_collection_shareholders.json"
 )
+
+resp_hk_com_dividend <- lxr_hk_com_dividend(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2024-01-01",
+  end_date = "2025-01-01",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_dividend,
+  "./tests/testthat/fixtures/hk_com_dividend.json"
+)
