@@ -521,3 +521,20 @@ lxr_hk_com_hot_mm_ah <- make_endpoint(
   endpoint = "hk/company/hot/mm_ah",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Repurchase Statistics Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/rep)
+#'
+#' @rdname lxr_hk_com_hot_rep
+#' @export
+lxr_hk_com_hot_rep <- make_endpoint(
+  endpoint = "hk/company/hot/rep",
+  required = c("token", "stock_codes")
+)
