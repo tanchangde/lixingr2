@@ -538,3 +538,23 @@ lxr_hk_com_hot_rep <- make_endpoint(
   endpoint = "hk/company/hot/rep",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Short Selling Statistics Data
+#'
+#' @description Retrieves accumulated short selling data for Hong Kong stocks,
+#' including amounts, shares, and H-share ratios over various time periods.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/ss)
+#'
+#' @rdname lxr_hk_com_hot_ss
+#' @export
+lxr_hk_com_hot_ss <- make_endpoint(
+  endpoint = "hk/company/hot/ss",
+  required = c("token", "stock_codes")
+)
