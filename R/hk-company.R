@@ -579,3 +579,24 @@ lxr_hk_com_hot_director_equity_change <- make_endpoint(
   endpoint = "hk/company/hot/director_equity_change",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Net Profit to Dividend Statistics Data
+#'
+#' @description Retrieves dividend-related statistics for Hong Kong stocks,
+#' including total dividend rate, total net profit, and total dividends since listing.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/npd)
+#'
+#' @rdname lxr_hk_com_hot_npd
+#' @export
+lxr_hk_com_hot_npd <- make_endpoint(
+  endpoint = "hk/company/hot/npd",
+  required = c("token", "stock_codes")
+)
+
