@@ -325,3 +325,15 @@ save_resp_as_json(
   resp_hk_com_hot_npd,
   "./tests/testthat/fixtures/hk_com_hot_npd.json"
 )
+
+resp_hk_com_hot_capita <- lxr_hk_com_hot_capita(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_codes = "00700",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_hot_capita,
+  "./tests/testthat/fixtures/hk_com_hot_capita.json"
+)
+

@@ -600,3 +600,25 @@ lxr_hk_com_hot_npd <- make_endpoint(
   required = c("token", "stock_codes")
 )
 
+#' Retrieve Per Capita Metrics Statistics Data
+#'
+#' @description Retrieves per capita metrics statistics for Hong Kong stocks,
+#' including per capita market cap, operating income, net profit, and cash flow
+#' from operating activities.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/capita)
+#'
+#' @rdname lxr_hk_com_hot_capita
+#' @export
+lxr_hk_com_hot_capita <- make_endpoint(
+  endpoint = "hk/company/hot/capita",
+  required = c("token", "stock_codes")
+)
+
+
