@@ -1,0 +1,20 @@
+[
+  {
+    "last_data_date": "2025-10-13T00:00:00+08:00",
+    "dec_cap_rc_last": -3.6685e-07,
+    "dec_cap_rc_y1": -5.48e-06,
+    "dec_cap_rc_y2": -0,
+    "dec_cap_rc_y3": -0,
+    "dec_a_last": -2126973.99,
+    "dec_a_y1": -25590433.99,
+    "dec_a_y2": -60368854.3931,
+    "dec_a_y3": -70752414.3931,
+    "dec_a_m6": -2126973.99,
+    "dec_cap_rc_m6": -3.6685e-07,
+    "dec_a_m3": -2126973.99,
+    "dec_cap_rc_m3": -3.6685e-07,
+    "dec_a_m1": 0,
+    "dec_cap_rc_m1": 0,
+    "stockCode": "00700"
+  }
+]

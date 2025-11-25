@@ -558,3 +558,24 @@ lxr_hk_com_hot_ss <- make_endpoint(
   endpoint = "hk/company/hot/ss",
   required = c("token", "stock_codes")
 )
+
+#' Retrieve Director Equity Change Statistics Data
+#'
+#' @description Retrieves director equity change statistics for Hong Kong stocks,
+#' including amounts and H-share ratios over various time periods (last transaction,
+#' 1/3/6 months, 1/2/3 years).
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/director_equity_change)
+#'
+#' @rdname lxr_hk_com_hot_director_equity_change
+#' @export
+lxr_hk_com_hot_director_equity_change <- make_endpoint(
+  endpoint = "hk/company/hot/director_equity_change",
+  required = c("token", "stock_codes")
+)
