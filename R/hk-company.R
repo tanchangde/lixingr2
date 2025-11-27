@@ -621,4 +621,25 @@ lxr_hk_com_hot_capita <- make_endpoint(
   required = c("token", "stock_codes")
 )
 
+#' Retrieve Turnover Rate Statistics Data
+#'
+#' @description Retrieves turnover rate statistics for Hong Kong stocks,
+#' including turnover rates for various time periods (1/5/10/20/60/120/240 trading days),
+#' along with price change and trading value data.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/tr)
+#'
+#' @rdname lxr_hk_com_hot_tr
+#' @export
+lxr_hk_com_hot_tr <- make_endpoint(
+  endpoint = "hk/company/hot/tr",
+  required = c("token", "stock_codes")
+)
+
 
