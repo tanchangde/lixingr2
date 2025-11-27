@@ -642,4 +642,25 @@ lxr_hk_com_hot_tr <- make_endpoint(
   required = c("token", "stock_codes")
 )
 
+#' Retrieve Short Selling Discount Rate Statistics Data
+#'
+#' @description Retrieves short selling discount rate statistics for Hong Kong stocks,
+#' including current discount rate and average discount rates over various time periods
+#' (1 week, 1/3/6 months, 1/2/3 years).
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/hot/ss_ha)
+#'
+#' @rdname lxr_hk_com_hot_ss_ha
+#' @export
+lxr_hk_com_hot_ss_ha <- make_endpoint(
+  endpoint = "hk/company/hot/ss_ha",
+  required = c("token", "stock_codes")
+)
+
 

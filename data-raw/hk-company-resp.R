@@ -348,3 +348,15 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_hot_tr.json"
 )
 
+resp_hk_com_hot_ss_ha <- lxr_hk_com_hot_ss_ha(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_codes = "03750",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_hot_ss_ha,
+  "./tests/testthat/fixtures/hk_com_hot_ss_ha.json"
+)
+
+
