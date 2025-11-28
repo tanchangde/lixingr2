@@ -360,3 +360,17 @@ save_resp_as_json(
 )
 
 
+
+resp_hk_com_mutual_market <- lxr_hk_com_mutual_market(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_code = "00700",
+  start_date = "2024-11-28",
+  end_date = "2025-11-28",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_mutual_market,
+  "./tests/testthat/fixtures/hk_com_mutual_market.json"
+)

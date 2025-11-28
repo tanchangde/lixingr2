@@ -664,3 +664,26 @@ lxr_hk_com_hot_ss_ha <- make_endpoint(
 )
 
 
+
+#' Retrieve Mutual Market (Stock Connect) Shareholding Data
+#'
+#' @description Retrieves Stock Connect (互联互通) shareholding data for Hong Kong stocks.
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @details The interval between `start_date` and `end_date` cannot exceed 10 years.
+#'   If `end_date` is omitted, it defaults to the previous Monday per the API specification.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/mutual-market)
+#'
+#' @rdname lxr_hk_com_mutual_market
+#' @export
+lxr_hk_com_mutual_market <- make_endpoint(
+  endpoint = "hk/company/mutual-market",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
