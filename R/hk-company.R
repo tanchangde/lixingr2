@@ -256,6 +256,99 @@ lxr_hk_com_shareholders_equity_change <- make_endpoint(
   optional = c("stock_code", "date", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Mainland Fund Shareholding Data
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @details The interval between `start_date` and `end_date` cannot exceed 10 years.
+#'   If `end_date` is omitted, it defaults to the previous Monday per the API specification.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-shareholders)
+#'
+#' @rdname lxr_hk_com_fund_shareholders
+#' @export
+lxr_hk_com_fund_shareholders <- make_endpoint(
+  endpoint = "hk/company/fund-shareholders",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
+#' Retrieve Fund Collection Shareholders Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-collection-shareholders)
+#'
+#' @rdname lxr_hk_com_fund_collection_shareholders
+#' @export
+lxr_hk_com_fund_collection_shareholders <- make_endpoint(
+  endpoint = "hk/company/fund-collection-shareholders",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
+#' Retrieve Dividend Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/dividend)
+#'
+#' @rdname lxr_hk_com_dividend
+#' @export
+lxr_hk_com_dividend <- make_endpoint(
+  endpoint = "hk/company/dividend",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
+#' Retrieve Stock Split Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/split)
+#'
+#' @rdname lxr_hk_com_split
+#' @export
+lxr_hk_com_split <- make_endpoint(
+  endpoint = "hk/company/split",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
+#' Retrieve Allotment Information
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_code_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/allotment)
+#'
+#' @rdname lxr_hk_com_allotment
+#' @export
+lxr_hk_com_allotment <- make_endpoint(
+  endpoint = "hk/company/allotment",
+  required = c("token", "stock_code", "start_date"),
+  optional = c("end_date", "limit")
+)
+
 #' Retrieve Non-Financial Fundamental Data
 #'
 #' @inheritParams common_params
@@ -390,99 +483,6 @@ lxr_hk_com_fs_non_financial <- make_endpoint(
   endpoint = "hk/company/fs/non_financial",
   required = c("token", "stock_codes", "metrics_list"),
   optional = c("date", "start_date", "end_date", "limit")
-)
-
-#' Retrieve Mainland Fund Shareholding Data
-#'
-#' @inheritParams common_params
-#' @inheritParams stock_code_param
-#' @inheritParams date_range_params
-#' @inheritParams limit_param
-#' @inherit common_return return
-#'
-#' @details The interval between `start_date` and `end_date` cannot exceed 10 years.
-#'   If `end_date` is omitted, it defaults to the previous Monday per the API specification.
-#'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-shareholders)
-#'
-#' @rdname lxr_hk_com_fund_shareholders
-#' @export
-lxr_hk_com_fund_shareholders <- make_endpoint(
-  endpoint = "hk/company/fund-shareholders",
-  required = c("token", "stock_code", "start_date"),
-  optional = c("end_date", "limit")
-)
-
-#' Retrieve Fund Collection Shareholders Information
-#'
-#' @inheritParams common_params
-#' @inheritParams stock_code_param
-#' @inheritParams date_range_params
-#' @inheritParams limit_param
-#' @inherit common_return return
-#'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fund-collection-shareholders)
-#'
-#' @rdname lxr_hk_com_fund_collection_shareholders
-#' @export
-lxr_hk_com_fund_collection_shareholders <- make_endpoint(
-  endpoint = "hk/company/fund-collection-shareholders",
-  required = c("token", "stock_code", "start_date"),
-  optional = c("end_date", "limit")
-)
-
-#' Retrieve Dividend Information
-#'
-#' @inheritParams common_params
-#' @inheritParams stock_code_param
-#' @inheritParams date_range_params
-#' @inheritParams limit_param
-#' @inherit common_return return
-#'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/dividend)
-#'
-#' @rdname lxr_hk_com_dividend
-#' @export
-lxr_hk_com_dividend <- make_endpoint(
-  endpoint = "hk/company/dividend",
-  required = c("token", "stock_code", "start_date"),
-  optional = c("end_date", "limit")
-)
-
-#' Retrieve Stock Split Information
-#'
-#' @inheritParams common_params
-#' @inheritParams stock_code_param
-#' @inheritParams date_range_params
-#' @inheritParams limit_param
-#' @inherit common_return return
-#'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/split)
-#'
-#' @rdname lxr_hk_com_split
-#' @export
-lxr_hk_com_split <- make_endpoint(
-  endpoint = "hk/company/split",
-  required = c("token", "stock_code", "start_date"),
-  optional = c("end_date", "limit")
-)
-
-#' Retrieve Allotment Information
-#'
-#' @inheritParams common_params
-#' @inheritParams stock_code_param
-#' @inheritParams date_range_params
-#' @inheritParams limit_param
-#' @inherit common_return return
-#'
-#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/allotment)
-#'
-#' @rdname lxr_hk_com_allotment
-#' @export
-lxr_hk_com_allotment <- make_endpoint(
-  endpoint = "hk/company/allotment",
-  required = c("token", "stock_code", "start_date"),
-  optional = c("end_date", "limit")
 )
 
 #' Retrieve Dividend Reinvestment Return Data
