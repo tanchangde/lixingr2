@@ -1,0 +1,177 @@
+---
+title: "Getting Started with lixingr2"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with lixingr2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+library(lixingr2)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = identical(Sys.getenv("NOT_CRAN"), "true") && lxr_has_token()
+)
+```
+
+## Introduction
+
+**lixingr2** is an R package that wraps the Lixinger Open Platform API. It provides convenient access to Chinese A-share, Hong Kong stock, and macroeconomic data for investment research and data analysis.
+
+## Installation
+
+```{r install, eval = FALSE}
+# Install from GitHub
+pak::pkg_install("tanchangde/lixingr2")
+```
+
+## Token Configuration
+
+Before using lixingr2, you need to obtain a Lixinger API Token:
+ 
+1. Register and log in to [Lixinger](https://www.lixinger.com/)
+2. Get your Token from the [Open Platform](https://www.lixinger.com/open/api/token)
+
+### Setting Up Your Token
+
+There are two ways to set your Token:
+
+**Method 1: Set token in R session (recommended for interactive use)**
+
+```{r set-token, eval = FALSE}
+library(lixingr2)
+
+# Set Token
+lxr_set_token("your-api-token")
+
+# Check if Token is set
+lxr_has_token()
+```
+
+**Method 2: Use environment variable (recommended for long-term use)**
+
+```{r env-token, eval = FALSE}
+# Edit .Renviron file
+usethis::edit_r_environ()
+
+# Add the following line and save:
+# LIXINGR_TOKEN=your-api-token
+
+# Restart R session to take effect
+```
+
+## Basic Usage
+
+### Get Stock Basic Information
+
+```{r basic-info}
+library(lixingr2)
+ 
+# Get basic info for CATL
+stocks <- lxr_cn_com(stock_codes = "300750")
+stocks
+```
+
+### Get Company Profile
+
+```{r profile}
+# Get company profile
+profile <- lxr_cn_com_profile(stock_codes = "300750")
+profile
+```
+
+### Get Candlestick Data
+
+```{r candlestick}
+# Get candlestick data for Kweichow Moutai
+candlestick <- lxr_cn_com_candlestick(
+  stock_code = "600519",
+  start_date = "2024-01-01",
+  end_date = "2024-01-31",
+  limit = 1,
+  type = "lxr_fc_rights"  # Lixinger forward-adjusted
+)
+candlestick
+```
+
+### Get Financial Data
+
+```{r financial}
+# Get fundamental data for non-financial companies
+fundmtl <- lxr_cn_com_fundmtl_non_financial(
+  stock_codes = "600519",
+  metrics_list = c("pe_ttm", "pb", "ps_ttm", "dyr"),
+  date = "2025-12-02"
+)
+fundmtl
+```
+
+## Return Formats
+
+lixingr2 supports multiple return formats, controlled via the `options` parameter:
+
+**Default: list**
+
+See the [Get Stock Basic Information](#get-stock-basic-information) section above for an example of the default list return format.
+
+**tibble (recommended for data analysis)**
+
+```{r return-format-tibble}
+result_tibble <- lxr_cn_com(
+  stock_codes = "600519",
+  options = list(call_config = list(return_format = "tibble"))
+)
+result_tibble
+```
+
+**JSON string**
+
+```{r return-format-json}
+result_json <- lxr_cn_com(
+  stock_codes = "600519",
+  options = list(call_config = list(return_format = "json"))
+)
+result_json
+```
+
+**httr2 response object (for debugging)**
+
+```{r return-format-resp}
+result_resp <- lxr_cn_com(
+  stock_codes = "600519",
+  options = list(call_config = list(return_format = "resp"))
+)
+result_resp
+```
+
+## Token Management
+
+```{r token-management, eval = FALSE}
+# Set Token
+lxr_set_token("your-token")
+
+# Get current Token
+token <- lxr_get_token()
+
+# Check if Token exists
+lxr_has_token()
+
+# Clear Token
+lxr_clear_token()
+```
+
+## Next Steps
+
+- See `vignette("cn-company-analysis")` for more A-share data analysis examples
+- See `vignette("financial-statements")` for financial statement data usage
+- Visit [Lixinger API Documentation](https://www.lixinger.com/open/api/doc) for the complete API list
+
+## Getting Help
+
+If you encounter issues:
+
+1. Check function documentation: `?lxr_cn_com`
+2. Ask questions on [GitHub Issues](https://github.com/tanchangde/lixingr2/issues)
+3. Consult [Lixinger Official Documentation](https://www.lixinger.com/open/api/doc)

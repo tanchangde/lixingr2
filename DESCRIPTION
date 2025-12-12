@@ -1,7 +1,7 @@
 Package: lixingr2
 Type: Package
 Title: R wrapper for Lixinger's Web API
-Version: 3.0.0
+Version: 3.1.0
 Authors@R: 
     person("Changde", "Tan", , "tanchangde@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <tanchangde@gmail.com>
@@ -29,7 +29,10 @@ Imports:
 RoxygenNote: 7.3.3
 Roxygen: list(markdown = TRUE)
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.2.0),
     withr
 Config/testthat/edition: 3
+VignetteBuilder: knitr
 Depends: R (>= 4.1.0)
