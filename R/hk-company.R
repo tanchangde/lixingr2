@@ -586,6 +586,81 @@ lxr_hk_com_fundmtl_security <- make_endpoint(
   optional = c("date", "start_date", "end_date", "limit")
 )
 
+#' Retrieve Fundamental Data of Listed Insurance Companies (HK)
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @param metrics_list A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
+#'
+#' Currently supported metrics:
+#'
+#' **Valuation Metrics**
+#'
+#' - PEV : `pev`
+#' - PE-TTM : `pe_ttm`
+#' - PB : `pb`
+#' - PS-TTM : `ps_ttm`
+#' - Dividend Yield : `dyr`
+#' - PCF-TTM : `pcf_ttm`
+#' - Stock Price : `sp`
+#' - Price Change (%) : `spc`
+#' - Intraday Range (%) : `spa`
+#' - Trading Volume : `tv`
+#' - Trading Value : `ta`
+#' - Turnover Rate (%) : `to_r`
+#' - Market Capitalization : `mc`
+#' - H-share Market Cap : `mc_om`
+#' - Stock Connect Holdings (Shares) : `ah_sh`
+#' - Stock Connect Holdings (Value) : `ah_shm`
+#' - Stock Connect Net Buy (Value) : `mm_nba`
+#' - Shares Per Lot : `sharesPerLot`
+#'
+#' **Valuation Statistics Metrics**
+#'
+#' Format: `metricsName.granularity.statisticsDataType`
+#'
+#' *metricsName*
+#'
+#' - PE-TTM : `pe_ttm`
+#' - PB : `pb`
+#' - PS-TTM : `ps_ttm`
+#' - PEV : `pev`
+#'
+#' *granularity*
+#'
+#' - Since Listing : `fs`
+#' - 20 Years : `y20`
+#' - 10 Years : `y10`
+#' - 5 Years : `y5`
+#' - 3 Years : `y3`
+#' - 1 Year : `y1`
+#'
+#' *statisticsDataType*
+#'
+#' - Percentile Rank (%) : `cvpos`
+#' - 20th Percentile : `q2v`
+#' - 50th Percentile : `q5v`
+#' - 80th Percentile : `q8v`
+#' - Minimum : `minv`
+#' - Maximum : `maxv`
+#' - Maximum Positive : `maxpv`
+#' - Average : `avgv`
+#'
+#' @inherit common_return return
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fundamental/insurance)
+#'
+#' @rdname lxr_hk_com_fundmtl_insurance
+#' @export
+lxr_hk_com_fundmtl_insurance <- make_endpoint(
+  endpoint = "hk/company/fundamental/insurance",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit")
+)
+
 #' Retrieve Financial Statement Data for Non-Financial Listed Companies
 #'
 #' @inheritParams common_params

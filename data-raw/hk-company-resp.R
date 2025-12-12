@@ -402,3 +402,17 @@ save_resp_as_json(
   resp_hk_com_fundmtl_security,
   "./tests/testthat/fixtures/hk_com_fundmtl_security.json"
 )
+
+resp_hk_com_fundmtl_insurance <- lxr_hk_com_fundmtl_insurance(
+  token = Sys.getenv("LIXINGR_TOKEN"),
+  stock_codes = "01336",
+  metrics_list = c("pe_ttm", "mc", "pb", "dyr"),
+  start_date = "2023-01-01",
+  end_date = "2023-01-05",
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_fundmtl_insurance,
+  "./tests/testthat/fixtures/hk_com_fundmtl_insurance.json"
+)
