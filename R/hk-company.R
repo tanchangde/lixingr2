@@ -21,7 +21,8 @@
 lxr_hk_com <- make_endpoint(
   endpoint = "hk/company",
   required = "token",
-  optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
+  optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted"),
+  array_params = c("stock_codes", "mutual_markets")
 )
 
 #' Get Company Profile Data
@@ -38,7 +39,8 @@ lxr_hk_com <- make_endpoint(
 #' @export
 lxr_hk_com_profile <- make_endpoint(
   endpoint = "hk/company/profile",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Candlestick Data
@@ -436,7 +438,8 @@ lxr_hk_com_allotment <- make_endpoint(
 lxr_hk_com_fundmtl_non_financial <- make_endpoint(
   endpoint = "hk/company/fundamental/non_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Banks (HK)
@@ -509,7 +512,8 @@ lxr_hk_com_fundmtl_non_financial <- make_endpoint(
 lxr_hk_com_fundmtl_bank <- make_endpoint(
   endpoint = "hk/company/fundamental/bank",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Securities Companies (HK)
@@ -582,7 +586,8 @@ lxr_hk_com_fundmtl_bank <- make_endpoint(
 lxr_hk_com_fundmtl_security <- make_endpoint(
   endpoint = "hk/company/fundamental/security",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Insurance Companies (HK)
@@ -657,7 +662,8 @@ lxr_hk_com_fundmtl_security <- make_endpoint(
 lxr_hk_com_fundmtl_insurance <- make_endpoint(
   endpoint = "hk/company/fundamental/insurance",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Non-Financial Listed Companies
@@ -701,7 +707,8 @@ lxr_hk_com_fundmtl_insurance <- make_endpoint(
 lxr_hk_com_fs_non_financial <- make_endpoint(
   endpoint = "hk/company/fs/non_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Dividend Reinvestment Return Data
@@ -718,7 +725,8 @@ lxr_hk_com_fs_non_financial <- make_endpoint(
 #' @export
 lxr_hk_com_hot_tr_dri <- make_endpoint(
   endpoint = "hk/company/hot/tr_dri",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve HK Connect (Mutual Market) Data
@@ -738,7 +746,8 @@ lxr_hk_com_hot_tr_dri <- make_endpoint(
 #' @export
 lxr_hk_com_hot_mm_ah <- make_endpoint(
   endpoint = "hk/company/hot/mm_ah",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Repurchase Statistics Data
@@ -755,7 +764,8 @@ lxr_hk_com_hot_mm_ah <- make_endpoint(
 #' @export
 lxr_hk_com_hot_rep <- make_endpoint(
   endpoint = "hk/company/hot/rep",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Short Selling Statistics Data
@@ -775,7 +785,8 @@ lxr_hk_com_hot_rep <- make_endpoint(
 #' @export
 lxr_hk_com_hot_ss <- make_endpoint(
   endpoint = "hk/company/hot/ss",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Director Equity Change Statistics Data
@@ -796,7 +807,8 @@ lxr_hk_com_hot_ss <- make_endpoint(
 #' @export
 lxr_hk_com_hot_director_equity_change <- make_endpoint(
   endpoint = "hk/company/hot/director_equity_change",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Net Profit to Dividend Statistics Data
@@ -816,7 +828,8 @@ lxr_hk_com_hot_director_equity_change <- make_endpoint(
 #' @export
 lxr_hk_com_hot_npd <- make_endpoint(
   endpoint = "hk/company/hot/npd",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Per Capita Metrics Statistics Data
@@ -837,7 +850,8 @@ lxr_hk_com_hot_npd <- make_endpoint(
 #' @export
 lxr_hk_com_hot_capita <- make_endpoint(
   endpoint = "hk/company/hot/capita",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Turnover Rate Statistics Data
@@ -858,7 +872,8 @@ lxr_hk_com_hot_capita <- make_endpoint(
 #' @export
 lxr_hk_com_hot_tr <- make_endpoint(
   endpoint = "hk/company/hot/tr",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Short Selling Discount Rate Statistics Data
@@ -879,7 +894,8 @@ lxr_hk_com_hot_tr <- make_endpoint(
 #' @export
 lxr_hk_com_hot_ss_ha <- make_endpoint(
   endpoint = "hk/company/hot/ss_ha",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 

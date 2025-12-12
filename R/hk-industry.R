@@ -19,5 +19,6 @@
 lxr_hk_industry <- make_endpoint(
   endpoint = "hk/industry",
   required = c("token", "source"),
-  optional = c("stock_codes", "level")
+  optional = c("stock_codes", "level"),
+  array_params = "stock_codes"
 )

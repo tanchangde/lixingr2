@@ -57,8 +57,6 @@ lxr_unnest <- function(df) {
 #'    response format. See *Details*.
 #' @param name_transform Function. Transforms R argument names to the naming
 #'    convention required by the API (default:`snakecase::to_lower_camel_case`).
-#' @param array_params Character vector. Parameters that must be encoded as JSON
-#'    arrays rather than scalars.
 #'
 #' @return An S3 object of class "api_client".
 #' @export
@@ -72,15 +70,7 @@ new_client <- function(
       return_format = "list",
       verbosity     = NULL
     ),
-    name_transform = snakecase::to_lower_camel_case,
-    array_params = NULL) {
-
-  default_array_params <- c("stockCodes", "mutualMarkets", "metricsList")
-  final_array_params <- if (!is.null(array_params)) {
-    array_params
-  } else {
-    default_array_params
-  }
+    name_transform = snakecase::to_lower_camel_case) {
 
   if (!is.list(default_hdrs)) {
     cli::cli_abort(c(
@@ -114,8 +104,7 @@ new_client <- function(
       base_url       = base_url,
       default_hdrs   = default_hdrs,
       default_cfg    = default_cfg,
-      name_transform = name_transform,
-      array_params   = final_array_params
+      name_transform = name_transform
     ),
     class = c("api_client", "list")
   )
@@ -260,6 +249,11 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
 #' @param endpoint Character. API path relative to `base_url`.
 #' @param required Character vector. Names of parameters **required** by this endpoint.
 #' @param optional Character vector. Names of optional parameters.
+#' @param array_params Character vector. Parameter names (in snake_case, matching
+#'   the R function arguments) that should be encoded as JSON arrays rather than
+#'   scalars. Each endpoint should explicitly declare its own array parameters
+#'   for clarity and maintainability. The names will be automatically converted
+#'   to the API's naming convention (camelCase by default).
 #'
 #' @details
 #' The generated function will automatically retrieve the token from the
@@ -269,7 +263,14 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
 #'
 #' @return A user-callable function.
 #' @export
-make_endpoint <- function(client = new_client(), endpoint, required, optional = NULL) {
+make_endpoint <- function(client = new_client(), endpoint, required, optional = NULL, array_params = NULL) {
+  # Convert array_params from snake_case to the API's naming convention
+  array_params_transformed <- if (!is.null(array_params)) {
+    client$name_transform(array_params)
+  } else {
+    NULL
+  }
+
   fmls <- c(
     rlang::set_names(purrr::map(required, ~ rlang::missing_arg()), required),
     rlang::set_names(purrr::map(optional, ~ rlang::expr(NULL)), optional),
@@ -302,7 +303,7 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
     names(body_args) <- (!!client$name_transform)(names(body_args))
 
     body_args <- purrr::imap(body_args, function(x, nm) {
-      if (nm %in% (!!client$array_params)) x else jsonlite::unbox(x)
+      if (nm %in% (!!array_params_transformed)) x else jsonlite::unbox(x)
     })
 
     extra_headers <- options$extra_headers %||% list()

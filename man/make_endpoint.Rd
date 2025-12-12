@@ -4,7 +4,13 @@
 \alias{make_endpoint}
 \title{Endpoint factory}
 \usage{
-make_endpoint(client = new_client(), endpoint, required, optional = NULL)
+make_endpoint(
+  client = new_client(),
+  endpoint,
+  required,
+  optional = NULL,
+  array_params = NULL
+)
 }
 \arguments{
 \item{client}{An API client.}
@@ -14,6 +20,12 @@ make_endpoint(client = new_client(), endpoint, required, optional = NULL)
 \item{required}{Character vector. Names of parameters \strong{required} by this endpoint.}
 
 \item{optional}{Character vector. Names of optional parameters.}
+
+\item{array_params}{Character vector. Parameter names (in snake_case, matching
+the R function arguments) that should be encoded as JSON arrays rather than
+scalars. Each endpoint should explicitly declare its own array parameters
+for clarity and maintainability. The names will be automatically converted
+to the API's naming convention (camelCase by default).}
 }
 \value{
 A user-callable function.

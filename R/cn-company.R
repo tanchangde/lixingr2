@@ -21,7 +21,8 @@
 lxr_cn_com <- make_endpoint(
   endpoint = "cn/company",
   required = "token",
-  optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
+  optional = c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted"),
+  array_params = c("stock_codes", "mutual_markets")
 )
 
 #' Get Company Profile Data
@@ -38,7 +39,8 @@ lxr_cn_com <- make_endpoint(
 #' @export
 lxr_cn_com_profile <- make_endpoint(
   endpoint = "cn/company/profile",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Share Capital Change Data
@@ -542,7 +544,8 @@ lxr_cn_com_suppliers <- make_endpoint(
 lxr_cn_com_fundmtl_non_financial <- make_endpoint(
   endpoint = "cn/company/fundamental/non_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Banks
@@ -640,7 +643,8 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 lxr_cn_com_fundmtl_bank <- make_endpoint(
   endpoint = "cn/company/fundamental/bank",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Securities
@@ -671,7 +675,8 @@ lxr_cn_com_fundmtl_bank <- make_endpoint(
 lxr_cn_com_fundmtl_security <- make_endpoint(
   endpoint = "cn/company/fundamental/security",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Fundamental Data of Listed Insurance
@@ -770,7 +775,8 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 lxr_cn_com_fundmtl_insurance <- make_endpoint(
   endpoint = "cn/company/fundamental/insurance",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Other Financial Fundamental Data
@@ -801,7 +807,8 @@ lxr_cn_com_fundmtl_insurance <- make_endpoint(
 lxr_cn_com_fundmtl_other_financial <- make_endpoint(
   endpoint = "cn/company/fundamental/other_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Non-Financial Listed Companies
@@ -845,7 +852,8 @@ lxr_cn_com_fundmtl_other_financial <- make_endpoint(
 lxr_cn_com_fs_non_financial <- make_endpoint(
   endpoint = "cn/company/fs/non_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Listed Banks
@@ -871,7 +879,8 @@ lxr_cn_com_fs_non_financial <- make_endpoint(
 lxr_cn_com_fs_bank <- make_endpoint(
   endpoint = "cn/company/fs/bank",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Listed Securities Companies
@@ -897,7 +906,8 @@ lxr_cn_com_fs_bank <- make_endpoint(
 lxr_cn_com_fs_security <- make_endpoint(
   endpoint = "cn/company/fs/security",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Listed Insurance Companies
@@ -923,7 +933,8 @@ lxr_cn_com_fs_security <- make_endpoint(
 lxr_cn_com_fs_insurance <- make_endpoint(
   endpoint = "cn/company/fs/insurance",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve Financial Statement Data for Listed Other Financial Companies
@@ -949,7 +960,8 @@ lxr_cn_com_fs_insurance <- make_endpoint(
 lxr_cn_com_fs_other_financial <- make_endpoint(
   endpoint = "cn/company/fs/other_financial",
   required = c("token", "stock_codes", "metrics_list"),
-  optional = c("date", "start_date", "end_date", "limit")
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
 )
 
 #' Retrieve A-Share Popularity Data
@@ -976,91 +988,104 @@ lxr_cn_com_fs_other_financial <- make_endpoint(
 #' @export
 lxr_cn_com_hot_tr_dri <- make_endpoint(
   endpoint = "cn/company/hot/tr_dri",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_mm_ha <- make_endpoint(
   endpoint = "cn/company/hot/mm_ha",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_mtasl <- make_endpoint(
   endpoint = "cn/company/hot/mtasl",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_esc <- make_endpoint(
   endpoint = "cn/company/hot/esc",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_mssc <- make_endpoint(
   endpoint = "cn/company/hot/mssc",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_t_a <- make_endpoint(
   endpoint = "cn/company/hot/t_a",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_elr <- make_endpoint(
   endpoint = "cn/company/hot/elr",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_ple <- make_endpoint(
   endpoint = "cn/company/hot/ple",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_capita <- make_endpoint(
   endpoint = "cn/company/hot/capita",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_shnc <- make_endpoint(
   endpoint = "cn/company/hot/shnc",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_df <- make_endpoint(
   endpoint = "cn/company/hot/df",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_npd <- make_endpoint(
   endpoint = "cn/company/hot/npd",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' @rdname lxr_cn_com_hot
 #' @export
 lxr_cn_com_hot_tr <- make_endpoint(
   endpoint = "cn/company/hot/tr",
-  required = c("token", "stock_codes")
+  required = c("token", "stock_codes"),
+  array_params = "stock_codes"
 )
 
 #' Retrieve Capital Flow Data

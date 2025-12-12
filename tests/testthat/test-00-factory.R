@@ -45,7 +45,8 @@ test_that("parameter cleaning & camelCase conversion works", {
   fn <- make_ep(
     endpoint = "cn/company",
     required = c("token", "stock_codes"),
-    optional = c("adjust_forward_date", "metrics_list")
+    optional = c("adjust_forward_date", "metrics_list"),
+    array_params = c("stock_codes", "metrics_list")
   )
 
   fn(
@@ -90,6 +91,44 @@ test_that("NULL parameters and internal parameters are excluded", {
   body <- captured$body$data
   expect_false("stock_codes" %in% names(body))
   expect_false(any(grepl("^\\.", names(body))))
+})
+
+test_that("array_params controls which parameters are encoded as arrays", {
+  captured <- NULL
+  local_mocked_bindings(
+    req_perform = function(req, ...) {
+      captured <<- req
+      httr2::response(
+        url         = "https://dummy/",
+        status_code = 200,
+        headers     = list("Content-Type" = "application/json"),
+        body        = charToRaw('{"ok": true}')
+      )
+    },
+    .package = "httr2"
+  )
+
+  # Without array_params, vector parameters should be unboxed (and fail)
+  fn_no_array <- make_ep(
+    endpoint = "test",
+    required = c("token", "codes"),
+    array_params = NULL
+  )
+
+  # Single value should work without array_params
+  fn_no_array(token = "admin", codes = "single")
+  expect_true(inherits(captured$body$data$codes, "scalar"))
+
+  # With array_params, vector parameters should remain as arrays
+  fn_with_array <- make_ep(
+    endpoint = "test",
+    required = c("token", "codes"),
+    array_params = "codes"
+  )
+
+  fn_with_array(token = "admin", codes = c("A", "B", "C"))
+  expect_identical(captured$body$data$codes, c("A", "B", "C"))
+  expect_false(inherits(captured$body$data$codes, "scalar"))
 })
 
 test_that("backoff_fun receives correct attempt numbers", {

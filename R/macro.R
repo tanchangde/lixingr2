@@ -39,7 +39,8 @@
 lxr_macro_national_debt <- make_endpoint(
   endpoint = "macro/national-debt",
   required = c("token", "start_date", "end_date", "area_code", "metrics_list"),
-  optional = c("limit")
+  optional = c("limit"),
+  array_params = "metrics_list"
 )
 
 #' Retrieve interest rate data
@@ -57,7 +58,8 @@ lxr_macro_national_debt <- make_endpoint(
 lxr_macro_interest_rates <- make_endpoint(
   endpoint = "macro/interest-rates",
   required = c("token", "start_date", "end_date", "area_code", "metrics_list"),
-  optional = c("limit")
+  optional = c("limit"),
+  array_params = "metrics_list"
 )
 
 #' Retrieve currency exchange rate data

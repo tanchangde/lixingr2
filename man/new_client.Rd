@@ -9,8 +9,7 @@ new_client(
   default_hdrs = list(`Content-Type` = "application/json"),
   default_cfg = list(max_tries = 4L, backoff_fun = NULL, retry_on = NULL, return_format =
     "list", verbosity = NULL),
-  name_transform = snakecase::to_lower_camel_case,
-  array_params = NULL
+  name_transform = snakecase::to_lower_camel_case
 )
 }
 \arguments{
@@ -25,9 +24,6 @@ response format. See \emph{Details}.}
 
 \item{name_transform}{Function. Transforms R argument names to the naming
 convention required by the API (default:\code{snakecase::to_lower_camel_case}).}
-
-\item{array_params}{Character vector. Parameters that must be encoded as JSON
-arrays rather than scalars.}
 }
 \value{
 An S3 object of class "api_client".
