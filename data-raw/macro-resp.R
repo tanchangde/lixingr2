@@ -12,7 +12,6 @@ save_json_response <- function(resp, path) {
 }
 
 resp_macro_national_debt <- lxr_macro_national_debt(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   area_code = "us",
   start_date = "2025-09-01",
   end_date = "2025-09-06",
@@ -26,7 +25,6 @@ save_json_response(
 )
 
 resp_macro_interest_rates <- lxr_macro_interest_rates(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   area_code = "cn",
   start_date = "2025-09-01",
   end_date = "2025-09-06",
@@ -40,7 +38,6 @@ save_json_response(
 )
 
 resp_macro_fx <- lxr_macro_fx(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   start_date = "2025-09-01",
   end_date = "2025-09-06",
   from_currency = "USD",

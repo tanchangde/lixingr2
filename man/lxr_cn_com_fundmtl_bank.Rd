@@ -156,7 +156,6 @@ greater than 1, a maximum of 48 metrics can be selected; when the length of
 \examples{
 \dontrun{
 lxr_cn_com_fundmtl_bank(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   start_date = "2025-07-01",
   end_date = "2025-07-08",
   stock_codes = "600036",,

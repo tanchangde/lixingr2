@@ -261,6 +261,12 @@ send_request <- function(client, path, body = NULL, hdrs = list(), cfg = list())
 #' @param required Character vector. Names of parameters **required** by this endpoint.
 #' @param optional Character vector. Names of optional parameters.
 #'
+#' @details
+#' The generated function will automatically retrieve the token from the
+#' `LIXINGR_TOKEN` environment variable when the `token` argument is not
+#' explicitly provided. Use [lxr_set_token()] to set the token, or set
+#' the environment variable directly.
+#'
 #' @return A user-callable function.
 #' @export
 make_endpoint <- function(client = new_client(), endpoint, required, optional = NULL) {
@@ -270,8 +276,10 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
     options = rlang::expr(list())
   )
 
+  # Create checks for required params EXCEPT token (handled separately)
+  required_without_token <- setdiff(required, "token")
   checks <- purrr::map(
-    required,
+    required_without_token,
     ~ rlang::expr(rlang::check_required(!!rlang::sym(.x)))
   )
 
@@ -279,6 +287,11 @@ make_endpoint <- function(client = new_client(), endpoint, required, optional = 
 
   fn_body <- rlang::expr({
     !!!checks
+
+    # Auto-fetch token from environment if not provided
+    if (rlang::is_missing(token)) {
+      token <- lxr_get_token()
+    }
 
     body_args <- rlang::env_get_list(
       env     = rlang::current_env(),

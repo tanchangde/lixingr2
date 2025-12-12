@@ -425,7 +425,6 @@ lxr_hk_com_allotment <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_hk_com_fundmtl_non_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   date = "2025-07-08",
 #'   stock_codes = "00700",
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos")
@@ -690,10 +689,9 @@ lxr_hk_com_fundmtl_insurance <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_hk_com_fs_non_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-07-01",
 #'   end_date = "2025-07-01",
-#'   stock_codes = "00700",,
+#'   stock_codes = "00700",
 #'   metrics_list = "q.ps.toi.t"
 #' )
 #' }

@@ -18,7 +18,32 @@ pak::pkg_install("tanchangde/lixingr2")
 
 ### Configuration
 
--   Register and log in to lixinger, then acquire a `Token` from the [Open Platform](https://www.lixinger.com/open/api/token).
+1.  Register and log in to lixinger, then acquire a `Token` from the [Open Platform](https://www.lixinger.com/open/api/token).
+
+2.  Set up your token (choose one method):
+
+```r
+# Method 1: Set token for current session
+lxr_set_token("your-api-token")
+
+# Method 2: Set environment variable in .Renviron file
+# Run: usethis::edit_r_environ()
+# Add: LIXINGR_TOKEN=your-api-token
+```
+
+### Usage
+
+Once configured, API functions will automatically use the token:
+
+```r
+library(lixingr2)
+
+# No need to pass token parameter
+lxr_cn_com(stock_codes = c("600519", "300750"))
+
+# Or explicitly pass token if needed
+lxr_cn_com(token = "your-token", stock_codes = c("600519", "300750"))
+```
 
 ## Motivation
 

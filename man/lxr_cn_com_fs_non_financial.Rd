@@ -94,10 +94,9 @@ a maximum of 128 metrics can be retrieved.
 \examples{
 \dontrun{
 lxr_cn_com_fs_non_financial(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   start_date = "2024-07-01",
   end_date = "2025-07-01",
-  stock_codes = "300750",,
+  stock_codes = "300750",
   metrics_list = "q.ps.toi.t"
 )
 }

@@ -531,7 +531,6 @@ lxr_cn_com_suppliers <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fundmtl_non_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   date = "2025-07-08",
 #'   stock_codes = c("300750", "600519", "600157"),
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos")
@@ -629,7 +628,6 @@ lxr_cn_com_fundmtl_non_financial <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fundmtl_bank(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2025-07-01",
 #'   end_date = "2025-07-08",
 #'   stock_codes = "600036",,
@@ -661,7 +659,6 @@ lxr_cn_com_fundmtl_bank <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fundmtl_security(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2025-07-01",
 #'   end_date = "2025-07-15",
 #'   stock_codes = "600030",,
@@ -761,10 +758,9 @@ lxr_cn_com_fundmtl_security <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fundmtl_insurance(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2025-07-01",
 #'   end_date = "2025-07-15",
-#'   stock_codes = "601318",,
+#'   stock_codes = "601318",
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
 #' }
@@ -793,10 +789,9 @@ lxr_cn_com_fundmtl_insurance <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fundmtl_other_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2025-07-01",
 #'   end_date = "2025-07-15",
-#'   stock_codes = "600901",,
+#'   stock_codes = "600901",
 #'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y5.cvpos")
 #' )
 #' }
@@ -838,10 +833,9 @@ lxr_cn_com_fundmtl_other_financial <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fs_non_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-07-01",
 #'   end_date = "2025-07-01",
-#'   stock_codes = "300750",,
+#'   stock_codes = "300750",
 #'   metrics_list = "q.ps.toi.t"
 #' )
 #' }
@@ -865,10 +859,9 @@ lxr_cn_com_fs_non_financial <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fs_bank(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-03-31",
 #'   end_date = "2025-03-31",
-#'   stock_codes = "600016",,
+#'   stock_codes = "600016",
 #'   metrics_list = "q.ps.oi.t"
 #' )
 #' }
@@ -892,10 +885,9 @@ lxr_cn_com_fs_bank <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fs_security(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-03-31",
 #'   end_date = "2025-03-31",
-#'   stock_codes = "600030",,
+#'   stock_codes = "600030",
 #'   metrics_list = "q.ps.oi.t"
 #' )
 #' }
@@ -919,10 +911,9 @@ lxr_cn_com_fs_security <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fs_insurance(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-03-31",
 #'   end_date = "2025-03-31",
-#'   stock_codes = "601318",,
+#'   stock_codes = "601318",
 #'   metrics_list = "q.ps.oi.t"
 #' )
 #' }
@@ -946,10 +937,9 @@ lxr_cn_com_fs_insurance <- make_endpoint(
 #' @examples
 #' \dontrun{
 #' lxr_cn_com_fs_other_financial(
-#'   token = Sys.getenv("LIXINGR_TOKEN"),
 #'   start_date = "2024-03-31",
 #'   end_date = "2025-03-31",
-#'   stock_codes = "600901",,
+#'   stock_codes = "600901",
 #'   metrics_list = "q.ps.oi.t"
 #' )
 #' }

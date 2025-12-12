@@ -21,3 +21,9 @@ A user-callable function.
 \description{
 Endpoint factory
 }
+\details{
+The generated function will automatically retrieve the token from the
+\code{LIXINGR_TOKEN} environment variable when the \code{token} argument is not
+explicitly provided. Use \code{\link[=lxr_set_token]{lxr_set_token()}} to set the token, or set
+the environment variable directly.
+}

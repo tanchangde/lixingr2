@@ -11,6 +11,7 @@ test_that("generated function has correct formals", {
     "token", "stock_codes", "fs_table_type", "mutual_markets", "include_delisted",
     "options"
   ))
+  # token is required (missing arg) but auto-fetched from env if not provided
   expect_true(rlang::is_missing(fmls$token))
 
   optional_params <- c("stock_codes", "fs_table_type", "mutual_markets", "include_delisted")
@@ -18,9 +19,12 @@ test_that("generated function has correct formals", {
     expect_identical(fmls[[param]], rlang::expr(NULL))}
 })
 
-test_that("required parameters are enforced", {
+test_that("token auto-fetch errors when not set", {
   fn <- make_ep(endpoint = "cn/company", required = "token")
-  expect_error(fn(), regexp = "`token` is absent")
+  # Ensure no token is set in environment
+  withr::with_envvar(c(LIXINGR_TOKEN = NA), {
+    expect_error(fn(), regexp = "API token not found")
+  })
 })
 
 test_that("parameter cleaning & camelCase conversion works", {

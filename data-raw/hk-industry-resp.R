@@ -1,5 +1,4 @@
 resp_hk_industry <- lxr_hk_industry(
-  token = Sys.getenv("LIXINGR_TOKEN"),
   stock_codes = "H50",
   source = "hsi",
   options = list(call_config = list(return_format = "resp"))
