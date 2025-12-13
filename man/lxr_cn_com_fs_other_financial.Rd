@@ -20,12 +20,9 @@ lxr_cn_com_fs_other_financial(
 
 \item{stock_codes}{A vector of stock codes as character strings.}
 
-\item{metrics_list}{A vector of metrics in the format
-\verb{[granularity].[tableName].[fieldName].[expressionCalculateType]}.
-For example, to retrieve the cumulative original value of total operating
-income and the year-on-year value of accounts receivable for the current
-period, set \code{metrics_list} to \code{c("q.ps.toi.t", "q.bs.ar.c_y2y")}. Refer to
-the API documentation for the full list of supported metrics.}
+\item{metrics_list}{A vector of metric names to retrieve. Refer to the API
+documentation (see \strong{See Also} section) for the full list of supported
+metrics for this endpoint.}
 
 \item{date}{The date for which data is to be retrieved, as a character string
 in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).}

@@ -20,78 +20,9 @@ lxr_cn_com_fundmtl_insurance(
 
 \item{stock_codes}{A vector of stock codes as character strings.}
 
-\item{metrics_list}{A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-
-Currently supported metrics:
-
-\strong{Valuation Metrics}
-\itemize{
-\item PEV : \code{pev}
-\item PE-TTM : \code{pe_ttm}
-\item PE-TTM (ex-NRI) : \code{d_pe_ttm}
-\item PB : \code{pb}
-\item PB (ex-Goodwill) : \code{pb_wo_gw}
-\item PS-TTM : \code{ps_ttm}
-\item Dividend Yield : \code{dyr}
-\item PCF-TTM : \code{pcf_ttm}
-\item Stock Price : \code{sp}
-\item Price Change (\%) : \code{spc}
-\item Intraday Range (\%) : \code{spa}
-\item Trading Volume : \code{tv}
-\item Trading Value : \code{ta}
-\item Turnover Rate (\%) : \code{to_r}
-\item Number of Shareholders : \code{shn}
-\item Market Capitalization : \code{mc}
-\item A-share Market Cap : \code{mc_om}
-\item Tradable Market Cap : \code{cmc}
-\item Free-float Market Cap : \code{ecmc}
-\item Free-float Market Cap / Holder : \code{ecmc_psh}
-\item Margin Purchase Value : \code{fpa}
-\item Margin Repayment Value : \code{fra}
-\item Margin Financing Balance : \code{fb}
-\item Short-sale Value : \code{ssa}
-\item Short-sale Repayment Value : \code{sra}
-\item Short Interest Balance : \code{sb}
-\item Northbound Connect Holdings (Shares) : \code{ha_sh}
-\item Northbound Connect Holdings (Value)  : \code{ha_shm}
-\item Northbound Connect Net Buy (Value)   : \code{mm_nba}
-}
-
-\strong{Valuation Statistics Metrics}
-
-Format: \code{metricsName.granularity.statisticsDataType}
-
-\emph{metricsName}
-\itemize{
-\item PE-TTM : \code{pe_ttm}
-\item PE-TTM (ex-NRI) : \code{d_pe_ttm}
-\item PB : \code{pb}
-\item PB (ex-Goodwill) : \code{pb_wo_gw}
-\item PS-TTM : \code{ps_ttm}
-\item PEV : `pev``
-}
-
-\emph{granularity}
-\itemize{
-\item Since Listing : \code{fs}
-\item 20 Years : \code{y20}
-\item 10 Years : \code{y10}
-\item 5 Years : \code{y5}
-\item 3 Years : \code{y3}
-\item 1 Year : \code{y1}
-}
-
-\emph{statisticsDataType}
-\itemize{
-\item Percentile Position (\%) : \code{cvpos}
-\item 20th-percentile Value : \code{q2v}
-\item 50th-percentile Value : \code{q5v}
-\item 80th-percentile Value : \code{q8v}
-\item Minimum Value : \code{minv}
-\item Maximum Value : \code{maxv}
-\item Maximum Positive Value : \code{maxpv}
-\item Average Value : \code{avgv}
-}}
+\item{metrics_list}{A vector of metric names to retrieve. Refer to the API
+documentation (see \strong{See Also} section) for the full list of supported
+metrics for this endpoint.}
 
 \item{date}{The date for which data is to be retrieved, as a character string
 in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).}

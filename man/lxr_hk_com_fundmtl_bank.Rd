@@ -20,63 +20,9 @@ lxr_hk_com_fundmtl_bank(
 
 \item{stock_codes}{A vector of stock codes as character strings.}
 
-\item{metrics_list}{A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-
-Currently supported metrics:
-
-\strong{Valuation Metrics}
-\itemize{
-\item PE-TTM : \code{pe_ttm}
-\item PB : \code{pb}
-\item PS-TTM : \code{ps_ttm}
-\item Dividend Yield : \code{dyr}
-\item PCF-TTM : \code{pcf_ttm}
-\item Stock Price : \code{sp}
-\item Price Change (\%) : \code{spc}
-\item Intraday Range (\%) : \code{spa}
-\item Trading Volume : \code{tv}
-\item Trading Value : \code{ta}
-\item Turnover Rate (\%) : \code{to_r}
-\item Market Capitalization : \code{mc}
-\item H-share Market Cap : \code{mc_om}
-\item Stock Connect Holdings (Shares) : \code{ah_sh}
-\item Stock Connect Holdings (Value) : \code{ah_shm}
-\item Stock Connect Net Buy (Value) : \code{mm_nba}
-\item Shares Per Lot : \code{sharesPerLot}
-}
-
-\strong{Valuation Statistics Metrics}
-
-Format: \code{metricsName.granularity.statisticsDataType}
-
-\emph{metricsName}
-\itemize{
-\item PE-TTM : \code{pe_ttm}
-\item PB : \code{pb}
-\item PS-TTM : \code{ps_ttm}
-}
-
-\emph{granularity}
-\itemize{
-\item Since Listing : \code{fs}
-\item 20 Years : \code{y20}
-\item 10 Years : \code{y10}
-\item 5 Years : \code{y5}
-\item 3 Years : \code{y3}
-\item 1 Year : \code{y1}
-}
-
-\emph{statisticsDataType}
-\itemize{
-\item Percentile Rank (\%) : \code{cvpos}
-\item 20th Percentile : \code{q2v}
-\item 50th Percentile : \code{q5v}
-\item 80th Percentile : \code{q8v}
-\item Minimum : \code{minv}
-\item Maximum : \code{maxv}
-\item Maximum Positive : \code{maxpv}
-\item Average : \code{avgv}
-}}
+\item{metrics_list}{A vector of metric names to retrieve. Refer to the API
+documentation (see \strong{See Also} section) for the full list of supported
+metrics for this endpoint.}
 
 \item{date}{The date for which data is to be retrieved, as a character string
 in "YYYY-MM-DD" format. The date should be based on Beijing Time (UTC+8).}

@@ -358,60 +358,7 @@ lxr_hk_com_allotment <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#'
-#' @param metrics_list A vector of string metrics, e.g., `c("mc", "pe_ttm", "pb", "dyr")`.
-#'
-#' Currently supported metrics:
-#'
-#' **Valuation Metrics**
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#' - Dividend Yield : `dyr`
-#' - PCF-TTM : `pcf_ttm`
-#' - Stock Price : `sp`
-#' - Price Change (%) : `spc`
-#' - Intraday Range (%) : `spa`
-#' - Trading Volume : `tv`
-#' - Trading Value : `ta`
-#' - Turnover Rate (%) : `to_r`
-#' - Market Capitalization : `mc`
-#' - H-share Market Cap : `mc_om`
-#' - Southbound Shareholding Volume : `ah_sh`
-#' - Southbound Shareholding Value : `ah_shm`
-#' - Southbound Net Buy Value : `mm_nba`
-#' - Shares Per Lot : `sharesPerLot`
-#'
-#' **Valuation Statistics Metrics**
-#'
-#' Format: `metricsName.granularity.statisticsDataType`
-#'
-#' *metricsName*
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#'
-#' *granularity*
-#'
-#' - Since Listing : `fs`
-#' - 20 Years : `y20`
-#' - 10 Years : `y10`
-#' - 5 Years : `y5`
-#' - 3 Years : `y3`
-#' - 1 Year : `y1`
-#'
-#' *statisticsDataType*
-#'
-#' - Percentile Position (%) : `cvpos`
-#' - 20th-percentile Value : `q2v`
-#' - 50th-percentile Value : `q5v`
-#' - 80th-percentile Value : `q8v`
-#' - Minimum Value : `minv`
-#' - Maximum Value : `maxv`
-#' - Maximum Positive Value : `maxpv`
-#' - Average Value : `avgv`
+#' @inheritParams metrics_list_param
 #'
 #' @inherit common_return return
 #'
@@ -449,59 +396,7 @@ lxr_hk_com_fundmtl_non_financial <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' @param metrics_list A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-#'
-#' Currently supported metrics:
-#'
-#' **Valuation Metrics**
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#' - Dividend Yield : `dyr`
-#' - PCF-TTM : `pcf_ttm`
-#' - Stock Price : `sp`
-#' - Price Change (%) : `spc`
-#' - Intraday Range (%) : `spa`
-#' - Trading Volume : `tv`
-#' - Trading Value : `ta`
-#' - Turnover Rate (%) : `to_r`
-#' - Market Capitalization : `mc`
-#' - H-share Market Cap : `mc_om`
-#' - Stock Connect Holdings (Shares) : `ah_sh`
-#' - Stock Connect Holdings (Value) : `ah_shm`
-#' - Stock Connect Net Buy (Value) : `mm_nba`
-#' - Shares Per Lot : `sharesPerLot`
-#'
-#' **Valuation Statistics Metrics**
-#'
-#' Format: `metricsName.granularity.statisticsDataType`
-#'
-#' *metricsName*
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#'
-#' *granularity*
-#'
-#' - Since Listing : `fs`
-#' - 20 Years : `y20`
-#' - 10 Years : `y10`
-#' - 5 Years : `y5`
-#' - 3 Years : `y3`
-#' - 1 Year : `y1`
-#'
-#' *statisticsDataType*
-#'
-#' - Percentile Rank (%) : `cvpos`
-#' - 20th Percentile : `q2v`
-#' - 50th Percentile : `q5v`
-#' - 80th Percentile : `q8v`
-#' - Minimum : `minv`
-#' - Maximum : `maxv`
-#' - Maximum Positive : `maxpv`
-#' - Average : `avgv`
+#' @inheritParams metrics_list_param
 #'
 #' @inherit common_return return
 #'
@@ -523,59 +418,7 @@ lxr_hk_com_fundmtl_bank <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' @param metrics_list A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-#'
-#' Currently supported metrics:
-#'
-#' **Valuation Metrics**
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#' - Dividend Yield : `dyr`
-#' - PCF-TTM : `pcf_ttm`
-#' - Stock Price : `sp`
-#' - Price Change (%) : `spc`
-#' - Intraday Range (%) : `spa`
-#' - Trading Volume : `tv`
-#' - Trading Value : `ta`
-#' - Turnover Rate (%) : `to_r`
-#' - Market Capitalization : `mc`
-#' - H-share Market Cap : `mc_om`
-#' - Stock Connect Holdings (Shares) : `ah_sh`
-#' - Stock Connect Holdings (Value) : `ah_shm`
-#' - Stock Connect Net Buy (Value) : `mm_nba`
-#' - Shares Per Lot : `sharesPerLot`
-#'
-#' **Valuation Statistics Metrics**
-#'
-#' Format: `metricsName.granularity.statisticsDataType`
-#'
-#' *metricsName*
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#'
-#' *granularity*
-#'
-#' - Since Listing : `fs`
-#' - 20 Years : `y20`
-#' - 10 Years : `y10`
-#' - 5 Years : `y5`
-#' - 3 Years : `y3`
-#' - 1 Year : `y1`
-#'
-#' *statisticsDataType*
-#'
-#' - Percentile Rank (%) : `cvpos`
-#' - 20th Percentile : `q2v`
-#' - 50th Percentile : `q5v`
-#' - 80th Percentile : `q8v`
-#' - Minimum : `minv`
-#' - Maximum : `maxv`
-#' - Maximum Positive : `maxpv`
-#' - Average : `avgv`
+#' @inheritParams metrics_list_param
 #'
 #' @inherit common_return return
 #'
@@ -597,61 +440,7 @@ lxr_hk_com_fundmtl_security <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' @param metrics_list A vector of string metrics, e.g., \code{c("mc", "pe_ttm", "pb", "dyr")}.
-#'
-#' Currently supported metrics:
-#'
-#' **Valuation Metrics**
-#'
-#' - PEV : `pev`
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#' - Dividend Yield : `dyr`
-#' - PCF-TTM : `pcf_ttm`
-#' - Stock Price : `sp`
-#' - Price Change (%) : `spc`
-#' - Intraday Range (%) : `spa`
-#' - Trading Volume : `tv`
-#' - Trading Value : `ta`
-#' - Turnover Rate (%) : `to_r`
-#' - Market Capitalization : `mc`
-#' - H-share Market Cap : `mc_om`
-#' - Stock Connect Holdings (Shares) : `ah_sh`
-#' - Stock Connect Holdings (Value) : `ah_shm`
-#' - Stock Connect Net Buy (Value) : `mm_nba`
-#' - Shares Per Lot : `sharesPerLot`
-#'
-#' **Valuation Statistics Metrics**
-#'
-#' Format: `metricsName.granularity.statisticsDataType`
-#'
-#' *metricsName*
-#'
-#' - PE-TTM : `pe_ttm`
-#' - PB : `pb`
-#' - PS-TTM : `ps_ttm`
-#' - PEV : `pev`
-#'
-#' *granularity*
-#'
-#' - Since Listing : `fs`
-#' - 20 Years : `y20`
-#' - 10 Years : `y10`
-#' - 5 Years : `y5`
-#' - 3 Years : `y3`
-#' - 1 Year : `y1`
-#'
-#' *statisticsDataType*
-#'
-#' - Percentile Rank (%) : `cvpos`
-#' - 20th Percentile : `q2v`
-#' - 50th Percentile : `q5v`
-#' - 80th Percentile : `q8v`
-#' - Minimum : `minv`
-#' - Maximum : `maxv`
-#' - Maximum Positive : `maxpv`
-#' - Average : `avgv`
+#' @inheritParams metrics_list_param
 #'
 #' @inherit common_return return
 #'
@@ -673,12 +462,8 @@ lxr_hk_com_fundmtl_insurance <- make_endpoint(
 #' @inheritParams date_param
 #' @inheritParams date_range_params
 #' @inheritParams limit_param
-#' @param metrics_list A vector of metrics in the format
-#'   `[granularity].[tableName].[fieldName].[expressionCalculateType]`.
-#'   For example, to retrieve the cumulative original value of total operating
-#'   income and the year-on-year value of accounts receivable for the current
-#'   period, set `metrics_list` to `c("q.ps.toi.t", "q.bs.ar.c_y2y")`. Refer to
-#'   the API documentation for the full list of supported metrics.
+#' @inheritParams metrics_list_param
+#'
 #' @inherit common_return return
 #'
 #' @details The length of `stock_codes` must be between 1 and 100. When assigning

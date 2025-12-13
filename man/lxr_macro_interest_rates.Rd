@@ -27,8 +27,9 @@ on Beijing Time (UTC+8).}
 
 \item{area_code}{Area code, currently supports mainland China: cn, United States: us.}
 
-\item{metrics_list}{A vector of string metrics. Refer to the API
-documentation for the full list of supported metrics.}
+\item{metrics_list}{A vector of metric names to retrieve. Refer to the API
+documentation (see \strong{See Also} section) for the full list of supported
+metrics for this endpoint.}
 
 \item{limit}{The number of latest records to return.}
 

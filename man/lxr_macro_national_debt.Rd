@@ -27,35 +27,9 @@ on Beijing Time (UTC+8).}
 
 \item{area_code}{Area code, currently supports mainland China: cn, United States: us.}
 
-\item{metrics_list}{A vector of string metrics.
-\itemize{
-\item Mainland China supports:
-\itemize{
-\item 3-month yield: tcm_m3
-\item 6-month yield: tcm_m6
-\item 1-year yield: tcm_y1
-\item 2-year yield: tcm_y2
-\item 3-year yield: tcm_y3
-\item 5-year yield: tcm_y5
-\item 7-year yield: tcm_y7
-\item 10-year yield: tcm_y10
-\item 20-year yield: tcm_y20
-\item 30-year yield: tcm_y30
-}
-\item United States supports:
-\itemize{
-\item 3-month yield: tcm_m3
-\item 6-month yield: tcm_m6
-\item 1-year yield: tcm_y1
-\item 2-year yield: tcm_y2
-\item 3-year yield: tcm_y3
-\item 5-year yield: tcm_y5
-\item 7-year yield: tcm_y7
-\item 10-year yield: tcm_y10
-\item 20-year yield: tcm_y20
-\item 30-year yield: tcm_y30
-}
-}}
+\item{metrics_list}{A vector of metric names to retrieve. Refer to the API
+documentation (see \strong{See Also} section) for the full list of supported
+metrics for this endpoint.}
 
 \item{limit}{The number of latest records to return.}
 
