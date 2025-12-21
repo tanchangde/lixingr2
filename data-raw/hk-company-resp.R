@@ -161,6 +161,18 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_fundmtl_non_financial.json"
 )
 
+resp_hk_com_fundmtl_reit <- lxr_hk_com_fundmtl_reit(
+  date = "2025-07-08",
+  stock_codes = "02778",
+  metrics_list = c("pe_ttm", "mc", "pb"),
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_fundmtl_reit,
+  "./tests/testthat/fixtures/hk_com_fundmtl_reit.json"
+)
+
 resp_hk_com_fs_non_financial <- lxr_hk_com_fs_non_financial(
   start_date = "2024-07-01",
   end_date = "2025-07-01",
