@@ -70,6 +70,45 @@ Tests use `local_mocked_bindings()` to mock httr2 responses. See `tests/testthat
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Scopes: `cn-company`, `cn-index`, `cn-industry`, `cn-fund`, `hk-company`, `hk-index`, `hk-industry`, `us-index`, `macro`.
 
+## Code Style
+
+Follow the [tidyverse style guide](https://style.tidyverse.org/).
+
+### 1. Naming Conventions
+
+- **Object Names**: Use `snake_case` for all variable and function names
+- **Word Choice**: Generally use nouns for variables and verbs for functions
+- **Avoid Dots**: Do not use dots (`.`) in names; reserve them exclusively for S3 methods (e.g., `print.data.frame`)
+- **File Names**: Use meaningful, `snake_case` names ending in `.R`. If files must run in a specific order, prefix them with numbers (e.g., `01_load.R`, `02_clean.R`)
+
+### 2. Syntax and Layout
+
+- **Assignment**: Always use `<-` for assignment, never `=`. Use `=` only for passing arguments inside functions
+- **Line Length**: Limit code to 80 characters per line
+- **Indentation**: Use two spaces for indentation. Never use tabs
+- **Spacing**:
+  - Place spaces around all infix operators (e.g., `+`, `-`, `<-`, `==`)
+  - Always put a space after a comma, but never before
+  - Do not put spaces inside or outside parentheses for regular function calls (e.g., `mean(x, na.rm = TRUE)`)
+
+### 3. Functional Programming and Pipes
+
+- **Piping**: Use the native pipe `|>` or the magrittr pipe `%>%`
+  - Start a new line after every pipe
+  - Indent the second line of a pipe sequence by two spaces
+- **Function Arguments**: If a function has many arguments, place each on its own line, indented to align with the first argument
+
+### 4. Documentation and Comments
+
+- **Comments**: Use `#` followed by a single space for all comments. For inline comments, use two spaces before the `#`
+- **Roxygen2**: Use `#'` for function documentation, following the roxygen2 standard for parameters (`@param`) and return values (`@return`)
+- **Sections**: Use commented lines (at least 4 dashes, e.g., `# Load data ----`) to break long scripts into readable sections
+
+### 5. AI-Specific Best Practices
+
+- **Explicit Namespaces**: Use `package::function()` (e.g., `dplyr::mutate()`) to avoid conflicts and improve clarity
+- **Styler Integration**: Run the `styler` package before finalizing code to ensure adherence to these rules
+
 ## CI
 
 GitHub Actions runs R-CMD-check on commits prefixed with `build`, `feat`, `fix`, or `test`.
