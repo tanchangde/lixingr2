@@ -113,24 +113,3 @@ Follow the [tidyverse style guide](https://style.tidyverse.org/).
 
 GitHub Actions runs R-CMD-check on commits prefixed with `build`, `feat`, `fix`, or `test`.
 
-## Puppeteer Configuration
-
-When using Puppeteer MCP tools for browser automation, always use the following configuration to preserve login state:
-
-1. First, get the user's home directory by running: `echo $HOME` (or `echo %USERPROFILE%` on Windows CMD)
-2. Then use the full expanded path in the launchOptions:
-
-```json
-{
-  "headless": false,
-  "userDataDir": "<expanded_home_dir>/.puppeteer-profile",
-  "defaultViewport": null,
-  "args": ["--start-maximized"]
-}
-```
-
-**Important:**
-- Always expand `~` or `$HOME` to the actual absolute path before passing to Puppeteer, as tilde expansion may not work correctly.
-- `defaultViewport: null` and `--start-maximized` ensure the browser content fills the window.
-
-This ensures login sessions are persisted across browser restarts.
