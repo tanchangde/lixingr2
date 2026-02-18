@@ -132,3 +132,10 @@ test_that("hk_com_fundmtl_other_financial response is correctly converted to a d
   expect_true(is.data.frame(result))
   expect_true(all(purrr::map_lgl(result, ~ !is.list(.))))
 })
+
+test_that("hk_com_fs_bank response is correctly converted to a data frame", {
+  result <- mock_lxr_unnest(test_path("fixtures", "hk_com_fs_bank.json"))
+
+  expect_true(is.data.frame(result))
+  expect_true(all(purrr::map_lgl(result, ~ !is.list(.))))
+})

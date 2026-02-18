@@ -187,6 +187,20 @@ save_resp_as_json(
   "./tests/testthat/fixtures/hk_com_fs_non_financial.json"
 )
 
+resp_hk_com_fs_bank <- lxr_hk_com_fs_bank(
+  start_date = "2024-07-01",
+  end_date = "2025-07-01",
+  stock_codes = "00939",
+  metrics_list = "q.ps.toi.t",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_fs_bank,
+  "./tests/testthat/fixtures/hk_com_fs_bank.json"
+)
+
 resp_hk_com_fund_shareholders <- lxr_hk_com_fund_shareholders(
   stock_code = "00700",
   start_date = "2024-11-23",
