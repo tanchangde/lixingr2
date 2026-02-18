@@ -493,6 +493,44 @@ lxr_hk_com_fundmtl_reit <- make_endpoint(
   array_params = c("stock_codes", "metrics_list")
 )
 
+#' Retrieve Fundamental Data of Other Listed Financial Companies (HK)
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inheritParams metrics_list_param
+#'
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
+#'   `start_date` or `date` must be provided. `limit` is only effective when
+#'   requesting data within a date range. When the length of `stock_codes` is
+#'   greater than 1, a maximum of 48 metrics can be selected; when the length of
+#'   `stock_codes` equals 1, a maximum of 36 metrics can be retrieved.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fundamental/other_financial)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_hk_com_fundmtl_other_financial(
+#'   date = "2026-02-10",
+#'   stock_codes = "03877",
+#'   metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos")
+#' )
+#' }
+#'
+#' @rdname lxr_hk_com_fundmtl_other_financial
+#' @export
+lxr_hk_com_fundmtl_other_financial <- make_endpoint(
+  endpoint = "hk/company/fundamental/other_financial",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
+)
+
 #' Retrieve Financial Statement Data for Non-Financial Listed Companies
 #'
 #' @inheritParams common_params

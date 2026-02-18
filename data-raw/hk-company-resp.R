@@ -395,3 +395,15 @@ save_resp_as_json(
   resp_hk_com_fundmtl_insurance,
   "./tests/testthat/fixtures/hk_com_fundmtl_insurance.json"
 )
+
+resp_hk_com_fundmtl_other_financial <- lxr_hk_com_fundmtl_other_financial(
+  date = "2026-02-10",
+  stock_codes = "03877",
+  metrics_list = c("pe_ttm", "mc", "pe_ttm.y3.cvpos"),
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_fundmtl_other_financial,
+  "./tests/testthat/fixtures/hk_com_fundmtl_other_financial.json"
+)
