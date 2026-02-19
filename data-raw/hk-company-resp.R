@@ -435,3 +435,17 @@ save_resp_as_json(
   resp_hk_com_fundmtl_other_financial,
   "./tests/testthat/fixtures/hk_com_fundmtl_other_financial.json"
 )
+
+resp_hk_com_fs_security <- lxr_hk_com_fs_security(
+  start_date = "2024-07-01",
+  end_date = "2025-07-01",
+  stock_codes = "06030",
+  metrics_list = "q.ps.oi.t",
+  limit = 5,
+  options = list(call_config = list(return_format = "resp"))
+)
+
+save_resp_as_json(
+  resp_hk_com_fs_security,
+  "./tests/testthat/fixtures/hk_com_fs_security.json"
+)

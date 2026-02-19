@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 /Meta/
+*.Rcheck/
+.DS_Store

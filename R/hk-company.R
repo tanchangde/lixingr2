@@ -866,3 +866,63 @@ lxr_hk_com_mutual_market <- make_endpoint(
   optional = c("end_date", "limit")
 )
 
+#' Retrieve Financial Statement Data for Listed Securities Companies (HK)
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inheritParams metrics_list_param
+#'
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
+#'   `start_date` or `date` must be provided. Passing `latest` as the value for
+#'   `date` will retrieve the most recent financial statement data within the
+#'   last 1.1 years. `limit` is only effective when requesting data within a date
+#'   range. When the length of `stock_codes` is greater than 1, a maximum of 48
+#'   metrics can be selected; when the length of `stock_codes` equals 1,
+#'   a maximum of 128 metrics can be retrieved.
+#'
+#'   Metrics are specified using the format:
+#'   `[granularity].[tableName].[fieldName].[expressionCalculateType]`.
+#'
+#'   Supported granularities:
+#'   - `y`: Annual
+#'   - `hy`: Half-year
+#'   - `q`: Quarterly
+#'
+#'   Supported expression calculation types for quarterly data:
+#'   - `t`: Current period
+#'   - `t_o`: Current period original value
+#'   - `t_y2y`: Current period year-over-year
+#'   - `t_c2c`: Current period quarter-over-quarter
+#'   - `c`: Single quarter
+#'   - `c_o`: Single quarter original value
+#'   - `c_y2y`: Single quarter year-over-year
+#'   - `c_c2c`: Single quarter quarter-over-quarter
+#'   - `ttm`: Trailing twelve months
+#'   - `ttm_o`: TTM original value
+#'   - `ttm_y2y`: TTM year-over-year
+#'   - `ttm_c2c`: TTM quarter-over-quarter
+#'
+#'   Table names and field names for securities companies include:
+#'   - `ps`: Profit Statement (e.g., `ps.oi` for operating income)
+#'   - `bs`: Balance Sheet
+#'   - `cf`: Cash Flow Statement
+#'
+#'   Example: `"q.ps.oi.t"` retrieves quarterly operating income (current period cumulative).
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fs/security)
+#'
+#' @rdname lxr_hk_com_fs_security
+#' @export
+lxr_hk_com_fs_security <- make_endpoint(
+  endpoint = "hk/company/fs/security",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
+)
+

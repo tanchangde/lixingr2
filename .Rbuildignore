@@ -8,3 +8,7 @@
 ^Meta$
 ^CLAUDE\.md$
 ^\.claude$
+^\.git$
+^\.gitignore$
+^\.DS_Store$
+^.*\.Rcheck$
