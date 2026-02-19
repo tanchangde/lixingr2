@@ -1,0 +1,15 @@
+[
+  {
+    "stockCode": "000016",
+    "fsTableType": "hybrid",
+    "source": "csi",
+    "areaCode": "cn",
+    "market": "a",
+    "name": "上证50",
+    "caculationMethod": "grading_weighted",
+    "launchDate": "2004-01-02T00:00:00+08:00",
+    "series": "size",
+    "currency": "CNY",
+    "rebalancingFrequency": "semi-annually"
+  }
+]
