@@ -613,6 +613,47 @@ lxr_hk_com_fs_bank <- make_endpoint(
   array_params = c("stock_codes", "metrics_list")
 )
 
+#' Retrieve Financial Statement Data for Listed Insurance Companies
+#'
+#' @inheritParams common_params
+#' @inheritParams stock_codes_param
+#' @inheritParams date_param
+#' @inheritParams date_range_params
+#' @inheritParams limit_param
+#' @inheritParams metrics_list_param
+#'
+#' @inherit common_return return
+#'
+#' @details The length of `stock_codes` must be between 1 and 100. When assigning
+#'   a value to `start_date`, the length of `stock_codes` must be 1. Either
+#'   `start_date` or `date` must be provided. Passing `latest` as the value for
+#'   `date` will retrieve the most recent financial statement data within the
+#'   last 1.1 years.`limit` is only effective when requesting data within a date
+#'   range. When the length of `stock_codes` is greater than 1, a maximum of 48
+#'   metrics can be selected; when the length of `stock_codes` equals 1,
+#'   a maximum of 128 metrics can be retrieved.
+#'
+#' @seealso [API documentation](https://www.lixinger.com/open/api/doc?api-key=hk/company/fs/insurance)
+#'
+#' @examples
+#' \dontrun{
+#' lxr_hk_com_fs_insurance(
+#'   start_date = "2024-07-01",
+#'   end_date = "2025-07-01",
+#'   stock_codes = "01336",
+#'   metrics_list = "q.ps.oi.t"
+#' )
+#' }
+#'
+#' @rdname lxr_hk_com_fs_insurance
+#' @export
+lxr_hk_com_fs_insurance <- make_endpoint(
+  endpoint = "hk/company/fs/insurance",
+  required = c("token", "stock_codes", "metrics_list"),
+  optional = c("date", "start_date", "end_date", "limit"),
+  array_params = c("stock_codes", "metrics_list")
+)
+
 #' Retrieve Dividend Reinvestment Return Data
 #'
 #' @inheritParams common_params

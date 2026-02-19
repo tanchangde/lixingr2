@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2025-06-30T00:00:00+08:00",
+    "currency": "CNY",
+    "q": {
+      "ps": {
+        "oi": {
+          "t": 76729915500
+        }
+      }
+    },
+    "reportDate": "2025-09-05T00:00:00+08:00",
+    "reportType": "interim_report",
+    "standardDate": "2025-06-30T00:00:00+08:00",
+    "stockCode": "01336"
+  },
+  {
+    "date": "2025-03-31T00:00:00+08:00",
+    "currency": "CNY",
+    "q": {
+      "ps": {
+        "oi": {
+          "t": 35830325400
+        }
+      }
+    },
+    "reportDate": "2025-04-30T00:00:00+08:00",
+    "reportType": "first_quarterly_report",
+    "standardDate": "2025-03-31T00:00:00+08:00",
+    "stockCode": "01336"
+  },
+  {
+    "date": "2024-12-31T00:00:00+08:00",
+    "currency": "CNY",
+    "q": {
+      "ps": {
+        "oi": {
+          "t": 140919220500
+        }
+      }
+    },
+    "reportDate": "2025-04-10T00:00:00+08:00",
+    "reportType": "annual_report",
+    "standardDate": "2024-12-31T00:00:00+08:00",
+    "stockCode": "01336"
+  },
+  {
+    "date": "2024-09-30T00:00:00+08:00",
+    "currency": "CNY",
+    "q": {
+      "ps": {
+        "oi": {
+          "t": 118421683200
+        }
+      }
+    },
+    "reportDate": "2024-10-31T00:00:00+08:00",
+    "reportType": "third_quarterly_report",
+    "standardDate": "2024-09-30T00:00:00+08:00",
+    "stockCode": "01336"
+  }
+]
